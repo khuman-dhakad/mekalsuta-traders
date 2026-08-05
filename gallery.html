@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — Shri Mekalsuta Traders | Products &amp; Warehouse</title>
+  <meta name="description" content="Photo gallery of Shri Mekalsuta Traders — warehouse, product stockpile, roofing materials, steel bars, structural sections and delivery vehicles." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .gallery-masonry {
+      columns: 3;
+      column-gap: var(--space-3);
+    }
+    @media (max-width: 1100px) { .gallery-masonry { columns: 2; } }
+    @media (max-width: 640px) { .gallery-masonry { columns: 1; } }
+    .gallery-item {
+      break-inside: avoid;
+      margin-bottom: var(--space-3);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+    }
+    .gallery-item img {
+      width: 100%; display: block;
+      transition: transform 0.5s var(--ease-out);
+    }
+    .gallery-item:hover img { transform: scale(1.04); }
+    .gallery-item-overlay {
+      position: absolute; inset: 0;
+      background: rgba(12,37,68,.5);
+      opacity: 0;
+      transition: opacity var(--duration-normal) var(--ease-out);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .gallery-item:hover .gallery-item-overlay { opacity: 1; }
+    .gallery-zoom-icon { color: var(--white); font-size: 2.5rem; }
+    .gallery-caption { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,.7), transparent); padding: 16px; transform: translateY(4px); opacity: 0; transition: all var(--duration-normal) var(--ease-out); }
+    .gallery-item:hover .gallery-caption { opacity: 1; transform: translateY(0); }
+    .gallery-caption-text { font-size: 0.8125rem; font-weight: 600; color: var(--white); }
+  </style>
+</head>
+<body>
+
+<!-- Announcement Bar -->
+<div class="announcement-bar">
+  <div class="container">
+    <div class="announcement-left">
+      <div class="announcement-location">📍 Bareli, Madhya Pradesh, India</div>
+      <div class="announcement-divider"></div>
+      <div class="ann-badge">★ 5.0 Google Rating</div>
+    </div>
+    <div class="announcement-right">
+      <a href="tel:+917000000000" class="ann-btn ann-btn-call">📞 +91 70000 00000</a>
+      <a href="javascript:openWhatsApp()" class="ann-btn ann-btn-whatsapp">💬 WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-name">Shri Mekalsuta Traders</span>
+      <span class="nav-logo-sub">Premium Construction Materials</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="products.html" class="nav-link">Products</a></li>
+      <li><a href="brands.html" class="nav-link">Brands</a></li>
+      <li><a href="roofing.html" class="nav-link">Roofing</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-cta"><a href="quote.html" class="btn btn-primary btn-sm">Request Quote →</a></div>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile" id="mobileNav">
+  <ul><li><a href="index.html" class="nav-link">Home</a></li><li><a href="products.html" class="nav-link">Products</a></li><li><a href="brands.html" class="nav-link">Brands</a></li><li><a href="roofing.html" class="nav-link">Roofing</a></li><li><a href="projects.html" class="nav-link">Projects</a></li><li><a href="gallery.html" class="nav-link">Gallery</a></li><li><a href="about.html" class="nav-link">About</a></li><li><a href="contact.html" class="nav-link">Contact</a></li></ul>
+  <div style="margin-top:auto;display:flex;flex-direction:column;gap:12px;padding-top:32px;border-top:1px solid var(--border);">
+    <a href="tel:+917000000000" class="btn btn-outline-primary btn-lg w-full">Call Now</a>
+    <a href="quote.html" class="btn btn-primary btn-lg w-full">Request Quote</a>
+  </div>
+</div>
+
+<!-- Page Hero -->
+<section class="page-hero" aria-label="Gallery hero">
+  <div class="container page-hero-content">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">›</span><span>Gallery</span></nav>
+    <h1 class="page-hero-title">Inside Our World</h1>
+    <p class="page-hero-sub">A visual tour of our warehouse, material stockpile, roofing sections, and the premium products we supply across Madhya Pradesh.</p>
+  </div>
+</section>
+
+<!-- Filter -->
+<section style="background:var(--white);padding:var(--space-6) 0;border-bottom:1px solid var(--border);" aria-label="Gallery filter">
+  <div class="container">
+    <div style="display:flex;gap:var(--space-2);flex-wrap:wrap;justify-content:center;" class="reveal">
+      <button class="project-filter-btn active" onclick="filterGallery('all', this)">All Photos</button>
+      <button class="project-filter-btn" onclick="filterGallery('warehouse', this)">Warehouse</button>
+      <button class="project-filter-btn" onclick="filterGallery('products', this)">Products</button>
+      <button class="project-filter-btn" onclick="filterGallery('roofing', this)">Roofing</button>
+      <button class="project-filter-btn" onclick="filterGallery('projects', this)">Projects</button>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="section" style="background:var(--bg);" aria-label="Photo gallery">
+  <div class="container">
+    <div class="gallery-masonry" role="list">
+
+      <div class="gallery-item reveal" data-gcat="warehouse" data-lightbox="images/hero_warehouse.jpg" data-alt="Main warehouse" role="listitem">
+        <img src="images/hero_warehouse.jpg" alt="Shri Mekalsuta Traders warehouse" loading="lazy" />
+        <div class="gallery-item-overlay"><span class="gallery-zoom-icon">🔍</span></div>
+        <div class="gallery-caption"><div class="gallery-caption-text">Main Warehouse — Bareli, MP</div></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-1" data-gcat="products" data-lightbox="images/product_tmt.jpg" data-alt="TMT bars stockpile" role="listitem">
+        <img src="images/product_tmt.jpg" alt="TMT steel bars stockpile" loading="lazy" />
+        <div class="gallery-item-overlay"><span class="gallery-zoom-icon">🔍</span></div>
+        <div class="gallery-caption"><div class="gallery-caption-text">Kamdhenu TMT Bars Fe 500D</div></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-2" data-gcat="roofing" data-lightbox="images/roofing_section.jpg" data-alt="Roofing sheets stock" role="listitem">
+        <img src="images/roofing_section.jpg" alt="Color coated roofing sheets" loading="lazy" />
+        <div class="gallery-item-overlay"><span class="gallery-zoom-icon">🔍</span></div>
+        <div class="gallery-caption"><div class="gallery-caption-text">Color Coated Profile Sheets</div></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-1" data-gcat="products" data-lightbox="images/product_cement.jpg" data-alt="Cement bags stock" role="listitem">
+        <img src="images/product_cement.jpg" alt="UltraTech cement bags stacked" loading="lazy" />
+        <div class="gallery-item-overlay"><span class="gallery-zoom-icon">🔍</span></div>
+        <div class="gallery-caption"><div class="gallery-caption-text">UltraTech Cement Stockpile</div></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-2" data-gcat="projects" data-lightbox="images/project_residential.jpg" data-alt="Residential project" role="listitem">
+        <img src="images/project_residential.jpg" alt="Multi-storey residential project" loading="lazy" />
+        <div class="gallery-item-overlay"><span class="gallery-zoom-icon">🔍</span></div>
+        <div class="gallery-caption"><div class="gallery-caption-text">Residential Construction, Bareli</div></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-3" data-gcat="products" data-lightbox="images/product_structural.jpg" data-alt="Structural steel sections" role="listitem">
+        <img src="images/product_structural.jpg" alt="MS Angle and Channel structural sections" loading="lazy" />
+        <div class="gallery-item-overlay"><span class="gallery-zoom-icon">🔍</span></div>
+        <div class="gallery-caption"><div class="gallery-caption-text">MS Angle, Channel &amp; Beam Sections</div></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-1" data-gcat="projects" data-lightbox="images/project_industrial.jpg" data-alt="Industrial facility" role="listitem">
+        <img src="images/project_industrial.jpg" alt="Industrial factory built with our materials" loading="lazy" />
+        <div class="gallery-item-overlay"><span class="gallery-zoom-icon">🔍</span></div>
+        <div class="gallery-caption"><div class="gallery-caption-text">Industrial Facility, MP</div></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-2" data-gcat="warehouse" data-lightbox="images/about_store.jpg" data-alt="Store and office" role="listitem">
+        <img src="images/about_store.jpg" alt="Shri Mekalsuta Traders store" loading="lazy" />
+        <div class="gallery-item-overlay"><span class="gallery-zoom-icon">🔍</span></div>
+        <div class="gallery-caption"><div class="gallery-caption-text">Our Store &amp; Office, Bareli</div></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-3" data-gcat="projects" data-lightbox="images/project_warehouse.jpg" data-alt="Commercial warehouse project" role="listitem">
+        <img src="images/project_warehouse.jpg" alt="Large commercial warehouse project" loading="lazy" />
+        <div class="gallery-item-overlay"><span class="gallery-zoom-icon">🔍</span></div>
+        <div class="gallery-caption"><div class="gallery-caption-text">Commercial Warehouse Project</div></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-1" data-gcat="roofing" data-lightbox="images/project_warehouse.jpg" data-alt="Roofing installation" role="listitem">
+        <img src="images/project_warehouse.jpg" alt="GP sheet roofing installation" loading="lazy" />
+        <div class="gallery-item-overlay"><span class="gallery-zoom-icon">🔍</span></div>
+        <div class="gallery-caption"><div class="gallery-caption-text">GP Sheet Roof Installation</div></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-2" data-gcat="products" data-lightbox="images/hero_warehouse.jpg" data-alt="Structural pipes" role="listitem">
+        <img src="images/hero_warehouse.jpg" alt="APL Apollo structural pipes and tubes" loading="lazy" />
+        <div class="gallery-item-overlay"><span class="gallery-zoom-icon">🔍</span></div>
+        <div class="gallery-caption"><div class="gallery-caption-text">APL Apollo Structural Tubes</div></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-3" data-gcat="warehouse" data-lightbox="images/product_structural.jpg" data-alt="Material yard" role="listitem">
+        <img src="images/product_structural.jpg" alt="Large material storage yard" loading="lazy" />
+        <div class="gallery-item-overlay"><span class="gallery-zoom-icon">🔍</span></div>
+        <div class="gallery-caption"><div class="gallery-caption-text">Material Storage Yard</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:var(--primary);padding:var(--space-12) 0;" aria-label="Call to action">
+  <div class="container text-center reveal">
+    <h2 class="text-h3" style="color:var(--white);margin-bottom:var(--space-3);">Like What You See?</h2>
+    <p style="color:rgba(255,255,255,.7);font-size:1.1rem;margin-bottom:var(--space-5);">Get a quote for your next project today.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <a href="quote.html" class="btn btn-primary btn-lg">Request a Quote</a>
+      <a href="products.html" class="btn btn-outline btn-lg">Browse Products</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">Shri Mekalsuta Traders</div>
+        <div class="footer-brand-sub">Premium Construction Materials</div>
+        <p class="footer-desc">Three generations of trust in Bareli, MP.</p>
+        <div class="footer-contact-links">
+          <a href="tel:+917000000000" class="footer-contact-link">📞 +91 70000 00000</a>
+          <a href="javascript:openWhatsApp()" class="footer-contact-link">💬 WhatsApp</a>
+          <span class="footer-contact-link">📍 Bareli, MP</span>
+        </div>
+      </div>
+      <div><h3 class="footer-col-title">Quick Links</h3><ul class="footer-links"><li><a href="index.html" class="footer-link">Home</a></li><li><a href="products.html" class="footer-link">Products</a></li><li><a href="brands.html" class="footer-link">Brands</a></li><li><a href="roofing.html" class="footer-link">Roofing</a></li><li><a href="about.html" class="footer-link">About</a></li><li><a href="contact.html" class="footer-link">Contact</a></li></ul></div>
+      <div><h3 class="footer-col-title">Gallery</h3><ul class="footer-links"><li><a href="gallery.html" class="footer-link">Warehouse Photos</a></li><li><a href="gallery.html" class="footer-link">Products</a></li><li><a href="gallery.html" class="footer-link">Roofing</a></li><li><a href="gallery.html" class="footer-link">Projects</a></li></ul></div>
+      <div><h3 class="footer-col-title">Products</h3><ul class="footer-links"><li><a href="products.html" class="footer-link">TMT Steel Bars</a></li><li><a href="products.html" class="footer-link">Cement</a></li><li><a href="roofing.html" class="footer-link">Roofing</a></li><li><a href="products.html" class="footer-link">Structural Steel</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-bottom-text">© 2024 Shri Mekalsuta Traders, Bareli, MP. All rights reserved.</p>
+      <div class="footer-bottom-badges"><span class="footer-badge">★★★★★ 5.0</span><span class="footer-badge">✓ Auth. Dealer</span></div>
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" tabindex="-1"><button class="lightbox-close">✕</button><img class="lightbox-img" src="" alt="" /></div>
+<div class="mobile-cta"><a href="tel:+917000000000" class="btn btn-secondary">📞 Call</a><a href="javascript:openWhatsApp()" class="btn" style="background:#25D366;color:white;">💬 WhatsApp</a><a href="quote.html" class="btn btn-primary">Quote</a></div>
+
+<script src="js/main.js"></script>
+<script>
+function filterGallery(cat, btn) {
+  document.querySelectorAll('.project-filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('[data-gcat]').forEach(el => {
+    el.style.display = (cat === 'all' || el.dataset.gcat === cat) ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Brands — Shri Mekalsuta Traders | Authorized Dealer MP</title>
+  <meta name="description" content="Authorized dealer of UltraTech Cement, Tata Steel, JSW Steel, Kamdhenu, Jindal Steel, APL Apollo, Tata Structura, BSP and more in Bareli, MP." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .brand-feature {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: var(--space-8);
+      align-items: center;
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-2xl);
+      padding: var(--space-6);
+      margin-bottom: var(--space-4);
+      transition: all var(--duration-normal) var(--ease-out);
+    }
+    .brand-feature:hover { box-shadow: var(--shadow-lg); border-color: transparent; transform: translateY(-2px); }
+    .brand-feature.reverse { direction: rtl; }
+    .brand-feature.reverse > * { direction: ltr; }
+    @media (max-width: 1100px) {
+      .brand-feature, .brand-feature.reverse { grid-template-columns: 1fr; direction: ltr; }
+    }
+    .brand-feature-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      aspect-ratio: 4/3;
+      border-radius: var(--radius-xl);
+      position: relative;
+      overflow: hidden;
+    }
+    .brand-feature-logo-inner {
+      width: 100px; height: 100px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--white);
+      z-index: 1;
+      position: relative;
+    }
+    .brand-feature-logo::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.08;
+    }
+    .brand-product-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: var(--space-3) 0; }
+    .brand-product-tag { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 4px 10px; font-size: 0.8125rem; font-weight: 500; color: var(--text-mid); }
+  </style>
+</head>
+<body>
+
+<!-- Announcement Bar -->
+<div class="announcement-bar">
+  <div class="container">
+    <div class="announcement-left">
+      <div class="announcement-location">📍 Bareli, Madhya Pradesh, India</div>
+      <div class="announcement-divider"></div>
+      <div class="ann-badge">✓ Authorized Multi-Brand Dealer</div>
+    </div>
+    <div class="announcement-right">
+      <a href="tel:+917000000000" class="ann-btn ann-btn-call">📞 +91 70000 00000</a>
+      <a href="javascript:openWhatsApp()" class="ann-btn ann-btn-whatsapp">💬 WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-name">Shri Mekalsuta Traders</span>
+      <span class="nav-logo-sub">Premium Construction Materials</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="products.html" class="nav-link">Products</a></li>
+      <li><a href="brands.html" class="nav-link active">Brands</a></li>
+      <li><a href="roofing.html" class="nav-link">Roofing</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="quote.html" class="btn btn-primary btn-sm">Request Quote →</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile" id="mobileNav">
+  <ul><li><a href="index.html" class="nav-link">Home</a></li><li><a href="products.html" class="nav-link">Products</a></li><li><a href="brands.html" class="nav-link">Brands</a></li><li><a href="roofing.html" class="nav-link">Roofing</a></li><li><a href="projects.html" class="nav-link">Projects</a></li><li><a href="gallery.html" class="nav-link">Gallery</a></li><li><a href="about.html" class="nav-link">About</a></li><li><a href="contact.html" class="nav-link">Contact</a></li></ul>
+  <div style="margin-top:auto;display:flex;flex-direction:column;gap:12px;padding-top:32px;border-top:1px solid var(--border);">
+    <a href="tel:+917000000000" class="btn btn-outline-primary btn-lg w-full">Call Now</a>
+    <a href="quote.html" class="btn btn-primary btn-lg w-full">Request Quote</a>
+  </div>
+</div>
+
+<!-- Page Hero -->
+<section class="page-hero" aria-label="Brands page hero">
+  <div class="container page-hero-content">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">›</span><span>Our Brands</span></nav>
+    <h1 class="page-hero-title">Authorized Dealer of India's Best</h1>
+    <p class="page-hero-sub">We are proud authorized dealers of India's most trusted construction material brands — guaranteeing genuine, certified products for every project.</p>
+  </div>
+</section>
+
+<!-- ── INTRO ── -->
+<section style="background:var(--white);padding:var(--space-10) 0;border-bottom:1px solid var(--border);" aria-label="Brand dealer introduction">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-4);text-align:center;" class="reveal">
+      <div style="padding:var(--space-4);">
+        <div style="font-family:var(--font-number);font-size:2rem;font-weight:800;color:var(--primary);">8+</div>
+        <div style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;font-weight:500;">Premium Brands</div>
+      </div>
+      <div style="padding:var(--space-4);border-left:1px solid var(--border);">
+        <div style="font-family:var(--font-number);font-size:2rem;font-weight:800;color:var(--primary);">100%</div>
+        <div style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;font-weight:500;">Genuine Products</div>
+      </div>
+      <div style="padding:var(--space-4);border-left:1px solid var(--border);">
+        <div style="font-family:var(--font-number);font-size:2rem;font-weight:800;color:var(--primary);">ISI</div>
+        <div style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;font-weight:500;">Certified Products</div>
+      </div>
+      <div style="padding:var(--space-4);border-left:1px solid var(--border);">
+        <div style="font-family:var(--font-number);font-size:2rem;font-weight:800;color:var(--primary);">✓</div>
+        <div style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;font-weight:500;">Authorized Dealer</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── BRAND FEATURES ── -->
+<section class="section" style="background:var(--bg);" aria-label="Brands details">
+  <div class="container">
+
+    <!-- UltraTech -->
+    <article class="brand-feature reveal" aria-label="UltraTech Cement">
+      <div class="brand-feature-logo" style="background:linear-gradient(135deg,#EBF5FF,#DBEAFE);">
+        <div class="brand-feature-logo-inner" style="background:linear-gradient(135deg,#1d4ed8,#2563eb);">UC</div>
+      </div>
+      <div>
+        <div class="brand-auth-tag" style="margin-bottom:var(--space-3);width:fit-content;">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          Authorized Dealer
+        </div>
+        <h2 class="text-h3 mb-2">UltraTech Cement</h2>
+        <p class="text-body mb-3">UltraTech Cement is India's No.1 cement brand and the largest manufacturer of grey cement, white cement and ready mix concrete. With a capacity of 114.76 MTPA, UltraTech is a name synonymous with strength and reliability.</p>
+        <p class="text-body mb-3">We stock the complete range of UltraTech products including OPC, PPC, and SRC variants — all ISI certified and directly sourced for guaranteed authenticity.</p>
+        <div class="brand-product-tags">
+          <span class="brand-product-tag">OPC 43 Grade</span>
+          <span class="brand-product-tag">OPC 53 Grade</span>
+          <span class="brand-product-tag">PPC Cement</span>
+          <span class="brand-product-tag">SRC Cement</span>
+          <span class="brand-product-tag">50 kg Bags</span>
+        </div>
+        <a href="quote.html?brand=ultratech" class="btn btn-primary">Get UltraTech Quote</a>
+      </div>
+    </article>
+
+    <!-- JSW Steel -->
+    <article class="brand-feature reverse reveal reveal-delay-1" aria-label="JSW Steel">
+      <div class="brand-feature-logo" style="background:linear-gradient(135deg,#ECFDF5,#D1FAE5);">
+        <div class="brand-feature-logo-inner" style="background:linear-gradient(135deg,#0f766e,#047857);">JSW</div>
+      </div>
+      <div>
+        <div class="brand-auth-tag" style="margin-bottom:var(--space-3);width:fit-content;">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          Authorized Dealer
+        </div>
+        <h2 class="text-h3 mb-2">JSW Steel</h2>
+        <p class="text-body mb-3">JSW Steel is one of India's leading steel companies with a capacity of 28 MTPA. Known for high-quality TMT bars, structural steel, and roofing products — JSW is the preferred choice for major infrastructure projects across India.</p>
+        <p class="text-body mb-3">We carry JSW's complete range of structural sections, profile sheets, and coils — ideal for everything from residential construction to large industrial facilities.</p>
+        <div class="brand-product-tags">
+          <span class="brand-product-tag">TMT Bars</span>
+          <span class="brand-product-tag">MS Angle</span>
+          <span class="brand-product-tag">MS Channel</span>
+          <span class="brand-product-tag">Profile Coil</span>
+          <span class="brand-product-tag">Roofing Sheets</span>
+        </div>
+        <a href="quote.html?brand=jsw" class="btn btn-primary">Get JSW Steel Quote</a>
+      </div>
+    </article>
+
+    <!-- Tata Steel -->
+    <article class="brand-feature reveal" aria-label="Tata Steel">
+      <div class="brand-feature-logo" style="background:linear-gradient(135deg,#F1F5F9,#E2E8F0);">
+        <div class="brand-feature-logo-inner" style="background:linear-gradient(135deg,#1e293b,#334155);">TS</div>
+      </div>
+      <div>
+        <div class="brand-auth-tag" style="margin-bottom:var(--space-3);width:fit-content;">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          Authorized Dealer
+        </div>
+        <h2 class="text-h3 mb-2">Tata Steel</h2>
+        <p class="text-body mb-3">Tata Steel is one of the world's most geographically diversified steel producers. India's most trusted steel brand, known for producing high-quality TMT bars and structural steel products since 1907.</p>
+        <p class="text-body mb-3">Tata Steel products are synonymous with strength, reliability and consistent quality — preferred by architects, engineers and contractors for critical structural applications.</p>
+        <div class="brand-product-tags">
+          <span class="brand-product-tag">Tata Tiscon TMT</span>
+          <span class="brand-product-tag">Structural Steel</span>
+          <span class="brand-product-tag">Tata Wiron</span>
+          <span class="brand-product-tag">Tata Structura</span>
+        </div>
+        <a href="quote.html?brand=tata" class="btn btn-primary">Get Tata Steel Quote</a>
+      </div>
+    </article>
+
+    <!-- Kamdhenu -->
+    <article class="brand-feature reverse reveal reveal-delay-1" aria-label="Kamdhenu Steel">
+      <div class="brand-feature-logo" style="background:linear-gradient(135deg,#FEF3C7,#FDE68A);">
+        <div class="brand-feature-logo-inner" style="background:linear-gradient(135deg,#b45309,#d97706);">KS</div>
+      </div>
+      <div>
+        <div class="brand-auth-tag" style="margin-bottom:var(--space-3);width:fit-content;">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          Authorized Dealer — Best Performing Rural Dealer 2021
+        </div>
+        <h2 class="text-h3 mb-2">Kamdhenu Steel</h2>
+        <p class="text-body mb-3">Kamdhenu Limited is India's No.1 TMT bar brand in the rural and semi-urban market. Known for high-strength, corrosion-resistant TMT bars that are ideal for residential and commercial construction.</p>
+        <p class="text-body mb-3">We are proud to be recognized by Kamdhenu Limited as the <strong>Best Performing Rural Dealer</strong> for Bareli — a testament to our strong partnership and sales excellence.</p>
+        <div class="brand-product-tags">
+          <span class="brand-product-tag">TMT Fe 500D</span>
+          <span class="brand-product-tag">TMT Fe 550D</span>
+          <span class="brand-product-tag">8mm – 32mm</span>
+          <span class="brand-product-tag">Direct from Raipur</span>
+        </div>
+        <a href="quote.html?brand=kamdhenu" class="btn btn-primary">Get Kamdhenu Quote</a>
+      </div>
+    </article>
+
+    <!-- Jindal Steel -->
+    <article class="brand-feature reveal" aria-label="Jindal Steel and Power">
+      <div class="brand-feature-logo" style="background:linear-gradient(135deg,#FDF2F8,#FCE7F3);">
+        <div class="brand-feature-logo-inner" style="background:linear-gradient(135deg,#be185d,#9d174d);">JSP</div>
+      </div>
+      <div>
+        <div class="brand-auth-tag" style="margin-bottom:var(--space-3);width:fit-content;">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          Authorized Dealer
+        </div>
+        <h2 class="text-h3 mb-2">Jindal Steel &amp; Power</h2>
+        <p class="text-body mb-3">Jindal Steel &amp; Power (JSPL) is one of India's significant industrial powerhouses. JSPL produces superior quality structural steel, TMT bars and rails from their Raigarh plant using direct reduced iron technology.</p>
+        <div class="brand-product-tags">
+          <span class="brand-product-tag">TMT Bars</span>
+          <span class="brand-product-tag">HR Coils</span>
+          <span class="brand-product-tag">Structural Sections</span>
+          <span class="brand-product-tag">Plates</span>
+        </div>
+        <a href="quote.html?brand=jindal" class="btn btn-primary">Get Jindal Quote</a>
+      </div>
+    </article>
+
+    <!-- APL Apollo -->
+    <article class="brand-feature reverse reveal reveal-delay-1" aria-label="APL Apollo Tubes">
+      <div class="brand-feature-logo" style="background:linear-gradient(135deg,#F5F3FF,#EDE9FE);">
+        <div class="brand-feature-logo-inner" style="background:linear-gradient(135deg,#7c3aed,#6d28d9);">APL</div>
+      </div>
+      <div>
+        <div class="brand-auth-tag" style="margin-bottom:var(--space-3);width:fit-content;">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          Authorized Dealer
+        </div>
+        <h2 class="text-h3 mb-2">APL Apollo Tubes</h2>
+        <p class="text-body mb-3">APL Apollo is India's largest steel tube manufacturer, offering a wide range of structural tubes, hollow sections and pipes. Their products are extensively used in construction, infrastructure and industrial applications.</p>
+        <div class="brand-product-tags">
+          <span class="brand-product-tag">Round Tubes</span>
+          <span class="brand-product-tag">Square Sections</span>
+          <span class="brand-product-tag">Rectangular HSS</span>
+          <span class="brand-product-tag">GP Pipes</span>
+          <span class="brand-product-tag">Pre-Galvanized</span>
+        </div>
+        <a href="quote.html?brand=apl-apollo" class="btn btn-primary">Get APL Apollo Quote</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section style="background:var(--primary);padding:var(--space-12) 0;" aria-label="Enquire about brands">
+  <div class="container text-center reveal">
+    <h2 class="text-h2" style="color:var(--white);margin-bottom:var(--space-3);">Need Any Specific Brand?</h2>
+    <p style="font-size:1.1rem;color:rgba(255,255,255,.7);margin-bottom:var(--space-6);max-width:480px;margin-left:auto;margin-right:auto;">We carry many more brands and can source specific products on request. Contact us with your requirements.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <a href="quote.html" class="btn btn-primary btn-lg">Request a Quote</a>
+      <a href="javascript:openWhatsApp('I need information about available brands and pricing.')" class="btn btn-outline btn-lg">WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">Shri Mekalsuta Traders</div>
+        <div class="footer-brand-sub">Premium Construction Materials</div>
+        <p class="footer-desc">Authorized dealer of India's top construction brands in Bareli, MP.</p>
+        <div class="footer-contact-links">
+          <a href="tel:+917000000000" class="footer-contact-link">📞 +91 70000 00000</a>
+          <a href="javascript:openWhatsApp()" class="footer-contact-link">💬 WhatsApp</a>
+          <span class="footer-contact-link">📍 Bareli, MP</span>
+        </div>
+      </div>
+      <div><h3 class="footer-col-title">Quick Links</h3><ul class="footer-links"><li><a href="index.html" class="footer-link">Home</a></li><li><a href="products.html" class="footer-link">Products</a></li><li><a href="brands.html" class="footer-link">Brands</a></li><li><a href="roofing.html" class="footer-link">Roofing</a></li><li><a href="about.html" class="footer-link">About</a></li><li><a href="contact.html" class="footer-link">Contact</a></li></ul></div>
+      <div><h3 class="footer-col-title">Our Brands</h3><ul class="footer-links"><li><a href="brands.html" class="footer-link">UltraTech Cement</a></li><li><a href="brands.html" class="footer-link">JSW Steel</a></li><li><a href="brands.html" class="footer-link">Tata Steel</a></li><li><a href="brands.html" class="footer-link">Kamdhenu</a></li><li><a href="brands.html" class="footer-link">Jindal Steel</a></li><li><a href="brands.html" class="footer-link">APL Apollo</a></li></ul></div>
+      <div><h3 class="footer-col-title">Products</h3><ul class="footer-links"><li><a href="products.html" class="footer-link">TMT Steel Bars</a></li><li><a href="products.html" class="footer-link">Cement</a></li><li><a href="roofing.html" class="footer-link">Roofing</a></li><li><a href="products.html" class="footer-link">Structural Steel</a></li><li><a href="products.html" class="footer-link">Pipes &amp; Tubes</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-bottom-text">© 2024 Shri Mekalsuta Traders, Bareli, MP. All rights reserved.</p>
+      <div class="footer-bottom-badges"><span class="footer-badge">★★★★★ 5.0</span><span class="footer-badge">🏆 Best Rural Dealer</span><span class="footer-badge">✓ Auth. Dealer</span></div>
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" tabindex="-1"><button class="lightbox-close">✕</button><img class="lightbox-img" src="" alt="" /></div>
+<div class="mobile-cta"><a href="tel:+917000000000" class="btn btn-secondary">📞 Call</a><a href="javascript:openWhatsApp()" class="btn" style="background:#25D366;color:white;">💬 WhatsApp</a><a href="quote.html" class="btn btn-primary">Quote</a></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

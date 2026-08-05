@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request a Quote — Shri Mekalsuta Traders</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .page-hero {
+      background: var(--primary);
+      padding: var(--space-16) 0 var(--space-10);
+      text-align: center;
+      color: var(--white);
+    }
+    .quote-container {
+      padding: var(--space-12) 0;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: var(--space-8);
+    }
+    @media (max-width: 900px) {
+      .quote-container { grid-template-columns: 1fr; }
+    }
+    .quote-form-wrap {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-8);
+      box-shadow: var(--shadow-md);
+    }
+    .trust-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-6);
+      height: fit-content;
+    }
+    .faq-accordion {
+      margin-top: var(--space-8);
+    }
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      margin-bottom: var(--space-3);
+      padding: var(--space-4);
+      background: var(--white);
+    }
+    .faq-question {
+      font-weight: 600;
+      margin-bottom: var(--space-2);
+      color: var(--primary);
+    }
+    .form-group-checkbox {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+      margin-top: 8px;
+    }
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="announcement-bar" role="banner">
+  <div class="container">
+    <div class="announcement-left">
+      <div class="announcement-location">Bareli, Madhya Pradesh, India</div>
+    </div>
+    <div class="announcement-right">
+      <a href="tel:+917000000000" class="ann-btn">+91 70000 00000</a>
+    </div>
+  </div>
+</div>
+
+<!-- NAVIGATION -->
+<nav class="navbar" id="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-name">Shri Mekalsuta Traders</span>
+      <span class="nav-logo-sub">Premium Construction Materials</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="products.html" class="nav-link">Products</a></li>
+      <li><a href="quote.html" class="nav-link active">Request Quote</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="tel:+917000000000" class="nav-phone">+91 70000 00000</a>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <h1 class="page-title text-h1">Request a Quote</h1>
+    <p class="page-subtitle">Get the best pricing for your construction needs.</p>
+  </div>
+</section>
+
+<section class="container quote-container">
+  <!-- FORM -->
+  <div class="quote-form-wrap">
+    <form action="thank-you.html" method="get" data-validate novalidate>
+      <div class="form-row" style="gap:var(--space-3); margin-bottom:var(--space-3);">
+        <div class="form-group">
+          <label class="form-label" for="fullName">Full Name <span>*</span></label>
+          <input type="text" id="fullName" name="fullName" class="form-input" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="phone">Phone <span>*</span></label>
+          <input type="tel" id="phone" name="phone" class="form-input" required>
+        </div>
+      </div>
+      
+      <div class="form-row" style="gap:var(--space-3); margin-bottom:var(--space-3);">
+        <div class="form-group">
+          <label class="form-label" for="email">Email</label>
+          <input type="email" id="email" name="email" class="form-input">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="company">Company/Project Name</label>
+          <input type="text" id="company" name="company" class="form-input">
+        </div>
+      </div>
+      
+      <div class="form-row" style="gap:var(--space-3); margin-bottom:var(--space-3);">
+        <div class="form-group">
+          <label class="form-label" for="city">City/Location</label>
+          <input type="text" id="city" name="city" class="form-input">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="projectType">Project Type</label>
+          <select id="projectType" name="projectType" class="form-select">
+            <option value="Residential">Residential</option>
+            <option value="Commercial">Commercial</option>
+            <option value="Industrial">Industrial</option>
+            <option value="Agricultural">Agricultural</option>
+            <option value="Government">Government</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group" style="margin-bottom:var(--space-3);">
+        <label class="form-label">Materials Required</label>
+        <div class="form-group-checkbox">
+          <label class="checkbox-label"><input type="checkbox" name="materials" value="TMT Bars"> TMT Bars</label>
+          <label class="checkbox-label"><input type="checkbox" name="materials" value="Cement"> Cement</label>
+          <label class="checkbox-label"><input type="checkbox" name="materials" value="Roofing"> Roofing</label>
+          <label class="checkbox-label"><input type="checkbox" name="materials" value="MS Angle"> MS Angle</label>
+          <label class="checkbox-label"><input type="checkbox" name="materials" value="MS Channel"> MS Channel</label>
+          <label class="checkbox-label"><input type="checkbox" name="materials" value="Pipes"> Pipes</label>
+          <label class="checkbox-label"><input type="checkbox" name="materials" value="Wire"> Wire</label>
+          <label class="checkbox-label"><input type="checkbox" name="materials" value="Other"> Other</label>
+        </div>
+      </div>
+      
+      <div class="form-row" style="gap:var(--space-3); margin-bottom:var(--space-3);">
+        <div class="form-group">
+          <label class="form-label" for="preferredBrand">Preferred Brand</label>
+          <select id="preferredBrand" name="preferredBrand" class="form-select">
+            <option value="">Any</option>
+            <option value="Kamdhenu">Kamdhenu</option>
+            <option value="UltraTech">UltraTech</option>
+            <option value="JSW Steel">JSW Steel</option>
+            <option value="Tata Steel">Tata Steel</option>
+            <option value="Jindal">Jindal</option>
+            <option value="APL Apollo">APL Apollo</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="quantity">Quantity/Volume</label>
+          <input type="text" id="quantity" name="quantity" class="form-input">
+        </div>
+      </div>
+      
+      <div class="form-group" style="margin-bottom:var(--space-3);">
+        <label class="form-label" for="timeline">Timeline</label>
+        <select id="timeline" name="timeline" class="form-select">
+          <option value="Immediate">Immediate</option>
+          <option value="Within 1 Week">Within 1 Week</option>
+          <option value="Within 1 Month">Within 1 Month</option>
+          <option value="Planning Phase">Planning Phase</option>
+        </select>
+      </div>
+
+      <div class="form-group" style="margin-bottom:var(--space-4);">
+        <label class="form-label" for="message">Message</label>
+        <textarea id="message" name="message" class="form-textarea" rows="4"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-lg w-full" style="background:var(--orange); border-color:var(--orange);">Submit Quote Request</button>
+    </form>
+    
+    <!-- FAQ -->
+    <div class="faq-accordion">
+      <h3 class="text-h3" style="margin-bottom:var(--space-4);">Frequently Asked Questions</h3>
+      <div class="faq-item">
+        <div class="faq-question">How fast do you respond?</div>
+        <p class="text-body text-small">We typically respond to all quote requests within 2-4 business hours.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">What is the minimum order?</div>
+        <p class="text-body text-small">There is no strict minimum order, though bulk discounts apply for larger volumes.</p>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question">Do you deliver to site?</div>
+        <p class="text-body text-small">Yes, we provide site delivery across Bareli and surrounding regions.</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- TRUST SIGNALS -->
+  <div>
+    <div class="trust-card">
+      <h3 class="text-h3 mb-3">Why Choose Us?</h3>
+      <p style="font-size: 1.5rem; font-weight:700; color:var(--primary); margin-bottom:4px;">★★★★★ 5.0 rating</p>
+      <p class="text-body mb-4">500+ Happy Customers &bull; 10+ Premium Brands</p>
+      <hr style="border:none; border-top:1px solid var(--border); margin-bottom:16px;">
+      <p class="text-body mb-3">Need immediate assistance?</p>
+      <a href="tel:+917000000000" class="btn btn-outline-primary w-full mb-2">Call Now</a>
+      <a href="javascript:openWhatsApp()" class="btn w-full" style="background:#25D366; color:white; border:none;">WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">Shri Mekalsuta Traders</div>
+        <div class="footer-brand-sub">Premium Construction Materials</div>
+        <p class="footer-desc">
+          Three generations of trust. Authorized dealer of India's finest construction brands.
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-bottom-text">© 2024 Shri Mekalsuta Traders. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta" role="navigation">
+  <a href="tel:+917000000000" class="btn btn-secondary">Call Now</a>
+  <a href="javascript:openWhatsApp()" class="btn" style="background:#25D366; color:white;">WhatsApp</a>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Complete Product Range — Shri Mekalsuta Traders</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .page-hero {
+      background: var(--primary);
+      padding: var(--space-16) 0 var(--space-10);
+      text-align: center;
+      color: var(--white);
+    }
+    .page-title {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      margin-bottom: var(--space-3);
+    }
+    .page-subtitle {
+      font-size: 1.125rem;
+      opacity: 0.9;
+    }
+    .products-container {
+      padding: var(--space-10) 0;
+    }
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+      justify-content: center;
+      margin-bottom: var(--space-8);
+    }
+    .filter-btn {
+      padding: var(--space-2) var(--space-4);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      color: var(--text-dark);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--primary);
+      color: var(--white);
+      border-color: var(--primary);
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-6);
+    }
+    @media (max-width: 992px) { .products-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 600px) { .products-grid { grid-template-columns: 1fr; } }
+    
+    .product-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+    .product-img {
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+    }
+    .product-content {
+      padding: var(--space-5);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .product-badges {
+      display: flex;
+      gap: 8px;
+      margin-bottom: var(--space-3);
+    }
+    .product-title {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      margin-bottom: var(--space-2);
+    }
+    .product-desc {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: var(--space-4);
+      flex: 1;
+    }
+    .product-actions {
+      display: flex;
+      gap: var(--space-3);
+      margin-top: auto;
+    }
+    
+    .cta-banner {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--orange) 100%);
+      border-radius: var(--radius-xl);
+      padding: var(--space-8);
+      text-align: center;
+      color: var(--white);
+      margin: var(--space-12) 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="announcement-bar" role="banner" aria-label="Business information bar">
+  <div class="container">
+    <div class="announcement-left">
+      <div class="announcement-location">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Bareli, Madhya Pradesh, India
+      </div>
+      <div class="announcement-divider" aria-hidden="true"></div>
+      <div class="ann-badge">★ Authorized Dealer</div>
+      <div class="announcement-divider" aria-hidden="true"></div>
+      <span style="font-size:0.8125rem; color:rgba(255,255,255,.75); font-weight:500;">Mon – Sat &nbsp;9:00 AM – 7:00 PM</span>
+    </div>
+    <div class="announcement-right">
+      <a href="tel:+917000000000" class="ann-btn ann-btn-call" aria-label="Call us">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 11a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 0h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 7.91a16 16 0 0 0 5.12 5.12l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +91 70000 00000
+      </a>
+      <a href="javascript:openWhatsApp()" class="ann-btn ann-btn-whatsapp" aria-label="WhatsApp us">WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<!-- NAVIGATION -->
+<nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="container navbar-inner">
+    <a href="index.html" class="nav-logo" aria-label="Shri Mekalsuta Traders Home">
+      <span class="nav-logo-name">Shri Mekalsuta Traders</span>
+      <span class="nav-logo-sub">Premium Construction Materials</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="products.html" class="nav-link active">Products</a></li>
+      <li><a href="brands.html" class="nav-link">Brands</a></li>
+      <li><a href="roofing.html" class="nav-link">Roofing</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="tel:+917000000000" class="nav-phone" aria-label="Call us">+91 70000 00000</a>
+      <a href="quote.html" class="btn btn-primary btn-sm">Request Quote</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Nav Drawer -->
+<div class="nav-mobile" id="mobileNav" role="dialog" aria-label="Mobile navigation">
+  <ul role="list" style="display:flex;flex-direction:column;gap:4px;">
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="products.html" class="nav-link">Products</a></li>
+    <li><a href="brands.html" class="nav-link">Brands</a></li>
+    <li><a href="roofing.html" class="nav-link">Roofing</a></li>
+    <li><a href="projects.html" class="nav-link">Projects</a></li>
+    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+    <li><a href="about.html" class="nav-link">About</a></li>
+    <li><a href="contact.html" class="nav-link">Contact</a></li>
+  </ul>
+  <div style="margin-top:auto; display:flex; flex-direction:column; gap:12px; padding-top:32px; border-top:1px solid var(--border);">
+    <a href="tel:+917000000000" class="btn btn-outline-primary btn-lg w-full">Call Now</a>
+    <a href="quote.html" class="btn btn-primary btn-lg w-full">Request Quote</a>
+  </div>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <h1 class="page-title">Our Complete Product Range</h1>
+    <p class="page-subtitle">Premium construction materials from India's most trusted brands</p>
+  </div>
+</section>
+
+<!-- PRODUCTS GRID -->
+<section class="products-container container">
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="filterProducts('All')">All</button>
+    <button class="filter-btn" onclick="filterProducts('Steel')">Steel</button>
+    <button class="filter-btn" onclick="filterProducts('Cement')">Cement</button>
+    <button class="filter-btn" onclick="filterProducts('Roofing')">Roofing</button>
+    <button class="filter-btn" onclick="filterProducts('Structural')">Structural</button>
+    <button class="filter-btn" onclick="filterProducts('Pipes')">Pipes</button>
+    <button class="filter-btn" onclick="filterProducts('Wire')">Wire</button>
+  </div>
+  
+  <div class="products-grid" id="productsGrid">
+    <div class="product-card" data-category="Steel">
+      <img src="images/product_tmt.jpg" class="product-img" alt="Kamdhenu TMT Fe500D">
+      <div class="product-content">
+        <div class="product-badges">
+          <span class="badge badge-primary">Kamdhenu</span>
+          <span class="badge badge-success">In Stock</span>
+        </div>
+        <h3 class="product-title">Kamdhenu TMT Fe500D</h3>
+        <p class="product-desc">High-strength corrosion-resistant TMT bars ideal for all foundations.</p>
+        <div class="product-specs mb-4"><span class="spec-tag">Fe 500D</span><span class="spec-tag">8-32mm</span></div>
+        <div class="product-actions">
+          <a href="quote.html" class="btn btn-primary btn-sm">Get Quote</a>
+          <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="product-card" data-category="Cement">
+      <img src="images/product_cement.jpg" class="product-img" alt="UltraTech OPC 53">
+      <div class="product-content">
+        <div class="product-badges">
+          <span class="badge badge-primary">UltraTech</span>
+          <span class="badge badge-success">In Stock</span>
+        </div>
+        <h3 class="product-title">UltraTech OPC 53</h3>
+        <p class="product-desc">India's No.1 cement offering superior strength and consistent quality.</p>
+        <div class="product-specs mb-4"><span class="spec-tag">OPC 53</span><span class="spec-tag">50 kg</span></div>
+        <div class="product-actions">
+          <a href="quote.html" class="btn btn-primary btn-sm">Get Quote</a>
+          <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="product-card" data-category="Structural">
+      <img src="images/product_structural.jpg" class="product-img" alt="JSW MS Angle">
+      <div class="product-content">
+        <div class="product-badges">
+          <span class="badge badge-primary">JSW Steel</span>
+          <span class="badge badge-success">In Stock</span>
+        </div>
+        <h3 class="product-title">JSW MS Angle</h3>
+        <p class="product-desc">Premium MS Angles for industrial and commercial structural frameworks.</p>
+        <div class="product-specs mb-4"><span class="spec-tag">MS Angle</span><span class="spec-tag">IS 2062</span></div>
+        <div class="product-actions">
+          <a href="quote.html" class="btn btn-primary btn-sm">Get Quote</a>
+          <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="product-card" data-category="Structural">
+      <img src="images/product_structural.jpg" class="product-img" alt="JSW MS Channel">
+      <div class="product-content">
+        <div class="product-badges">
+          <span class="badge badge-primary">JSW Steel</span>
+          <span class="badge badge-success">In Stock</span>
+        </div>
+        <h3 class="product-title">JSW MS Channel</h3>
+        <p class="product-desc">High-quality MS channels providing structural support for heavy loads.</p>
+        <div class="product-specs mb-4"><span class="spec-tag">MS Channel</span></div>
+        <div class="product-actions">
+          <a href="quote.html" class="btn btn-primary btn-sm">Get Quote</a>
+          <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="product-card" data-category="Steel">
+      <img src="images/product_tmt.jpg" class="product-img" alt="Tata Steel TMT">
+      <div class="product-content">
+        <div class="product-badges">
+          <span class="badge badge-primary">Tata Steel</span>
+          <span class="badge badge-success">In Stock</span>
+        </div>
+        <h3 class="product-title">Tata Steel TMT</h3>
+        <p class="product-desc">Premium grade steel offering superior earthquake resistance.</p>
+        <div class="product-specs mb-4"><span class="spec-tag">Fe 500D</span><span class="spec-tag">Fe 550D</span></div>
+        <div class="product-actions">
+          <a href="quote.html" class="btn btn-primary btn-sm">Get Quote</a>
+          <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="product-card" data-category="Steel">
+      <img src="images/product_tmt.jpg" class="product-img" alt="Jindal TMT Bars">
+      <div class="product-content">
+        <div class="product-badges">
+          <span class="badge badge-primary">Jindal</span>
+          <span class="badge badge-success">In Stock</span>
+        </div>
+        <h3 class="product-title">Jindal TMT Bars</h3>
+        <p class="product-desc">High flexibility and strength for versatile construction needs.</p>
+        <div class="product-specs mb-4"><span class="spec-tag">TMT Bars</span></div>
+        <div class="product-actions">
+          <a href="quote.html" class="btn btn-primary btn-sm">Get Quote</a>
+          <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="product-card" data-category="Roofing">
+      <img src="images/roofing_section.jpg" class="product-img" alt="Color Coated Sheets">
+      <div class="product-content">
+        <div class="product-badges">
+          <span class="badge badge-primary">SM Roofing</span>
+          <span class="badge badge-success">In Stock</span>
+        </div>
+        <h3 class="product-title">Color Coated Sheets</h3>
+        <p class="product-desc">Durable and aesthetic roofing solutions for industrial and residential setups.</p>
+        <div class="product-specs mb-4"><span class="spec-tag">Color Coated</span></div>
+        <div class="product-actions">
+          <a href="quote.html" class="btn btn-primary btn-sm">Get Quote</a>
+          <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="product-card" data-category="Roofing">
+      <img src="images/roofing_section.jpg" class="product-img" alt="GP Roofing Sheet">
+      <div class="product-content">
+        <div class="product-badges">
+          <span class="badge badge-primary">Generic</span>
+          <span class="badge badge-success">In Stock</span>
+        </div>
+        <h3 class="product-title">GP Roofing Sheet</h3>
+        <p class="product-desc">Galvanized plain sheets offering excellent corrosion protection.</p>
+        <div class="product-specs mb-4"><span class="spec-tag">Galvanized</span></div>
+        <div class="product-actions">
+          <a href="quote.html" class="btn btn-primary btn-sm">Get Quote</a>
+          <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="product-card" data-category="Pipes">
+      <img src="images/about_store.jpg" class="product-img" alt="APL Apollo Pipes">
+      <div class="product-content">
+        <div class="product-badges">
+          <span class="badge badge-primary">APL Apollo</span>
+          <span class="badge badge-success">In Stock</span>
+        </div>
+        <h3 class="product-title">APL Apollo Pipes</h3>
+        <p class="product-desc">High-grade structural steel tubes and pipes for varied applications.</p>
+        <div class="product-specs mb-4"><span class="spec-tag">Steel Tubes</span></div>
+        <div class="product-actions">
+          <a href="quote.html" class="btn btn-primary btn-sm">Get Quote</a>
+          <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="product-card" data-category="Structural">
+      <img src="images/project_industrial.jpg" class="product-img" alt="Tata Structura HSS">
+      <div class="product-content">
+        <div class="product-badges">
+          <span class="badge badge-primary">Tata Structura</span>
+          <span class="badge badge-success">In Stock</span>
+        </div>
+        <h3 class="product-title">Tata Structura HSS</h3>
+        <p class="product-desc">Hollow structural sections for modern architectural designs.</p>
+        <div class="product-specs mb-4"><span class="spec-tag">HSS</span></div>
+        <div class="product-actions">
+          <a href="quote.html" class="btn btn-primary btn-sm">Get Quote</a>
+          <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="product-card" data-category="Wire">
+      <img src="images/hero_warehouse.jpg" class="product-img" alt="Tata Wiron">
+      <div class="product-content">
+        <div class="product-badges">
+          <span class="badge badge-primary">Tata Wiron</span>
+          <span class="badge badge-success">In Stock</span>
+        </div>
+        <h3 class="product-title">Tata Wiron</h3>
+        <p class="product-desc">Reliable binding wires and fencing solutions for secure constructions.</p>
+        <div class="product-specs mb-4"><span class="spec-tag">Binding Wire</span></div>
+        <div class="product-actions">
+          <a href="quote.html" class="btn btn-primary btn-sm">Get Quote</a>
+          <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="product-card" data-category="Cement">
+      <img src="images/product_cement.jpg" class="product-img" alt="Cement PPC 43">
+      <div class="product-content">
+        <div class="product-badges">
+          <span class="badge badge-primary">UltraTech</span>
+          <span class="badge badge-success">In Stock</span>
+        </div>
+        <h3 class="product-title">Cement PPC 43</h3>
+        <p class="product-desc">Portland Pozzolana Cement for plastering and brickwork.</p>
+        <div class="product-specs mb-4"><span class="spec-tag">PPC</span><span class="spec-tag">43 Grade</span></div>
+        <div class="product-actions">
+          <a href="quote.html" class="btn btn-primary btn-sm">Get Quote</a>
+          <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cta-banner">
+    <h2>Need Bulk Order? Get Special Pricing</h2>
+    <p style="margin: 16px 0;">Contact our sales team directly for large projects and wholesale pricing.</p>
+    <a href="quote.html" class="btn btn-primary btn-lg" style="background:var(--white); color:var(--primary);">Request Quote</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">Shri Mekalsuta Traders</div>
+        <div class="footer-brand-sub">Premium Construction Materials</div>
+        <p class="footer-desc">
+          Three generations of trust. Authorized dealer of India's finest construction brands.
+        </p>
+        <div class="footer-contact-links">
+          <a href="tel:+917000000000" class="footer-contact-link">+91 70000 00000</a>
+        </div>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Quick Links</h3>
+        <ul class="footer-links" role="list">
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="about.html" class="footer-link">About Us</a></li>
+          <li><a href="products.html" class="footer-link">Products</a></li>
+          <li><a href="contact.html" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Products</h3>
+        <ul class="footer-links" role="list">
+          <li><a href="products.html" class="footer-link">TMT Steel Bars</a></li>
+          <li><a href="products.html" class="footer-link">Cement</a></li>
+          <li><a href="roofing.html" class="footer-link">Roofing Sheets</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-bottom-text">© 2024 Shri Mekalsuta Traders. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-label="Image lightbox" aria-modal="true" tabindex="-1">
+  <button class="lightbox-close" aria-label="Close lightbox">✕</button>
+  <img class="lightbox-img" src="" alt="" />
+</div>
+
+<!-- MOBILE FLOATING CTAs -->
+<div class="mobile-cta" role="navigation" aria-label="Mobile quick actions">
+  <a href="tel:+917000000000" class="btn btn-secondary">Call Now</a>
+  <a href="javascript:openWhatsApp()" class="btn" style="background:#25D366; color:white;">WhatsApp</a>
+  <a href="quote.html" class="btn btn-primary">Quote</a>
+</div>
+
+<script>
+  function filterProducts(category) {
+    const btns = document.querySelectorAll('.filter-btn');
+    btns.forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+    
+    const cards = document.querySelectorAll('.product-card');
+    cards.forEach(card => {
+      if (category === 'All' || card.getAttribute('data-category') === category) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>

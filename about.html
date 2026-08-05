@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Story — About Shri Mekalsuta Traders | Bareli, MP</title>
+  <meta name="description" content="Three generations of trust in construction materials. Shri Mekalsuta Traders — authorized dealer in Bareli, Madhya Pradesh. Kamdhenu Award Winner." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .about-split { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-12); align-items: center; }
+    @media (max-width: 1100px) { .about-split { grid-template-columns: 1fr; } }
+    .about-img-wrap { position: relative; border-radius: var(--radius-2xl); overflow: hidden; }
+    .about-img-wrap img { width: 100%; height: 500px; object-fit: cover; }
+    .about-stats-overlay { position: absolute; bottom: 20px; left: 20px; right: 20px; background: rgba(12,37,68,.9); backdrop-filter: blur(12px); border-radius: var(--radius-xl); padding: var(--space-4); display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3); }
+    .about-stat { text-align: center; }
+    .about-stat-num { font-family: var(--font-number); font-size: 1.5rem; font-weight: 800; color: var(--orange); }
+    .about-stat-lbl { font-size: 0.6875rem; color: rgba(255,255,255,.65); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 500; }
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3); }
+    @media (max-width: 768px) { .values-grid { grid-template-columns: 1fr; } }
+    .value-card { background: var(--white); border: 1.5px solid var(--border); border-radius: var(--radius-xl); padding: var(--space-5); transition: all var(--duration-normal) var(--ease-out); }
+    .value-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: transparent; }
+    .value-icon { width: 52px; height: 52px; background: rgba(18,53,91,.08); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; font-size: 1.375rem; margin-bottom: var(--space-3); }
+    .founder-quote { background: var(--primary); border-radius: var(--radius-2xl); padding: var(--space-8); position: relative; overflow: hidden; }
+    .founder-quote::before { content: '"'; position: absolute; top: -20px; left: var(--space-6); font-size: 12rem; font-family: var(--font-heading); color: rgba(255,255,255,.05); line-height: 1; }
+    .legacy-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-3); }
+    @media (max-width: 768px) { .legacy-grid { grid-template-columns: repeat(2, 1fr); } }
+    .legacy-card { background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--radius-xl); padding: var(--space-5); display: flex; align-items: flex-start; gap: var(--space-3); }
+  </style>
+</head>
+<body>
+
+<!-- Announcement Bar -->
+<div class="announcement-bar">
+  <div class="container">
+    <div class="announcement-left">
+      <div class="announcement-location">📍 Bareli, Madhya Pradesh, India</div>
+      <div class="announcement-divider"></div>
+      <div class="ann-badge">🏆 Best Performing Rural Dealer — Kamdhenu</div>
+    </div>
+    <div class="announcement-right">
+      <a href="tel:+917000000000" class="ann-btn ann-btn-call">📞 +91 70000 00000</a>
+      <a href="javascript:openWhatsApp()" class="ann-btn ann-btn-whatsapp">💬 WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-name">Shri Mekalsuta Traders</span>
+      <span class="nav-logo-sub">Premium Construction Materials</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="products.html" class="nav-link">Products</a></li>
+      <li><a href="brands.html" class="nav-link">Brands</a></li>
+      <li><a href="roofing.html" class="nav-link">Roofing</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+      <li><a href="about.html" class="nav-link active">About</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="quote.html" class="btn btn-primary btn-sm">Request Quote →</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile" id="mobileNav">
+  <ul><li><a href="index.html" class="nav-link">Home</a></li><li><a href="products.html" class="nav-link">Products</a></li><li><a href="brands.html" class="nav-link">Brands</a></li><li><a href="roofing.html" class="nav-link">Roofing</a></li><li><a href="projects.html" class="nav-link">Projects</a></li><li><a href="gallery.html" class="nav-link">Gallery</a></li><li><a href="about.html" class="nav-link">About</a></li><li><a href="contact.html" class="nav-link">Contact</a></li></ul>
+  <div style="margin-top:auto;display:flex;flex-direction:column;gap:12px;padding-top:32px;border-top:1px solid var(--border);">
+    <a href="tel:+917000000000" class="btn btn-outline-primary btn-lg w-full">Call Now</a>
+    <a href="quote.html" class="btn btn-primary btn-lg w-full">Request Quote</a>
+  </div>
+</div>
+
+<!-- Page Hero -->
+<section class="page-hero" aria-label="About page hero">
+  <div class="container page-hero-content">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">›</span><span>About Us</span></nav>
+    <h1 class="page-hero-title">Our Story</h1>
+    <p class="page-hero-sub">Three generations of trust in premium construction materials — serving contractors, builders and engineers across Madhya Pradesh.</p>
+  </div>
+</section>
+
+<!-- ── COMPANY STORY ── -->
+<section class="section" style="background:var(--white);" aria-label="Company story">
+  <div class="container">
+    <div class="about-split">
+      <div class="about-img-wrap reveal">
+        <img src="images/about_store.jpg" alt="Shri Mekalsuta Traders store" loading="lazy" />
+        <div class="about-stats-overlay">
+          <div class="about-stat"><div class="about-stat-num">500+</div><div class="about-stat-lbl">Customers</div></div>
+          <div class="about-stat"><div class="about-stat-num">10+</div><div class="about-stat-lbl">Brands</div></div>
+          <div class="about-stat"><div class="about-stat-num">5.0★</div><div class="about-stat-lbl">Google Rating</div></div>
+          <div class="about-stat"><div class="about-stat-num">🏆</div><div class="about-stat-lbl">Award Winner</div></div>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="section-label mb-3"><div class="section-label-line"></div><span class="text-label">Who We Are</span></div>
+        <h2 class="text-h2 mb-4">Built on Three <span style="color:var(--orange);">Generations of Trust</span></h2>
+        <p class="text-body mb-4">
+          Shri Mekalsuta Traders was founded with a simple belief: quality materials and honest service build lasting relationships. Our legacy was established by our founder, <strong>Late Shri Nathuram Ji Verma</strong>, who believed that trust is the foundation of every great business.
+        </p>
+        <p class="text-body mb-4">
+          Located in Bareli, Madhya Pradesh, we have grown from a local building materials supplier to a trusted, multi-brand authorized dealer serving contractors, civil engineers, architects, industrial buyers, government contractors and home owners across the region.
+        </p>
+        <p class="text-body mb-5">
+          Today, we are proud authorized dealers of <strong>UltraTech Cement, Tata Steel, JSW Steel, Kamdhenu, Jindal Steel, APL Apollo, Tata Structura</strong> and many more. We source TMT bars directly from Raipur to ensure the best quality at the most competitive prices.
+        </p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="quote.html" class="btn btn-primary">Request a Quote</a>
+          <a href="contact.html" class="btn btn-outline-primary">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOUNDER QUOTE ── -->
+<section style="background:var(--bg);padding:var(--space-12) 0;" aria-label="Founder's legacy">
+  <div class="container">
+    <div class="founder-quote reveal">
+      <div style="max-width:680px;margin:0 auto;text-align:center;position:relative;z-index:1;">
+        <div style="font-size:2rem;margin-bottom:var(--space-4);">🙏</div>
+        <p style="font-family:var(--font-heading);font-size:clamp(1.125rem,2vw,1.5rem);color:var(--white);line-height:1.6;font-weight:500;margin-bottom:var(--space-4);">
+          "We are trying our best to maintain the trust that was built by our Grandfather — Late Shri Nathuram Ji Verma"
+        </p>
+        <div style="font-size:0.875rem;color:rgba(255,255,255,.5);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;">— Shri Mekalsuta Traders Family</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── MISSION VISION VALUES ── -->
+<section class="section" style="background:var(--white);" aria-label="Mission, Vision and Values">
+  <div class="container">
+    <div class="text-center mb-10 reveal">
+      <div class="section-label" style="justify-content:center;"><div class="section-label-line"></div><span class="text-label">Our Foundation</span><div class="section-label-line"></div></div>
+      <h2 class="text-h2 mt-3">Mission, Vision &amp; <span style="color:var(--orange);">Values</span></h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-card reveal reveal-delay-1">
+        <div class="value-icon">🎯</div>
+        <h3 class="text-h4 mb-2">Our Mission</h3>
+        <p class="text-body">To provide genuine, high-quality construction materials from India's most trusted brands at competitive prices, with expert guidance and timely delivery — making every construction project stronger.</p>
+      </div>
+      <div class="value-card reveal reveal-delay-2">
+        <div class="value-icon">🔭</div>
+        <h3 class="text-h4 mb-2">Our Vision</h3>
+        <p class="text-body">To be Madhya Pradesh's most trusted and preferred construction materials partner — recognized for quality, reliability and customer-first service across residential, commercial and industrial projects.</p>
+      </div>
+      <div class="value-card reveal reveal-delay-3">
+        <div class="value-icon">💎</div>
+        <h3 class="text-h4 mb-2">Our Values</h3>
+        <p class="text-body">Integrity in every transaction. Quality in every product. Trust built through generations. We never compromise on authenticity — every product is genuine, certified and sourced directly from manufacturers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── TIMELINE ── -->
+<section class="section" style="background:var(--bg);" aria-label="Company history timeline">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-12);align-items:start;">
+      <div class="reveal">
+        <div class="section-label mb-3"><div class="section-label-line"></div><span class="text-label">Our Journey</span></div>
+        <h2 class="text-h2 mb-4">A Legacy Built <span style="color:var(--orange);">Over Generations</span></h2>
+        <p class="text-body mb-5">From a humble beginning to becoming one of the region's most trusted construction material dealers — our journey has been built on trust, hard work and a commitment to excellence.</p>
+        <img src="images/about_store.jpg" alt="Mekalsuta Traders store" style="border-radius:var(--radius-xl);width:100%;height:280px;object-fit:cover;" loading="lazy" />
+      </div>
+      <div class="timeline reveal reveal-delay-2">
+        <div class="timeline-item">
+          <div class="timeline-year">Founding Generation</div>
+          <div class="timeline-title">The Foundation of Trust</div>
+          <div class="timeline-desc">Late Shri Nathuram Ji Verma established the business legacy — building a reputation for quality and honesty in Bareli that continues to this day.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">Growth Era</div>
+          <div class="timeline-title">Expanding the Range</div>
+          <div class="timeline-desc">Expanded from basic building materials to a comprehensive range including structural steel, cement, pipes, wire and roofing products.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">Modern Era</div>
+          <div class="timeline-title">Authorized Dealer Status</div>
+          <div class="timeline-desc">Became official authorized dealer of UltraTech Cement, Tata Steel, JSW Steel, Kamdhenu and other premium national brands.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2021</div>
+          <div class="timeline-title">🏆 Award of Excellence</div>
+          <div class="timeline-desc">Recognized by Kamdhenu Limited as Best Performing Rural Dealer — a landmark achievement in our journey of excellence.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">Today</div>
+          <div class="timeline-title">★★★★★ 5.0 Rated Dealer</div>
+          <div class="timeline-desc">Serving 500+ satisfied customers with 10+ premium brands, maintaining a perfect 5.0 Google rating — continuing the tradition of trust.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHAT WE OFFER ── -->
+<section class="section" style="background:var(--white);" aria-label="What we offer">
+  <div class="container">
+    <div class="text-center mb-10 reveal">
+      <div class="section-label" style="justify-content:center;"><div class="section-label-line"></div><span class="text-label">What We Offer</span><div class="section-label-line"></div></div>
+      <h2 class="text-h2 mt-3">The Mekalsuta <span style="color:var(--orange);">Promise</span></h2>
+    </div>
+    <div class="legacy-grid">
+      <div class="legacy-card reveal reveal-delay-1">
+        <div style="font-size:1.75rem;flex-shrink:0;">✅</div>
+        <div>
+          <h3 style="font-family:var(--font-heading);font-size:1rem;font-weight:700;color:var(--text-dark);margin-bottom:8px;">Quality Material</h3>
+          <p class="text-body" style="font-size:0.875rem;">We provide quality material like TMT which we buy directly from Raipur. In Structure we deal in Kamdhenu &amp; Tata &amp; Profile Coil from JSW.</p>
+        </div>
+      </div>
+      <div class="legacy-card reveal reveal-delay-2">
+        <div style="font-size:1.75rem;flex-shrink:0;">📦</div>
+        <div>
+          <h3 style="font-family:var(--font-heading);font-size:1rem;font-weight:700;color:var(--text-dark);margin-bottom:8px;">Variety &amp; Range</h3>
+          <p class="text-body" style="font-size:0.875rem;">Wide range of Building Material from Light Structure to Heavy Structure, TMT, Cement, Profile Sheet, Wire &amp; Chain-Link — all under one roof.</p>
+        </div>
+      </div>
+      <div class="legacy-card reveal reveal-delay-3">
+        <div style="font-size:1.75rem;flex-shrink:0;">💰</div>
+        <div>
+          <h3 style="font-family:var(--font-heading);font-size:1rem;font-weight:700;color:var(--text-dark);margin-bottom:8px;">Competitive Rate</h3>
+          <p class="text-body" style="font-size:0.875rem;">We are associated with many companies — Auth. Dealer Kamdhenu TMT &amp; Structure, UltraTech Cement, Tata Wiron — helping us provide rates others can't.</p>
+        </div>
+      </div>
+      <div class="legacy-card reveal reveal-delay-1">
+        <div style="font-size:1.75rem;flex-shrink:0;">🤝</div>
+        <div>
+          <h3 style="font-family:var(--font-heading);font-size:1rem;font-weight:700;color:var(--text-dark);margin-bottom:8px;">Trust</h3>
+          <p class="text-body" style="font-size:0.875rem;">We are maintaining the Trust built by our Grandfather Late Shri Nathuram Ji Verma. Trust that has been earned through decades of honest dealing.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── AWARD SECTION ── -->
+<section style="background:#0A0F1A;padding:var(--space-20) 0;" aria-label="Awards and recognition">
+  <div class="container">
+    <div class="awards-inner">
+      <div class="awards-img-wrap reveal">
+        <div class="awards-img-frame">
+          <img src="images/award_bg.jpg" alt="Kamdhenu Best Performing Rural Dealer Award" loading="lazy" style="height:400px;object-fit:cover;" />
+          <div class="awards-img-badge">
+            <div class="awards-img-badge-title">🏆 Best Performing Rural Dealer</div>
+            <div class="awards-img-badge-sub">Kamdhenu Limited · August 2021</div>
+          </div>
+        </div>
+      </div>
+      <div class="awards-content reveal reveal-delay-2">
+        <div class="awards-label-gold"><span>✦</span> Recognition of Excellence</div>
+        <h2 class="awards-title">Awarded for <span>Outstanding Performance</span></h2>
+        <p class="awards-desc">We are deeply honored to have been recognized by Kamdhenu Limited — one of India's most respected steel manufacturers — as the Best Performing Rural Dealer for Bareli.</p>
+        <div class="awards-highlight">
+          <p class="awards-highlight-text">"We proudly present this award to you in recognition of your dedication, hard work and growth"</p>
+          <div class="awards-highlight-credit">— Kamdhenu Limited · August 2021</div>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Work With Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:var(--primary);padding:var(--space-12) 0;" aria-label="Call to action">
+  <div class="container text-center reveal">
+    <h2 class="text-h2" style="color:var(--white);margin-bottom:var(--space-3);">Ready to Build with the Best?</h2>
+    <p style="color:rgba(255,255,255,.7);font-size:1.1rem;margin-bottom:var(--space-6);">Join 500+ satisfied customers who trust Shri Mekalsuta Traders for all their construction material needs.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <a href="quote.html" class="btn btn-primary btn-lg">Request a Quote</a>
+      <a href="contact.html" class="btn btn-outline btn-lg">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">Shri Mekalsuta Traders</div>
+        <div class="footer-brand-sub">Premium Construction Materials</div>
+        <p class="footer-desc">Three generations of trust. Authorized dealer of India's finest construction brands in Bareli, Madhya Pradesh.</p>
+        <div class="footer-contact-links">
+          <a href="tel:+917000000000" class="footer-contact-link">📞 +91 70000 00000</a>
+          <a href="javascript:openWhatsApp()" class="footer-contact-link">💬 WhatsApp Chat</a>
+          <span class="footer-contact-link">📍 Bareli, Madhya Pradesh, India</span>
+        </div>
+      </div>
+      <div><h3 class="footer-col-title">Quick Links</h3><ul class="footer-links"><li><a href="index.html" class="footer-link">Home</a></li><li><a href="about.html" class="footer-link">About</a></li><li><a href="products.html" class="footer-link">Products</a></li><li><a href="brands.html" class="footer-link">Brands</a></li><li><a href="roofing.html" class="footer-link">Roofing</a></li><li><a href="contact.html" class="footer-link">Contact</a></li><li><a href="quote.html" class="footer-link">Request Quote</a></li></ul></div>
+      <div><h3 class="footer-col-title">Products</h3><ul class="footer-links"><li><a href="products.html" class="footer-link">TMT Steel Bars</a></li><li><a href="products.html" class="footer-link">Cement</a></li><li><a href="roofing.html" class="footer-link">Roofing Sheets</a></li><li><a href="products.html" class="footer-link">Structural Steel</a></li><li><a href="products.html" class="footer-link">Pipes &amp; Tubes</a></li><li><a href="products.html" class="footer-link">Wire Products</a></li></ul></div>
+      <div><h3 class="footer-col-title">Brands</h3><ul class="footer-links"><li><a href="brands.html" class="footer-link">UltraTech Cement</a></li><li><a href="brands.html" class="footer-link">JSW Steel</a></li><li><a href="brands.html" class="footer-link">Tata Steel</a></li><li><a href="brands.html" class="footer-link">Kamdhenu Steel</a></li><li><a href="brands.html" class="footer-link">APL Apollo</a></li><li><a href="brands.html" class="footer-link">Tata Structura</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-bottom-text">© 2024 Shri Mekalsuta Traders, Bareli, MP. All rights reserved.</p>
+      <div class="footer-bottom-badges"><span class="footer-badge">★★★★★ 5.0</span><span class="footer-badge">🏆 Best Rural Dealer</span><span class="footer-badge">✓ Auth. Dealer</span></div>
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" tabindex="-1"><button class="lightbox-close">✕</button><img class="lightbox-img" src="" alt="" /></div>
+<div class="mobile-cta"><a href="tel:+917000000000" class="btn btn-secondary">📞 Call</a><a href="javascript:openWhatsApp()" class="btn" style="background:#25D366;color:white;">💬 WhatsApp</a><a href="quote.html" class="btn btn-primary">Quote</a></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

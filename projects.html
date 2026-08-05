@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Shri Mekalsuta Traders | Construction Projects MP</title>
+  <meta name="description" content="Explore construction projects supplied by Shri Mekalsuta Traders — residential, industrial, commercial, agricultural and government projects in Madhya Pradesh." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .project-filter-bar { display: flex; align-items: center; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-8); }
+    .project-filter-btn { padding: 9px 20px; border: 1.5px solid var(--border); border-radius: var(--radius-full); font-size: 0.875rem; font-weight: 600; color: var(--text-mid); background: var(--white); cursor: pointer; transition: all var(--duration-fast) var(--ease-out); }
+    .project-filter-btn:hover, .project-filter-btn.active { background: var(--primary); color: var(--white); border-color: var(--primary); }
+    .projects-full-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
+    @media (max-width: 1100px) { .projects-full-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 768px) { .projects-full-grid { grid-template-columns: 1fr; } }
+    .project-full-card { border-radius: var(--radius-xl); overflow: hidden; position: relative; cursor: pointer; aspect-ratio: 4/3; }
+    .project-full-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s var(--ease-out); }
+    .project-full-card:hover img { transform: scale(1.06); }
+    .project-full-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(12,37,68,.85) 0%, transparent 50%); }
+    .project-full-info { position: absolute; bottom: 0; left: 0; right: 0; padding: var(--space-4); }
+    .project-cta-section { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); border-radius: var(--radius-2xl); padding: var(--space-8); text-align: center; margin-top: var(--space-10); }
+  </style>
+</head>
+<body>
+
+<!-- Announcement Bar -->
+<div class="announcement-bar">
+  <div class="container">
+    <div class="announcement-left">
+      <div class="announcement-location">📍 Bareli, Madhya Pradesh, India</div>
+      <div class="announcement-divider"></div>
+      <div class="ann-badge">★ 5.0 Google Rating</div>
+    </div>
+    <div class="announcement-right">
+      <a href="tel:+917000000000" class="ann-btn ann-btn-call">📞 +91 70000 00000</a>
+      <a href="javascript:openWhatsApp()" class="ann-btn ann-btn-whatsapp">💬 WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-name">Shri Mekalsuta Traders</span>
+      <span class="nav-logo-sub">Premium Construction Materials</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="products.html" class="nav-link">Products</a></li>
+      <li><a href="brands.html" class="nav-link">Brands</a></li>
+      <li><a href="roofing.html" class="nav-link">Roofing</a></li>
+      <li><a href="projects.html" class="nav-link active">Projects</a></li>
+      <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-cta"><a href="quote.html" class="btn btn-primary btn-sm">Request Quote →</a></div>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile" id="mobileNav">
+  <ul><li><a href="index.html" class="nav-link">Home</a></li><li><a href="products.html" class="nav-link">Products</a></li><li><a href="brands.html" class="nav-link">Brands</a></li><li><a href="roofing.html" class="nav-link">Roofing</a></li><li><a href="projects.html" class="nav-link">Projects</a></li><li><a href="gallery.html" class="nav-link">Gallery</a></li><li><a href="about.html" class="nav-link">About</a></li><li><a href="contact.html" class="nav-link">Contact</a></li></ul>
+  <div style="margin-top:auto;display:flex;flex-direction:column;gap:12px;padding-top:32px;border-top:1px solid var(--border);">
+    <a href="tel:+917000000000" class="btn btn-outline-primary btn-lg w-full">Call Now</a>
+    <a href="quote.html" class="btn btn-primary btn-lg w-full">Request Quote</a>
+  </div>
+</div>
+
+<!-- Page Hero -->
+<section class="page-hero" aria-label="Projects hero">
+  <div class="container page-hero-content">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">›</span><span>Projects</span></nav>
+    <h1 class="page-hero-title">Materials Powering Real Projects</h1>
+    <p class="page-hero-sub">From residential homes to large industrial facilities — our premium construction materials power projects across Madhya Pradesh.</p>
+  </div>
+</section>
+
+<!-- Projects -->
+<section class="section" style="background:var(--bg);" aria-label="Project gallery">
+  <div class="container">
+    <!-- Filter Bar -->
+    <div class="project-filter-bar reveal">
+      <button class="project-filter-btn active" data-filter-btn="all" onclick="filterProjects('all')">All Projects</button>
+      <button class="project-filter-btn" data-filter-btn="residential" onclick="filterProjects('residential')">Residential</button>
+      <button class="project-filter-btn" data-filter-btn="industrial" onclick="filterProjects('industrial')">Industrial</button>
+      <button class="project-filter-btn" data-filter-btn="commercial" onclick="filterProjects('commercial')">Commercial</button>
+      <button class="project-filter-btn" data-filter-btn="agricultural" onclick="filterProjects('agricultural')">Agricultural</button>
+      <button class="project-filter-btn" data-filter-btn="government" onclick="filterProjects('government')">Government</button>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="projects-full-grid">
+      <div class="project-full-card reveal" data-category="residential" data-lightbox="images/project_residential.jpg" data-alt="Residential complex">
+        <img src="images/project_residential.jpg" alt="Multi-storey residential complex" loading="lazy" />
+        <div class="project-full-overlay"></div>
+        <div class="project-full-info">
+          <div class="project-card-tag">Residential</div>
+          <div class="project-card-title">Multi-Storey Residential Complex</div>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,.6);margin-top:4px;">TMT Fe 500D · UltraTech Cement</div>
+        </div>
+      </div>
+
+      <div class="project-full-card reveal reveal-delay-1" data-category="industrial" data-lightbox="images/project_industrial.jpg" data-alt="Industrial factory">
+        <img src="images/project_industrial.jpg" alt="Industrial factory structure" loading="lazy" />
+        <div class="project-full-overlay"></div>
+        <div class="project-full-info">
+          <div class="project-card-tag">Industrial</div>
+          <div class="project-card-title">Industrial Manufacturing Facility</div>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,.6);margin-top:4px;">JSW Structural Steel · Color Coated Sheets</div>
+        </div>
+      </div>
+
+      <div class="project-full-card reveal reveal-delay-2" data-category="commercial" data-lightbox="images/project_warehouse.jpg" data-alt="Commercial warehouse">
+        <img src="images/project_warehouse.jpg" alt="Commercial warehouse" loading="lazy" />
+        <div class="project-full-overlay"></div>
+        <div class="project-full-info">
+          <div class="project-card-tag">Commercial</div>
+          <div class="project-card-title">Large Commercial Warehouse</div>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,.6);margin-top:4px;">Steel Structure · GP Roofing Sheets</div>
+        </div>
+      </div>
+
+      <div class="project-full-card reveal reveal-delay-1" data-category="agricultural" data-lightbox="images/about_store.jpg" data-alt="Agricultural shed">
+        <img src="images/about_store.jpg" alt="Agricultural storage shed" loading="lazy" />
+        <div class="project-full-overlay"></div>
+        <div class="project-full-info">
+          <div class="project-card-tag">Agricultural</div>
+          <div class="project-card-title">Farm Storage Facility</div>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,.6);margin-top:4px;">GC Roofing · MS Angle</div>
+        </div>
+      </div>
+
+      <div class="project-full-card reveal reveal-delay-2" data-category="government" data-lightbox="images/hero_warehouse.jpg" data-alt="Government project">
+        <img src="images/hero_warehouse.jpg" alt="Government infrastructure project" loading="lazy" />
+        <div class="project-full-overlay"></div>
+        <div class="project-full-info">
+          <div class="project-card-tag">Government</div>
+          <div class="project-card-title">Government Infrastructure</div>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,.6);margin-top:4px;">ISI Certified TMT · Structural Steel</div>
+        </div>
+      </div>
+
+      <div class="project-full-card reveal reveal-delay-3" data-category="residential" data-lightbox="images/product_tmt.jpg" data-alt="Residential foundation">
+        <img src="images/product_tmt.jpg" alt="Residential building foundation" loading="lazy" />
+        <div class="project-full-overlay"></div>
+        <div class="project-full-info">
+          <div class="project-card-tag">Residential</div>
+          <div class="project-card-title">Individual House Construction</div>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,.6);margin-top:4px;">Kamdhenu TMT · UltraTech Cement</div>
+        </div>
+      </div>
+
+      <div class="project-full-card reveal reveal-delay-1" data-category="industrial" data-lightbox="images/product_structural.jpg" data-alt="Industrial steel structure">
+        <img src="images/product_structural.jpg" alt="Industrial steel structure" loading="lazy" />
+        <div class="project-full-overlay"></div>
+        <div class="project-full-info">
+          <div class="project-card-tag">Industrial</div>
+          <div class="project-card-title">Steel Fabrication Workshop</div>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,.6);margin-top:4px;">MS Channel · MS Angle · Beams</div>
+        </div>
+      </div>
+
+      <div class="project-full-card reveal reveal-delay-2" data-category="commercial" data-lightbox="images/roofing_section.jpg" data-alt="Commercial roofing">
+        <img src="images/roofing_section.jpg" alt="Commercial building with roofing" loading="lazy" />
+        <div class="project-full-overlay"></div>
+        <div class="project-full-info">
+          <div class="project-card-tag">Commercial</div>
+          <div class="project-card-title">Shopping Complex Roofing</div>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,.6);margin-top:4px;">Color Coated Profile Sheets</div>
+        </div>
+      </div>
+
+      <div class="project-full-card reveal reveal-delay-3" data-category="agricultural" data-lightbox="images/project_residential.jpg" data-alt="Poultry shed">
+        <img src="images/project_residential.jpg" alt="Agricultural poultry shed" loading="lazy" />
+        <div class="project-full-overlay"></div>
+        <div class="project-full-info">
+          <div class="project-card-tag">Agricultural</div>
+          <div class="project-card-title">Poultry &amp; Dairy Infrastructure</div>
+          <div style="font-size:0.75rem;color:rgba(255,255,255,.6);margin-top:4px;">GC Sheets · Structural Steel</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="project-cta-section reveal">
+      <h2 class="text-h3" style="color:var(--white);margin-bottom:var(--space-3);">Planning Your Next Project?</h2>
+      <p style="font-size:1rem;color:rgba(255,255,255,.75);margin-bottom:var(--space-5);max-width:480px;margin-left:auto;margin-right:auto;">Get the right materials at the best prices. Our team will help you select the perfect products for your construction needs.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+        <a href="quote.html" class="btn btn-primary btn-lg">Request a Quote</a>
+        <a href="products.html" class="btn btn-outline btn-lg">Browse Products</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">Shri Mekalsuta Traders</div>
+        <div class="footer-brand-sub">Premium Construction Materials</div>
+        <p class="footer-desc">Three generations of trust in Bareli, Madhya Pradesh.</p>
+        <div class="footer-contact-links">
+          <a href="tel:+917000000000" class="footer-contact-link">📞 +91 70000 00000</a>
+          <a href="javascript:openWhatsApp()" class="footer-contact-link">💬 WhatsApp</a>
+          <span class="footer-contact-link">📍 Bareli, MP</span>
+        </div>
+      </div>
+      <div><h3 class="footer-col-title">Quick Links</h3><ul class="footer-links"><li><a href="index.html" class="footer-link">Home</a></li><li><a href="products.html" class="footer-link">Products</a></li><li><a href="brands.html" class="footer-link">Brands</a></li><li><a href="roofing.html" class="footer-link">Roofing</a></li><li><a href="about.html" class="footer-link">About</a></li><li><a href="contact.html" class="footer-link">Contact</a></li></ul></div>
+      <div><h3 class="footer-col-title">Project Types</h3><ul class="footer-links"><li><span class="footer-link">Residential</span></li><li><span class="footer-link">Industrial</span></li><li><span class="footer-link">Commercial</span></li><li><span class="footer-link">Agricultural</span></li><li><span class="footer-link">Government</span></li></ul></div>
+      <div><h3 class="footer-col-title">Products</h3><ul class="footer-links"><li><a href="products.html" class="footer-link">TMT Steel Bars</a></li><li><a href="products.html" class="footer-link">Cement</a></li><li><a href="roofing.html" class="footer-link">Roofing Sheets</a></li><li><a href="products.html" class="footer-link">Structural Steel</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-bottom-text">© 2024 Shri Mekalsuta Traders, Bareli, MP. All rights reserved.</p>
+      <div class="footer-bottom-badges"><span class="footer-badge">★★★★★ 5.0</span><span class="footer-badge">✓ Auth. Dealer</span></div>
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" tabindex="-1"><button class="lightbox-close">✕</button><img class="lightbox-img" src="" alt="" /></div>
+<div class="mobile-cta"><a href="tel:+917000000000" class="btn btn-secondary">📞 Call</a><a href="javascript:openWhatsApp()" class="btn" style="background:#25D366;color:white;">💬 WhatsApp</a><a href="quote.html" class="btn btn-primary">Quote</a></div>
+
+<script src="js/main.js"></script>
+<script>
+function filterProjects(category) {
+  document.querySelectorAll('.project-filter-btn').forEach(b => b.classList.toggle('active', b.dataset.filterBtn === category));
+  document.querySelectorAll('[data-category]').forEach(card => {
+    card.style.display = (category === 'all' || card.dataset.category === category) ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>

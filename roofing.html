@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roofing Solutions — SM Roofing | Shri Mekalsuta Traders</title>
+  <meta name="description" content="Premium roofing sheets for residential, industrial, commercial and agricultural structures. GP sheets, color coated, profile sheets. Bareli, Madhya Pradesh." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .roofing-hero {
+      background: var(--primary);
+      padding: 120px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .roofing-hero-bg {
+      position: absolute; inset: 0; z-index: 0;
+    }
+    .roofing-hero-bg img {
+      width: 100%; height: 100%; object-fit: cover; opacity: 0.25;
+    }
+    .roofing-hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(105deg, rgba(12,37,68,.95) 0%, rgba(12,37,68,.75) 100%);
+      z-index: 1;
+    }
+    .roofing-hero-content {
+      position: relative; z-index: 2;
+    }
+    .roofing-types-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-3);
+    }
+    @media (max-width: 768px) { .roofing-types-grid { grid-template-columns: 1fr; } }
+    .roofing-type-card {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      transition: all var(--duration-normal) var(--ease-out);
+    }
+    .roofing-type-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: transparent;
+    }
+    .roofing-type-img {
+      height: 220px; overflow: hidden;
+    }
+    .roofing-type-img img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.5s var(--ease-out);
+    }
+    .roofing-type-card:hover .roofing-type-img img { transform: scale(1.06); }
+    .roofing-type-body { padding: var(--space-5); }
+    .roofing-specs-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-4);
+    }
+    @media (max-width: 768px) { .roofing-specs-grid { grid-template-columns: 1fr; } }
+    .spec-card {
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-4);
+    }
+    .spec-label {
+      font-size: 0.75rem; font-weight: 600; color: var(--text-muted);
+      text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px;
+    }
+    .spec-value {
+      font-family: var(--font-number);
+      font-size: 1.125rem; font-weight: 700; color: var(--text-dark);
+    }
+    .usage-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-3);
+    }
+    @media (max-width: 768px) { .usage-grid { grid-template-columns: repeat(2, 1fr); } }
+    .usage-card {
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-5);
+      text-align: center;
+      transition: all var(--duration-normal) var(--ease-out);
+    }
+    .usage-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .usage-icon { font-size: 2rem; margin-bottom: var(--space-2); }
+  </style>
+</head>
+<body>
+
+<!-- Announcement Bar -->
+<div class="announcement-bar">
+  <div class="container">
+    <div class="announcement-left">
+      <div class="announcement-location">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Bareli, Madhya Pradesh, India
+      </div>
+      <div class="announcement-divider"></div>
+      <div class="ann-badge">★ Best Performing Rural Dealer — Kamdhenu</div>
+    </div>
+    <div class="announcement-right">
+      <a href="tel:+917000000000" class="ann-btn ann-btn-call">📞 +91 70000 00000</a>
+      <a href="javascript:openWhatsApp()" class="ann-btn ann-btn-whatsapp">💬 WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <div class="container navbar-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-name">Shri Mekalsuta Traders</span>
+      <span class="nav-logo-sub">Premium Construction Materials</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="products.html" class="nav-link">Products</a></li>
+      <li><a href="brands.html" class="nav-link">Brands</a></li>
+      <li><a href="roofing.html" class="nav-link active">Roofing</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="quote.html" class="btn btn-primary btn-sm">Request Quote →</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="nav-mobile" id="mobileNav">
+  <ul><li><a href="index.html" class="nav-link">Home</a></li><li><a href="products.html" class="nav-link">Products</a></li><li><a href="brands.html" class="nav-link">Brands</a></li><li><a href="roofing.html" class="nav-link">Roofing</a></li><li><a href="projects.html" class="nav-link">Projects</a></li><li><a href="gallery.html" class="nav-link">Gallery</a></li><li><a href="about.html" class="nav-link">About</a></li><li><a href="contact.html" class="nav-link">Contact</a></li></ul>
+  <div style="margin-top:auto;display:flex;flex-direction:column;gap:12px;padding-top:32px;border-top:1px solid var(--border);">
+    <a href="tel:+917000000000" class="btn btn-outline-primary btn-lg w-full">Call Now</a>
+    <a href="quote.html" class="btn btn-primary btn-lg w-full">Request Quote</a>
+  </div>
+</div>
+
+<!-- ── ROOFING HERO ── -->
+<section class="roofing-hero" aria-label="SM Roofing hero">
+  <div class="roofing-hero-bg">
+    <img src="images/roofing_section.jpg" alt="Premium roofing installation" />
+  </div>
+  <div class="roofing-hero-overlay"></div>
+  <div class="container roofing-hero-content">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>Roofing Solutions</span>
+    </nav>
+    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(249,115,22,.2);border:1px solid rgba(249,115,22,.4);border-radius:99px;padding:6px 16px;font-size:0.75rem;font-weight:600;color:var(--orange);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:var(--space-4);">
+      🏠 SM Roofing Solutions
+    </div>
+    <h1 class="hero-title" style="animation:none;opacity:1;transform:none;">
+      Premium Roofing for<br />
+      <span style="color:var(--orange);">Every Structure</span>
+    </h1>
+    <p style="font-size:1.1rem;color:rgba(255,255,255,.75);max-width:560px;line-height:1.7;margin:var(--space-4) 0 var(--space-6);">
+      From residential homes to industrial warehouses and agricultural sheds — we supply the complete range of high-quality roofing sheets with expert guidance and site delivery.
+    </p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;">
+      <a href="quote.html" class="btn btn-primary btn-lg">Get Roofing Quote</a>
+      <a href="tel:+917000000000" class="btn btn-outline btn-lg">Call for Advice</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHAT IS SM ROOFING ── -->
+<section class="section" style="background:var(--white);" aria-label="About SM Roofing">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-12);align-items:center;" class="reveal">
+      <div>
+        <div class="section-label mb-3">
+          <div class="section-label-line"></div>
+          <span class="text-label">SM Roofing</span>
+        </div>
+        <h2 class="text-h2 mb-4">Industrial-Grade <span style="color:var(--orange);">Roofing Solutions</span></h2>
+        <p class="text-body mb-4">
+          SM Roofing is our specialized roofing division under Shri Mekalsuta Traders, dedicated to providing the finest quality roofing sheets for all types of structures. Whether you're building a small farmhouse, a large industrial facility, or a commercial warehouse — we have the right roofing product at the best price.
+        </p>
+        <p class="text-body mb-5">
+          We stock a complete range of Galvanized Plain (GP) sheets, Galvanized Corrugated (GC) sheets, Color Coated sheets, and Profile Sheets from India's leading manufacturers including Tata Steel and JSW Steel.
+        </p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="quote.html" class="btn btn-primary">Request Roofing Quote</a>
+          <a href="javascript:openWhatsApp('I need roofing sheets for my project.')" class="btn btn-outline-primary">WhatsApp Us</a>
+        </div>
+      </div>
+      <div style="position:relative;border-radius:var(--radius-2xl);overflow:hidden;">
+        <img src="images/roofing_section.jpg" alt="Premium roofing installation" style="width:100%;height:400px;object-fit:cover;" loading="lazy" />
+        <div style="position:absolute;bottom:20px;left:20px;background:linear-gradient(135deg,#D4AF37,#C5A020);border-radius:var(--radius-lg);padding:16px 20px;">
+          <div style="font-family:var(--font-heading);font-size:0.875rem;font-weight:700;color:#0C2544;">SM Roofing Solutions</div>
+          <div style="font-size:0.75rem;color:rgba(12,37,68,.7);font-weight:500;">by Shri Mekalsuta Traders</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ROOFING TYPES ── -->
+<section class="section" style="background:var(--bg);" aria-label="Types of roofing sheets">
+  <div class="container">
+    <div class="text-center mb-10 reveal">
+      <div class="section-label" style="justify-content:center;"><div class="section-label-line"></div><span class="text-label">Our Range</span><div class="section-label-line"></div></div>
+      <h2 class="text-h2 mt-3">Roofing Sheet <span style="color:var(--orange);">Types</span></h2>
+    </div>
+    <div class="roofing-types-grid">
+      <div class="roofing-type-card reveal reveal-delay-1">
+        <div class="roofing-type-img"><img src="images/roofing_section.jpg" alt="GP Roofing Sheets" loading="lazy" /></div>
+        <div class="roofing-type-body">
+          <div style="display:flex;gap:8px;margin-bottom:var(--space-2);"><span class="badge badge-primary">GP Sheets</span><span class="badge badge-success">In Stock</span></div>
+          <h3 class="text-h4 mb-2">Galvanized Plain (GP) Sheets</h3>
+          <p class="text-body mb-3">Hot-dip galvanized steel sheets for general roofing applications. Excellent corrosion resistance with standard finish.</p>
+          <div class="product-specs"><span class="spec-tag">0.35mm – 0.80mm</span><span class="spec-tag">ISI Certified</span><span class="spec-tag">Zinc Coated</span></div>
+          <a href="quote.html" class="btn btn-primary btn-sm w-full mt-3">Get Quote</a>
+        </div>
+      </div>
+      <div class="roofing-type-card reveal reveal-delay-2">
+        <div class="roofing-type-img"><img src="images/project_warehouse.jpg" alt="GC Roofing Sheets" loading="lazy" /></div>
+        <div class="roofing-type-body">
+          <div style="display:flex;gap:8px;margin-bottom:var(--space-2);"><span class="badge badge-primary">GC Sheets</span><span class="badge badge-success">In Stock</span></div>
+          <h3 class="text-h4 mb-2">Galvanized Corrugated (GC) Sheets</h3>
+          <p class="text-body mb-3">Corrugated profile for extra strength and rigidity. Ideal for industrial and agricultural roofing requiring higher load capacity.</p>
+          <div class="product-specs"><span class="spec-tag">0.35mm – 0.80mm</span><span class="spec-tag">High Strength</span><span class="spec-tag">Corrugated</span></div>
+          <a href="quote.html" class="btn btn-primary btn-sm w-full mt-3">Get Quote</a>
+        </div>
+      </div>
+      <div class="roofing-type-card reveal reveal-delay-3">
+        <div class="roofing-type-img"><img src="images/roofing_section.jpg" alt="Color Coated Sheets" loading="lazy" /></div>
+        <div class="roofing-type-body">
+          <div style="display:flex;gap:8px;margin-bottom:var(--space-2);"><span class="badge badge-orange">Color Coated</span><span class="badge badge-success">In Stock</span></div>
+          <h3 class="text-h4 mb-2">Color Coated Profile Sheets</h3>
+          <p class="text-body mb-3">Pre-painted color coated sheets with premium polyester coating. Available in multiple colors for aesthetic modern buildings.</p>
+          <div class="product-specs"><span class="spec-tag">Blue · Red · White · Green</span><span class="spec-tag">PE Coated</span><span class="spec-tag">Anti-Rust</span></div>
+          <a href="quote.html" class="btn btn-primary btn-sm w-full mt-3">Get Quote</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SPECIFICATIONS ── -->
+<section class="section" style="background:var(--white);" aria-label="Technical specifications">
+  <div class="container">
+    <div class="section-header reveal">
+      <div>
+        <div class="section-label mb-3"><div class="section-label-line"></div><span class="text-label">Specifications</span></div>
+        <h2 class="text-h2">Technical <span style="color:var(--orange);">Specifications</span></h2>
+      </div>
+    </div>
+    <div class="roofing-specs-grid reveal reveal-delay-1">
+      <div class="spec-card"><div class="spec-label">Thickness Range</div><div class="spec-value">0.35mm – 0.80mm</div></div>
+      <div class="spec-card"><div class="spec-label">Standard Lengths</div><div class="spec-value">6ft · 8ft · 10ft · 12ft</div></div>
+      <div class="spec-card"><div class="spec-label">Sheet Width</div><div class="spec-value">1050mm – 1250mm</div></div>
+      <div class="spec-card"><div class="spec-label">Zinc Coating</div><div class="spec-value">80 GSM – 275 GSM</div></div>
+      <div class="spec-card"><div class="spec-label">Service Life</div><div class="spec-value">25 – 30 Years</div></div>
+      <div class="spec-card"><div class="spec-label">Color Options</div><div class="spec-value">Blue · Red · White · Green · Grey</div></div>
+      <div class="spec-card"><div class="spec-label">IS Standard</div><div class="spec-value">IS 277 · IS 3502</div></div>
+      <div class="spec-card"><div class="spec-label">Brands Available</div><div class="spec-value">Tata Steel · JSW · SAIL</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── APPLICATIONS ── -->
+<section class="section" style="background:var(--bg);" aria-label="Applications and use cases">
+  <div class="container">
+    <div class="text-center mb-10 reveal">
+      <div class="section-label" style="justify-content:center;"><div class="section-label-line"></div><span class="text-label">Applications</span><div class="section-label-line"></div></div>
+      <h2 class="text-h2 mt-3">Where We <span style="color:var(--orange);">Supply</span></h2>
+    </div>
+    <div class="usage-grid">
+      <div class="usage-card reveal reveal-delay-1"><div class="usage-icon">🏘️</div><h3 class="text-h4 mb-2">Residential</h3><p class="text-small">Home roofs, kitchen sheds, porches and extensions.</p></div>
+      <div class="usage-card reveal reveal-delay-2"><div class="usage-icon">🏭</div><h3 class="text-h4 mb-2">Industrial</h3><p class="text-small">Factory sheds, manufacturing plants, warehouses.</p></div>
+      <div class="usage-card reveal reveal-delay-3"><div class="usage-icon">🌾</div><h3 class="text-h4 mb-2">Agricultural</h3><p class="text-small">Grain storage, cattle sheds, farm machinery stores.</p></div>
+      <div class="usage-card reveal reveal-delay-1"><div class="usage-icon">🏢</div><h3 class="text-h4 mb-2">Commercial</h3><p class="text-small">Shops, showrooms, malls, parking structures.</p></div>
+      <div class="usage-card reveal reveal-delay-2"><div class="usage-icon">🏫</div><h3 class="text-h4 mb-2">Government</h3><p class="text-small">Schools, community halls, public infrastructure projects.</p></div>
+      <div class="usage-card reveal reveal-delay-3"><div class="usage-icon">🚛</div><h3 class="text-h4 mb-2">Transport</h3><p class="text-small">Truck bodies, bus depots, vehicle parking facilities.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── BENEFITS DARK SECTION ── -->
+<section style="background:#0A0F1A;padding:var(--space-20) 0;" aria-label="Why choose SM Roofing">
+  <div class="container">
+    <div class="text-center mb-10 reveal">
+      <h2 class="text-h2" style="color:var(--white);">Why Choose <span style="color:var(--orange);">SM Roofing?</span></h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-3);" class="reveal reveal-delay-1">
+      <div style="text-align:center;padding:var(--space-5);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-xl);">
+        <div style="font-size:2.5rem;margin-bottom:var(--space-3);">🌧️</div>
+        <h3 style="font-family:var(--font-heading);font-size:1rem;font-weight:700;color:var(--white);margin-bottom:8px;">Weatherproof</h3>
+        <p style="font-size:0.875rem;color:rgba(255,255,255,.55);line-height:1.6;">Engineered to withstand heavy rain, strong winds and UV radiation year-round.</p>
+      </div>
+      <div style="text-align:center;padding:var(--space-5);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-xl);">
+        <div style="font-size:2.5rem;margin-bottom:var(--space-3);">⚡</div>
+        <h3 style="font-family:var(--font-heading);font-size:1rem;font-weight:700;color:var(--white);margin-bottom:8px;">Fast Delivery</h3>
+        <p style="font-size:0.875rem;color:rgba(255,255,255,.55);line-height:1.6;">Prompt delivery to your construction site. Bulk orders handled efficiently.</p>
+      </div>
+      <div style="text-align:center;padding:var(--space-5);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-xl);">
+        <div style="font-size:2.5rem;margin-bottom:var(--space-3);">💰</div>
+        <h3 style="font-family:var(--font-heading);font-size:1rem;font-weight:700;color:var(--white);margin-bottom:8px;">Best Prices</h3>
+        <p style="font-size:0.875rem;color:rgba(255,255,255,.55);line-height:1.6;">Direct sourcing ensures market-competitive pricing without quality compromise.</p>
+      </div>
+      <div style="text-align:center;padding:var(--space-5);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-xl);">
+        <div style="font-size:2.5rem;margin-bottom:var(--space-3);">🔧</div>
+        <h3 style="font-family:var(--font-heading);font-size:1rem;font-weight:700;color:var(--white);margin-bottom:8px;">Expert Guidance</h3>
+        <p style="font-size:0.875rem;color:rgba(255,255,255,.55);line-height:1.6;">Our team helps you calculate sheet requirements and select the right product.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section style="background:var(--primary);padding:var(--space-12) 0;" aria-label="Get roofing quote">
+  <div class="container text-center reveal">
+    <h2 class="text-h2" style="color:var(--white);margin-bottom:var(--space-3);">Ready to Start Your Roofing Project?</h2>
+    <p style="font-size:1.1rem;color:rgba(255,255,255,.7);margin-bottom:var(--space-6);">Get a custom quote based on your measurements and requirements.</p>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <a href="quote.html" class="btn btn-primary btn-lg">Request Roofing Quote</a>
+      <a href="javascript:openWhatsApp('I need roofing sheets for my project. Please provide a quote.')" class="btn btn-outline btn-lg">WhatsApp for Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">Shri Mekalsuta Traders</div>
+        <div class="footer-brand-sub">SM Roofing Solutions</div>
+        <p class="footer-desc">Premium roofing sheets for every structure. Authorized dealer of Tata Steel and JSW roofing products.</p>
+        <div class="footer-contact-links">
+          <a href="tel:+917000000000" class="footer-contact-link">📞 +91 70000 00000</a>
+          <a href="javascript:openWhatsApp()" class="footer-contact-link">💬 WhatsApp Chat</a>
+          <span class="footer-contact-link">📍 Bareli, Madhya Pradesh, India</span>
+        </div>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="products.html" class="footer-link">Products</a></li>
+          <li><a href="roofing.html" class="footer-link">Roofing</a></li>
+          <li><a href="about.html" class="footer-link">About</a></li>
+          <li><a href="contact.html" class="footer-link">Contact</a></li>
+          <li><a href="quote.html" class="footer-link">Request Quote</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Roofing Types</h3>
+        <ul class="footer-links">
+          <li><a href="roofing.html" class="footer-link">GP Sheets</a></li>
+          <li><a href="roofing.html" class="footer-link">GC Sheets</a></li>
+          <li><a href="roofing.html" class="footer-link">Color Coated</a></li>
+          <li><a href="roofing.html" class="footer-link">Profile Sheets</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="footer-col-title">Our Brands</h3>
+        <ul class="footer-links">
+          <li><a href="brands.html" class="footer-link">Tata Steel</a></li>
+          <li><a href="brands.html" class="footer-link">JSW Steel</a></li>
+          <li><a href="brands.html" class="footer-link">SAIL</a></li>
+          <li><a href="brands.html" class="footer-link">View All Brands</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-bottom-text">© 2024 Shri Mekalsuta Traders — SM Roofing Solutions. Bareli, MP.</p>
+      <div class="footer-bottom-badges"><span class="footer-badge">★★★★★ 5.0</span><span class="footer-badge">✓ Auth. Dealer</span></div>
+    </div>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" tabindex="-1">
+  <button class="lightbox-close">✕</button>
+  <img class="lightbox-img" src="" alt="" />
+</div>
+
+<!-- Mobile CTAs -->
+<div class="mobile-cta">
+  <a href="tel:+917000000000" class="btn btn-secondary">📞 Call</a>
+  <a href="javascript:openWhatsApp()" class="btn" style="background:#25D366;color:white;">💬 WhatsApp</a>
+  <a href="quote.html" class="btn btn-primary">Quote</a>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

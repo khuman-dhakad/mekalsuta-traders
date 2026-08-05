@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Page Not Found | Shri Mekalsuta Traders</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    body { display: flex; flex-direction: column; min-height: 100vh; }
+    .not-found {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-20) var(--space-4);
+      background: var(--bg);
+      position: relative;
+      overflow: hidden;
+    }
+    .not-found::before {
+      content: '404';
+      position: absolute;
+      font-family: var(--font-number);
+      font-size: clamp(12rem, 30vw, 22rem);
+      font-weight: 900;
+      color: rgba(18,53,91,.04);
+      line-height: 1;
+      user-select: none;
+      pointer-events: none;
+    }
+    .not-found-content {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      max-width: 540px;
+    }
+    .not-found-code {
+      font-family: var(--font-number);
+      font-size: clamp(4rem, 10vw, 7rem);
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--primary), var(--orange));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: var(--space-4);
+    }
+    .not-found-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: var(--space-3);
+    }
+    .not-found-links {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-2);
+      margin-top: var(--space-6);
+      text-align: left;
+    }
+    .not-found-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 16px;
+      background: var(--white);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-lg);
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      text-decoration: none;
+      transition: all var(--duration-fast) var(--ease-out);
+    }
+    .not-found-link:hover {
+      background: var(--primary);
+      color: var(--white);
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+    .not-found-link span { font-size: 1.125rem; }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar" style="position:relative;">
+  <div class="container navbar-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-name">Shri Mekalsuta Traders</span>
+      <span class="nav-logo-sub">Premium Construction Materials</span>
+    </a>
+    <div class="nav-cta"><a href="index.html" class="btn btn-primary btn-sm">← Back to Home</a></div>
+  </div>
+</nav>
+
+<main class="not-found" aria-label="Page not found">
+  <div class="not-found-content">
+    <div class="not-found-code">404</div>
+    <h1 class="not-found-title">Page Not Found</h1>
+    <p class="text-body" style="color:var(--text-mid);font-size:1rem;">Looks like this page got lost on the way to the construction site. But we have everything else you need!</p>
+
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:var(--space-6);">
+      <a href="index.html" class="btn btn-primary btn-lg">← Home</a>
+      <a href="products.html" class="btn btn-outline-primary btn-lg">Browse Products</a>
+      <a href="quote.html" class="btn btn-secondary btn-lg">Get a Quote</a>
+    </div>
+
+    <div class="not-found-links">
+      <a href="products.html" class="not-found-link"><span>🔩</span> Products</a>
+      <a href="brands.html" class="not-found-link"><span>🏭</span> Brands</a>
+      <a href="roofing.html" class="not-found-link"><span>🏘️</span> Roofing</a>
+      <a href="projects.html" class="not-found-link"><span>🏗️</span> Projects</a>
+      <a href="gallery.html" class="not-found-link"><span>🖼️</span> Gallery</a>
+      <a href="about.html" class="not-found-link"><span>👥</span> About Us</a>
+      <a href="contact.html" class="not-found-link"><span>📞</span> Contact</a>
+      <a href="quote.html" class="not-found-link"><span>📋</span> Request Quote</a>
+    </div>
+  </div>
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>

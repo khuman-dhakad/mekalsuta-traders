@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shri Mekalsuta Traders — Premium Construction Materials Supplier in Bareli, MP</title>
+  <meta name="description" content="Authorized dealer of UltraTech, Tata Steel, JSW Steel, Kamdhenu & more. Premium TMT bars, roofing sheets, cement & structural steel in Bareli, Madhya Pradesh. ★★★★★ 5.0 Google Rating." />
+  <meta name="keywords" content="construction materials Bareli, TMT bars MP, JSW Steel dealer, UltraTech cement, Kamdhenu steel, roofing sheets, building materials Madhya Pradesh" />
+  <meta property="og:title" content="Shri Mekalsuta Traders — Premium Construction Materials" />
+  <meta property="og:description" content="Authorized dealer of India's top construction brands. 500+ satisfied customers. ★★★★★ 5.0 rating." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    /* Page-specific styles */
+    .brands-grid-section {
+      background: var(--white);
+      padding: var(--space-20) 0;
+    }
+    .brands-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-3);
+      margin-top: var(--space-10);
+    }
+    @media (max-width: 1100px) { .brands-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 768px)  { .brands-grid { grid-template-columns: repeat(2, 1fr); } }
+
+    .brand-card-lg {
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-6) var(--space-5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-3);
+      text-align: center;
+      transition: all var(--duration-normal) var(--ease-out);
+      cursor: default;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .brand-card-lg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(18,53,91,.0) 0%, rgba(249,115,22,.0) 100%);
+      transition: background var(--duration-normal);
+    }
+
+    .brand-card-lg:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
+    }
+
+    .brand-card-lg:hover::before {
+      background: linear-gradient(135deg, rgba(18,53,91,.04) 0%, rgba(249,115,22,.03) 100%);
+    }
+
+    .brand-logo-circle {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--white);
+      flex-shrink: 0;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-card-lg-name {
+      font-family: var(--font-heading);
+      font-size: 1.0625rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .brand-card-lg-type {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 500;
+    }
+
+    .brand-auth-tag {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      color: var(--success);
+      background: rgba(22,163,74,.08);
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+    }
+
+    /* Featured Products */
+    .featured-products-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+
+    /* Stats bar */
+    .stats-bar {
+      background: var(--primary);
+      padding: var(--space-8) 0;
+    }
+
+    .stats-bar-inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-6);
+    }
+
+    @media (max-width: 768px) {
+      .stats-bar-inner { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .stat-item {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-1);
+    }
+
+    .stat-item-number {
+      font-family: var(--font-number);
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .stat-item-label {
+      font-size: 0.8125rem;
+      color: rgba(255,255,255,.65);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .stat-item-divider {
+      width: 1px;
+      background: rgba(255,255,255,.15);
+    }
+
+    /* Category bg colors for gradient overlays */
+    .cat-steel      { background: linear-gradient(135deg, #1e293b 0%, #334155 100%); }
+    .cat-roofing    { background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%); }
+    .cat-cement     { background: linear-gradient(135deg, #78716c 0%, #57534e 100%); }
+    .cat-structural { background: linear-gradient(135deg, #065f46 0%, #047857 100%); }
+    .cat-pipes      { background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); }
+    .cat-wire       { background: linear-gradient(135deg, #92400e 0%, #b45309 100%); }
+    .cat-channel    { background: linear-gradient(135deg, #be185d 0%, #9d174d 100%); }
+    .cat-accessories{ background: linear-gradient(135deg, #0f766e 0%, #0d9488 100%); }
+
+    /* Section header layout */
+    .section-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: var(--space-10);
+    }
+
+    .section-header-left {}
+    .section-header-right {}
+
+    @media (max-width: 768px) {
+      .section-header { flex-direction: column; align-items: flex-start; gap: var(--space-4); }
+    }
+
+    /* Why card icon colors */
+    .why-icon-1 { color: var(--primary); }
+    .why-icon-2 { color: var(--orange); }
+    .why-icon-3 { color: var(--gold); }
+    .why-icon-4 { color: var(--success); }
+    .why-icon-5 { color: #7c3aed; }
+    .why-icon-6 { color: #0891b2; }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     ANNOUNCEMENT BAR
+═══════════════════════════════════════ -->
+<div class="announcement-bar" role="banner" aria-label="Business information bar">
+  <div class="container">
+    <div class="announcement-left">
+      <div class="announcement-location">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Bareli, Madhya Pradesh, India
+      </div>
+      <div class="announcement-divider" aria-hidden="true"></div>
+      <div class="ann-badge">★ Authorized Dealer</div>
+      <div class="announcement-divider" aria-hidden="true"></div>
+      <span style="font-size:0.8125rem; color:rgba(255,255,255,.75); font-weight:500;">Mon – Sat &nbsp;9:00 AM – 7:00 PM</span>
+    </div>
+    <div class="announcement-right">
+      <a href="tel:+917000000000" class="ann-btn ann-btn-call" aria-label="Call us">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 11a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 0h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 7.91a16 16 0 0 0 5.12 5.12l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +91 70000 00000
+      </a>
+      <a href="javascript:openWhatsApp()" class="ann-btn ann-btn-whatsapp" aria-label="WhatsApp us">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════ -->
+<nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="container navbar-inner">
+    <!-- Logo -->
+    <a href="index.html" class="nav-logo" aria-label="Shri Mekalsuta Traders Home">
+      <span class="nav-logo-name">Shri Mekalsuta Traders</span>
+      <span class="nav-logo-sub">Premium Construction Materials</span>
+    </a>
+
+    <!-- Desktop Links -->
+    <ul class="nav-links" role="list">
+      <li><a href="index.html" class="nav-link active">Home</a></li>
+      <li><a href="products.html" class="nav-link">Products</a></li>
+      <li><a href="brands.html" class="nav-link">Brands</a></li>
+      <li><a href="roofing.html" class="nav-link">Roofing</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+      <li><a href="about.html" class="nav-link">About</a></li>
+      <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+
+    <!-- CTA -->
+    <div class="nav-cta">
+      <a href="tel:+917000000000" class="nav-phone" aria-label="Call us">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 11a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 0h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 7.91a16 16 0 0 0 5.12 5.12l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        +91 70000 00000
+      </a>
+      <a href="quote.html" class="btn btn-primary btn-sm">
+        Request Quote
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+    <!-- Mobile Toggle -->
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Nav Drawer -->
+<div class="nav-mobile" id="mobileNav" role="dialog" aria-label="Mobile navigation">
+  <ul role="list" style="display:flex;flex-direction:column;gap:4px;">
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="products.html" class="nav-link">Products</a></li>
+    <li><a href="brands.html" class="nav-link">Brands</a></li>
+    <li><a href="roofing.html" class="nav-link">Roofing</a></li>
+    <li><a href="projects.html" class="nav-link">Projects</a></li>
+    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+    <li><a href="about.html" class="nav-link">About</a></li>
+    <li><a href="contact.html" class="nav-link">Contact</a></li>
+  </ul>
+  <div style="margin-top:auto; display:flex; flex-direction:column; gap:12px; padding-top:32px; border-top:1px solid var(--border);">
+    <a href="tel:+917000000000" class="btn btn-outline-primary btn-lg w-full">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 11a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 0h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 7.91a16 16 0 0 0 5.12 5.12l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call Now
+    </a>
+    <a href="quote.html" class="btn btn-primary btn-lg w-full">Request Quote</a>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     HERO SECTION
+═══════════════════════════════════════ -->
+<section class="hero" id="hero" aria-label="Hero section">
+  <div class="hero-bg">
+    <img
+      src="images/hero_warehouse.jpg"
+      alt="Shri Mekalsuta Traders — Premium steel warehouse"
+      loading="eager"
+      fetchpriority="high"
+    />
+  </div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+
+  <div class="hero-content container">
+    <!-- Eyebrow -->
+    <div class="hero-eyebrow">
+      <div class="hero-rating" role="img" aria-label="5 star Google rating">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <span class="hero-rating-text">5.0 Google Rating</span>
+      </div>
+      <div class="hero-dealer-badge">✓ Authorized Multi-Brand Dealer</div>
+    </div>
+
+    <!-- Headline -->
+    <h1 class="hero-title">
+      Building Strong Foundations<br />
+      With <span class="highlight">Premium</span><br />
+      Construction Materials
+    </h1>
+
+    <!-- Subtitle -->
+    <p class="hero-subtitle">
+      Authorized Dealer of UltraTech, Tata Steel, JSW Steel, Kamdhenu, Jindal Steel &amp; Power, APL Apollo, Tata Structura and India's leading construction brands. Serving contractors, builders &amp; engineers across Madhya Pradesh.
+    </p>
+
+    <!-- CTAs -->
+    <div class="hero-actions">
+      <a href="quote.html" class="btn btn-primary btn-lg" id="heroQuoteBtn">
+        Request Quote
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+      <a href="products.html" class="btn btn-outline btn-lg" id="heroProductsBtn">
+        Explore Products
+      </a>
+    </div>
+
+    <!-- Stats -->
+    <div class="hero-stats" role="list" aria-label="Key statistics">
+      <div class="hero-stat" role="listitem">
+        <span class="hero-stat-number"><span data-count="5" data-suffix=".0">5.0</span></span>
+        <span class="hero-stat-label">Google Rating</span>
+      </div>
+      <div class="hero-stat-divider" aria-hidden="true"></div>
+      <div class="hero-stat" role="listitem">
+        <span class="hero-stat-number"><span data-count="10" data-suffix="+">10+</span></span>
+        <span class="hero-stat-label">Premium Brands</span>
+      </div>
+      <div class="hero-stat-divider" aria-hidden="true"></div>
+      <div class="hero-stat" role="listitem">
+        <span class="hero-stat-number"><span data-count="500" data-suffix="+">500+</span></span>
+        <span class="hero-stat-label">Happy Customers</span>
+      </div>
+      <div class="hero-stat-divider" aria-hidden="true"></div>
+      <div class="hero-stat" role="listitem">
+        <span class="hero-stat-number">🏆</span>
+        <span class="hero-stat-label">Award Winner</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="hero-scroll" aria-hidden="true">
+    <span class="hero-scroll-text">Scroll</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     STATS BAR
+═══════════════════════════════════════ -->
+<section class="stats-bar" aria-label="Key statistics">
+  <div class="container">
+    <div class="stats-bar-inner">
+      <div class="stat-item">
+        <span class="stat-item-number">
+          <span data-count="500" data-suffix="+">500+</span>
+        </span>
+        <span class="stat-item-label">Satisfied Customers</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-item-number">
+          <span data-count="10" data-suffix="+">10+</span>
+        </span>
+        <span class="stat-item-label">Premium Brands</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-item-number">
+          <span data-count="5" data-suffix=".0">5.0</span>
+        </span>
+        <span class="stat-item-label">Google Rating</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-item-number">3+</span>
+        <span class="stat-item-label">Generations of Trust</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     TRUSTED BRANDS — Marquee + Grid
+═══════════════════════════════════════ -->
+<section class="brands-section" aria-label="Our trusted brands">
+  <div class="brands-label">
+    <p class="text-label">Authorized Dealer of India's Most Trusted Brands</p>
+  </div>
+  <div class="brands-marquee-wrapper">
+    <div class="brands-marquee" id="brandMarquee" aria-label="Brand logos carousel">
+      <!-- Brand cards repeated -->
+      <div class="brand-card"><span class="brand-card-name">UltraTech</span><span class="brand-card-sub">Cement</span></div>
+      <div class="brand-card"><span class="brand-card-name">JSW Steel</span><span class="brand-card-sub">Steel</span></div>
+      <div class="brand-card"><span class="brand-card-name">Tata Steel</span><span class="brand-card-sub">Steel</span></div>
+      <div class="brand-card"><span class="brand-card-name">Kamdhenu</span><span class="brand-card-sub">TMT Bars</span></div>
+      <div class="brand-card"><span class="brand-card-name">Jindal</span><span class="brand-card-sub">Steel &amp; Power</span></div>
+      <div class="brand-card"><span class="brand-card-name">APL Apollo</span><span class="brand-card-sub">Tubes</span></div>
+      <div class="brand-card"><span class="brand-card-name">Tata Structura</span><span class="brand-card-sub">Structural Steel</span></div>
+      <div class="brand-card"><span class="brand-card-name">BSP</span><span class="brand-card-sub">Bhilai Steel</span></div>
+      <div class="brand-card"><span class="brand-card-name">Tata Wiron</span><span class="brand-card-sub">Wire Products</span></div>
+      <div class="brand-card"><span class="brand-card-name">UltraTech</span><span class="brand-card-sub">Cement</span></div>
+      <div class="brand-card"><span class="brand-card-name">JSW Steel</span><span class="brand-card-sub">Steel</span></div>
+      <div class="brand-card"><span class="brand-card-name">Tata Steel</span><span class="brand-card-sub">Steel</span></div>
+      <div class="brand-card"><span class="brand-card-name">Kamdhenu</span><span class="brand-card-sub">TMT Bars</span></div>
+      <div class="brand-card"><span class="brand-card-name">Jindal</span><span class="brand-card-sub">Steel &amp; Power</span></div>
+      <div class="brand-card"><span class="brand-card-name">APL Apollo</span><span class="brand-card-sub">Tubes</span></div>
+      <div class="brand-card"><span class="brand-card-name">Tata Structura</span><span class="brand-card-sub">Structural Steel</span></div>
+      <div class="brand-card"><span class="brand-card-name">BSP</span><span class="brand-card-sub">Bhilai Steel</span></div>
+      <div class="brand-card"><span class="brand-card-name">Tata Wiron</span><span class="brand-card-sub">Wire Products</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Premium Brand Cards Grid -->
+<section class="brands-grid-section" aria-label="Featured brands">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-header-left reveal">
+        <div class="section-label">
+          <div class="section-label-line" aria-hidden="true"></div>
+          <span class="text-label">Our Brands</span>
+        </div>
+        <h2 class="text-h2 mt-2">Authorized Dealer of<br /><span style="color:var(--orange);">India's Finest</span></h2>
+      </div>
+      <div class="section-header-right reveal reveal-delay-2">
+        <a href="brands.html" class="btn btn-outline-primary">
+          View All Brands
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="brands-grid">
+      <!-- UltraTech -->
+      <div class="brand-card-lg reveal reveal-delay-1" role="article" aria-label="UltraTech Cement">
+        <div class="brand-logo-circle" style="background:linear-gradient(135deg,#1d4ed8,#2563eb);">UC</div>
+        <div>
+          <div class="brand-card-lg-name">UltraTech Cement</div>
+          <div class="brand-card-lg-type">Cement &amp; Building Solutions</div>
+        </div>
+        <div class="brand-auth-tag">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          Authorized Dealer
+        </div>
+      </div>
+
+      <!-- JSW Steel -->
+      <div class="brand-card-lg reveal reveal-delay-2" role="article" aria-label="JSW Steel">
+        <div class="brand-logo-circle" style="background:linear-gradient(135deg,#0f766e,#047857);">JSW</div>
+        <div>
+          <div class="brand-card-lg-name">JSW Steel</div>
+          <div class="brand-card-lg-type">TMT Bars &amp; Structural Steel</div>
+        </div>
+        <div class="brand-auth-tag">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          Authorized Dealer
+        </div>
+      </div>
+
+      <!-- Tata Steel -->
+      <div class="brand-card-lg reveal reveal-delay-3" role="article" aria-label="Tata Steel">
+        <div class="brand-logo-circle" style="background:linear-gradient(135deg,#1e293b,#334155);">TS</div>
+        <div>
+          <div class="brand-card-lg-name">Tata Steel</div>
+          <div class="brand-card-lg-type">Premium Grade Steel Products</div>
+        </div>
+        <div class="brand-auth-tag">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          Authorized Dealer
+        </div>
+      </div>
+
+      <!-- Kamdhenu -->
+      <div class="brand-card-lg reveal reveal-delay-4" role="article" aria-label="Kamdhenu Steel">
+        <div class="brand-logo-circle" style="background:linear-gradient(135deg,#b45309,#d97706);">KS</div>
+        <div>
+          <div class="brand-card-lg-name">Kamdhenu Steel</div>
+          <div class="brand-card-lg-type">TMT Bars &amp; Wire Products</div>
+        </div>
+        <div class="brand-auth-tag">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          Authorized Dealer
+        </div>
+      </div>
+
+      <!-- Jindal Steel -->
+      <div class="brand-card-lg reveal reveal-delay-1" role="article" aria-label="Jindal Steel and Power">
+        <div class="brand-logo-circle" style="background:linear-gradient(135deg,#be185d,#9d174d);">JSP</div>
+        <div>
+          <div class="brand-card-lg-name">Jindal Steel &amp; Power</div>
+          <div class="brand-card-lg-type">Structural Steel &amp; TMT</div>
+        </div>
+        <div class="brand-auth-tag">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          Authorized Dealer
+        </div>
+      </div>
+
+      <!-- APL Apollo -->
+      <div class="brand-card-lg reveal reveal-delay-2" role="article" aria-label="APL Apollo Tubes">
+        <div class="brand-logo-circle" style="background:linear-gradient(135deg,#7c3aed,#6d28d9);">APL</div>
+        <div>
+          <div class="brand-card-lg-name">APL Apollo</div>
+          <div class="brand-card-lg-type">Steel Tubes &amp; Pipes</div>
+        </div>
+        <div class="brand-auth-tag">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          Authorized Dealer
+        </div>
+      </div>
+
+      <!-- Tata Structura -->
+      <div class="brand-card-lg reveal reveal-delay-3" role="article" aria-label="Tata Structura">
+        <div class="brand-logo-circle" style="background:linear-gradient(135deg,#0891b2,#0e7490);">TStr</div>
+        <div>
+          <div class="brand-card-lg-name">Tata Structura</div>
+          <div class="brand-card-lg-type">Hollow Structural Sections</div>
+        </div>
+        <div class="brand-auth-tag">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          Authorized Dealer
+        </div>
+      </div>
+
+      <!-- BSP -->
+      <div class="brand-card-lg reveal reveal-delay-4" role="article" aria-label="BSP Bhilai Steel Plant">
+        <div class="brand-logo-circle" style="background:linear-gradient(135deg,#15803d,#166534);">BSP</div>
+        <div>
+          <div class="brand-card-lg-name">BSP — Bhilai Steel</div>
+          <div class="brand-card-lg-type">Structural Steel Products</div>
+        </div>
+        <div class="brand-auth-tag">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+          Authorized Dealer
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     PRODUCT CATEGORIES
+═══════════════════════════════════════ -->
+<section class="categories-section section" aria-label="Product categories">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-header-left reveal">
+        <div class="section-label">
+          <div class="section-label-line" aria-hidden="true"></div>
+          <span class="text-label">Our Products</span>
+        </div>
+        <h2 class="text-h2 mt-2">Complete Range of<br /><span style="color:var(--orange);">Building Materials</span></h2>
+      </div>
+      <div class="section-header-right reveal reveal-delay-2">
+        <a href="products.html" class="btn btn-outline-primary">
+          View All Products
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="category-grid">
+      <!-- TMT Steel — Large card -->
+      <a href="product-detail.html" class="category-card tall reveal" aria-label="TMT Steel Bars">
+        <img src="images/product_tmt.jpg" alt="Premium TMT steel bars" loading="lazy" />
+        <div class="category-card-overlay" aria-hidden="true"></div>
+        <div class="category-card-icon" aria-hidden="true">⚙️</div>
+        <div class="category-card-content">
+          <p class="category-card-name">TMT Steel Bars</p>
+          <p class="category-card-count">Fe 500D · Fe 550D · Fe 600</p>
+        </div>
+      </a>
+
+      <!-- Roofing -->
+      <a href="roofing.html" class="category-card reveal reveal-delay-1" aria-label="Roofing Sheets">
+        <img src="images/roofing_section.jpg" alt="Premium roofing sheets" loading="lazy" />
+        <div class="category-card-overlay" aria-hidden="true"></div>
+        <div class="category-card-icon" aria-hidden="true">🏗️</div>
+        <div class="category-card-content">
+          <p class="category-card-name">Roofing Sheets</p>
+          <p class="category-card-count">GP · GC · Color Coated</p>
+        </div>
+      </a>
+
+      <!-- Cement -->
+      <a href="products.html" class="category-card reveal reveal-delay-2" aria-label="Cement">
+        <img src="images/product_cement.jpg" alt="Premium cement bags" loading="lazy" />
+        <div class="category-card-overlay" aria-hidden="true"></div>
+        <div class="category-card-icon" aria-hidden="true">🏠</div>
+        <div class="category-card-content">
+          <p class="category-card-name">Cement</p>
+          <p class="category-card-count">OPC · PPC · SRC</p>
+        </div>
+      </a>
+
+      <!-- Structural Steel -->
+      <a href="products.html" class="category-card reveal reveal-delay-1" aria-label="Structural Steel">
+        <img src="images/product_structural.jpg" alt="Structural steel sections" loading="lazy" />
+        <div class="category-card-overlay" aria-hidden="true"></div>
+        <div class="category-card-icon" aria-hidden="true">🔩</div>
+        <div class="category-card-content">
+          <p class="category-card-name">Structural Steel</p>
+          <p class="category-card-count">Beams · Columns · Channels</p>
+        </div>
+      </a>
+
+      <!-- Wire Coils -->
+      <a href="products.html" class="category-card reveal reveal-delay-2" aria-label="Steel Wire Products">
+        <img src="images/hero_warehouse.jpg" alt="Steel wire coils" loading="lazy" style="object-position:right center" />
+        <div class="category-card-overlay" aria-hidden="true"></div>
+        <div class="category-card-icon" aria-hidden="true">🌀</div>
+        <div class="category-card-content">
+          <p class="category-card-name">Wire &amp; Chain Link</p>
+          <p class="category-card-count">Binding · Chain Link</p>
+        </div>
+      </a>
+
+      <!-- MS Angle / Channel -->
+      <a href="products.html" class="category-card reveal reveal-delay-3" aria-label="MS Angle and Channel">
+        <img src="images/project_industrial.jpg" alt="MS Angle and channel steel" loading="lazy" />
+        <div class="category-card-overlay" aria-hidden="true"></div>
+        <div class="category-card-icon" aria-hidden="true">📐</div>
+        <div class="category-card-content">
+          <p class="category-card-name">MS Angle &amp; Channel</p>
+          <p class="category-card-count">Light · Medium · Heavy</p>
+        </div>
+      </a>
+
+      <!-- Pipes -->
+      <a href="products.html" class="category-card reveal reveal-delay-2" aria-label="Steel Pipes and Tubes">
+        <img src="images/about_store.jpg" alt="Steel pipes and tubes" loading="lazy" />
+        <div class="category-card-overlay" aria-hidden="true"></div>
+        <div class="category-card-icon" aria-hidden="true">🔧</div>
+        <div class="category-card-content">
+          <p class="category-card-name">Pipes &amp; Tubes</p>
+          <p class="category-card-count">ERW · HSS · Square · Round</p>
+        </div>
+      </a>
+
+      <!-- Building Accessories -->
+      <a href="products.html" class="category-card reveal reveal-delay-3" aria-label="Building Accessories">
+        <img src="images/project_warehouse.jpg" alt="Building accessories" loading="lazy" />
+        <div class="category-card-overlay" aria-hidden="true"></div>
+        <div class="category-card-icon" aria-hidden="true">🧱</div>
+        <div class="category-card-content">
+          <p class="category-card-name">Building Accessories</p>
+          <p class="category-card-count">Nuts · Bolts · Hardware</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     WHY CHOOSE US
+═══════════════════════════════════════ -->
+<section class="why-section section" aria-label="Why choose Shri Mekalsuta Traders">
+  <div class="container">
+    <div class="text-center mb-10 reveal">
+      <div class="section-label" style="justify-content:center;">
+        <div class="section-label-line" aria-hidden="true"></div>
+        <span class="text-label">Why Choose Us</span>
+        <div class="section-label-line" aria-hidden="true"></div>
+      </div>
+      <h2 class="text-h2 mt-3">The Trusted Name in<br /><span style="color:var(--orange);">Madhya Pradesh</span></h2>
+      <p class="text-lead mt-3" style="max-width:540px; margin-left:auto; margin-right:auto;">
+        Three generations of trust, built on quality products and honest service.
+      </p>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card reveal reveal-delay-1">
+        <div class="why-icon why-icon-1" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3 class="why-title">Authorized Dealer</h3>
+        <p class="why-desc">Official authorized dealer of UltraTech, Tata Steel, JSW, Kamdhenu and more. 100% genuine products — every time.</p>
+      </div>
+
+      <div class="why-card reveal reveal-delay-2">
+        <div class="why-icon why-icon-2" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <h3 class="why-title">Fast Delivery</h3>
+        <p class="why-desc">Prompt delivery to construction sites across Bareli and surrounding districts. Bulk and urgent orders accommodated.</p>
+      </div>
+
+      <div class="why-card reveal reveal-delay-3">
+        <div class="why-icon why-icon-3" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        </div>
+        <h3 class="why-title">Award Winning</h3>
+        <p class="why-desc">Recognized by Kamdhenu Steel as Best Performing Rural Dealer — a testament to our excellence and customer trust.</p>
+      </div>
+
+      <div class="why-card reveal reveal-delay-1">
+        <div class="why-icon why-icon-4" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h3 class="why-title">Competitive Pricing</h3>
+        <p class="why-desc">We source directly from manufacturers, enabling us to offer market-leading prices without compromising quality.</p>
+      </div>
+
+      <div class="why-card reveal reveal-delay-2">
+        <div class="why-icon why-icon-5" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3 class="why-title">Expert Consultation</h3>
+        <p class="why-desc">Our experienced team helps you select the right grade and brand for your project — whether residential, commercial or industrial.</p>
+      </div>
+
+      <div class="why-card reveal reveal-delay-3">
+        <div class="why-icon why-icon-6" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3 class="why-title">Genuine Products</h3>
+        <p class="why-desc">Every product carries manufacturer certification. We never compromise on authenticity or quality standards.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FEATURED PRODUCTS
+═══════════════════════════════════════ -->
+<section class="products-section section" aria-label="Featured products">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-header-left reveal">
+        <div class="section-label">
+          <div class="section-label-line" aria-hidden="true"></div>
+          <span class="text-label">Featured Products</span>
+        </div>
+        <h2 class="text-h2 mt-2">Premium Products<br /><span style="color:var(--orange);">For Every Project</span></h2>
+      </div>
+      <div class="section-header-right reveal reveal-delay-2">
+        <a href="products.html" class="btn btn-outline-primary">Browse Catalog</a>
+      </div>
+    </div>
+
+    <div class="featured-products-list">
+      <!-- Product 1 -->
+      <article class="product-card-h reveal" aria-label="Kamdhenu TMT Steel Bars">
+        <div class="product-card-h-img">
+          <img src="images/product_tmt.jpg" alt="Kamdhenu TMT Steel Bars Fe 500D" loading="lazy" />
+        </div>
+        <div class="product-card-h-body">
+          <div class="product-card-h-top">
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:var(--space-2);">
+              <span class="badge badge-primary">Kamdhenu Steel</span>
+              <span class="badge badge-success">✓ In Stock</span>
+            </div>
+            <h3 class="text-h4 mb-2">Kamdhenu TMT Bars — Fe 500D</h3>
+            <p class="text-body mb-3">High-strength corrosion-resistant TMT bars for residential and commercial construction. Sourced directly from Raipur plant. Ideal for columns, beams, slabs and foundations.</p>
+            <div class="product-specs" aria-label="Product specifications">
+              <span class="spec-tag">Fe 500D Grade</span>
+              <span class="spec-tag">8mm – 32mm</span>
+              <span class="spec-tag">BIS Certified</span>
+              <span class="spec-tag">Corrosion Resistant</span>
+              <span class="spec-tag">High Ductility</span>
+            </div>
+          </div>
+          <div class="product-card-h-bottom" style="display:flex; gap:12px; align-items:center;">
+            <a href="quote.html" class="btn btn-primary">Get Quote</a>
+            <a href="product-detail.html" class="btn btn-outline-primary">View Details</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 2 -->
+      <article class="product-card-h reveal reveal-delay-1" aria-label="UltraTech Premium Cement">
+        <div class="product-card-h-img">
+          <img src="images/product_cement.jpg" alt="UltraTech Premium Cement" loading="lazy" />
+        </div>
+        <div class="product-card-h-body">
+          <div class="product-card-h-top">
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:var(--space-2);">
+              <span class="badge badge-primary">UltraTech Cement</span>
+              <span class="badge badge-success">✓ In Stock</span>
+            </div>
+            <h3 class="text-h4 mb-2">UltraTech Premium OPC 53 Grade</h3>
+            <p class="text-body mb-3">India's No.1 cement brand. Superior strength, consistent quality and excellent workability. Recommended for all structural applications.</p>
+            <div class="product-specs" aria-label="Product specifications">
+              <span class="spec-tag">OPC 53 Grade</span>
+              <span class="spec-tag">50 kg Bags</span>
+              <span class="spec-tag">ISI Marked</span>
+              <span class="spec-tag">High Early Strength</span>
+            </div>
+          </div>
+          <div class="product-card-h-bottom" style="display:flex; gap:12px; align-items:center;">
+            <a href="quote.html" class="btn btn-primary">Get Quote</a>
+            <a href="product-detail.html" class="btn btn-outline-primary">View Details</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Product 3 -->
+      <article class="product-card-h reveal reveal-delay-2" aria-label="JSW Structural Steel Sections">
+        <div class="product-card-h-img">
+          <img src="images/product_structural.jpg" alt="JSW Structural Steel Sections" loading="lazy" />
+        </div>
+        <div class="product-card-h-body">
+          <div class="product-card-h-top">
+            <div style="display:flex; align-items:center; gap:8px; margin-bottom:var(--space-2);">
+              <span class="badge badge-primary">JSW Steel</span>
+              <span class="badge badge-success">✓ In Stock</span>
+            </div>
+            <h3 class="text-h4 mb-2">JSW MS Angles, Channels &amp; Sections</h3>
+            <p class="text-body mb-3">Full range of mild steel structural sections for industrial, commercial and agricultural structures. Light to heavy structure applications.</p>
+            <div class="product-specs" aria-label="Product specifications">
+              <span class="spec-tag">MS Angle</span>
+              <span class="spec-tag">MS Channel</span>
+              <span class="spec-tag">I-Beam</span>
+              <span class="spec-tag">H-Beam</span>
+              <span class="spec-tag">Profile Sheet</span>
+            </div>
+          </div>
+          <div class="product-card-h-bottom" style="display:flex; gap:12px; align-items:center;">
+            <a href="quote.html" class="btn btn-primary">Get Quote</a>
+            <a href="product-detail.html" class="btn btn-outline-primary">View Details</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     ROOFING SOLUTIONS
+═══════════════════════════════════════ -->
+<section class="roofing-section" aria-label="SM Roofing Solutions">
+  <div class="roofing-img">
+    <img src="images/roofing_section.jpg" alt="Premium roofing installation" loading="lazy" />
+  </div>
+  <div class="roofing-content">
+    <div class="roofing-badge">
+      <span>🏠</span> SM Roofing Solutions
+    </div>
+    <h2 class="roofing-title">
+      Premium Roofing for<br />
+      <span>Every Structure</span>
+    </h2>
+    <p class="roofing-subtitle">
+      From agricultural sheds to industrial warehouses and commercial buildings — we supply the complete range of high-quality roofing sheets with expert guidance.
+    </p>
+    <div class="roofing-benefits" role="list">
+      <div class="roofing-benefit" role="listitem">
+        <div class="roofing-benefit-icon" aria-hidden="true">🌧️</div>
+        <span class="roofing-benefit-text">Weather Resistant &amp; Waterproof</span>
+      </div>
+      <div class="roofing-benefit" role="listitem">
+        <div class="roofing-benefit-icon" aria-hidden="true">⏳</div>
+        <span class="roofing-benefit-text">25+ Year Service Life</span>
+      </div>
+      <div class="roofing-benefit" role="listitem">
+        <div class="roofing-benefit-icon" aria-hidden="true">✨</div>
+        <span class="roofing-benefit-text">Premium Color Finish</span>
+      </div>
+      <div class="roofing-benefit" role="listitem">
+        <div class="roofing-benefit-icon" aria-hidden="true">🏭</div>
+        <span class="roofing-benefit-text">Industrial Grade Quality</span>
+      </div>
+    </div>
+    <div style="display:flex; gap:12px; flex-wrap:wrap;">
+      <a href="roofing.html" class="btn btn-primary">Explore Roofing</a>
+      <a href="quote.html" class="btn btn-outline">Get Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     AWARDS SECTION
+═══════════════════════════════════════ -->
+<section class="awards-section" aria-label="Awards and recognition">
+  <div class="container">
+    <div class="awards-inner">
+      <!-- Image -->
+      <div class="awards-img-wrap reveal">
+        <div class="awards-img-frame">
+          <img src="images/award_bg.jpg" alt="Kamdhenu Steel Best Performing Rural Dealer Award" loading="lazy" />
+          <div class="awards-img-badge">
+            <div class="awards-img-badge-title">🏆 Best Performing Rural Dealer</div>
+            <div class="awards-img-badge-sub">Awarded by Kamdhenu Limited · August 2021</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="awards-content reveal reveal-delay-2">
+        <div class="awards-label-gold">
+          <span>✦</span> Award of Excellence
+        </div>
+        <h2 class="awards-title">
+          Recognized for<br />
+          <span>Outstanding Excellence</span>
+        </h2>
+        <p class="awards-desc">
+          Shri Mekalsuta Traders was honored with the prestigious <strong style="color:var(--gold);">Best Performing Rural Dealer Award</strong> by Kamdhenu Limited — one of India's foremost steel manufacturers.
+        </p>
+        <div class="awards-highlight">
+          <p class="awards-highlight-text">
+            "We proudly present this award to you in recognition of your dedication, hard work and growth"
+          </p>
+          <div class="awards-highlight-credit">— Kamdhenu Limited · August 2021</div>
+        </div>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="about.html" class="btn btn-primary">Our Story</a>
+          <a href="contact.html" class="btn btn-outline">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     PROJECTS SECTION
+═══════════════════════════════════════ -->
+<section class="projects-section section" aria-label="Featured projects">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-header-left reveal">
+        <div class="section-label">
+          <div class="section-label-line" aria-hidden="true"></div>
+          <span class="text-label">Our Projects</span>
+        </div>
+        <h2 class="text-h2 mt-2">Materials Powering<br /><span style="color:var(--orange);">Real Projects</span></h2>
+      </div>
+      <div class="section-header-right reveal reveal-delay-2">
+        <a href="projects.html" class="btn btn-outline-primary">View All Projects</a>
+      </div>
+    </div>
+
+    <div class="projects-masonry">
+      <div class="project-card tall reveal" data-lightbox="images/project_residential.jpg" data-alt="Residential building project">
+        <img src="images/project_residential.jpg" alt="Multi-storey residential building" loading="lazy" />
+        <div class="project-card-overlay" aria-hidden="true"></div>
+        <div class="project-card-info">
+          <div class="project-card-tag">Residential</div>
+          <div class="project-card-title">Multi-Storey Residential Complex</div>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-1" data-lightbox="images/project_industrial.jpg" data-alt="Industrial project">
+        <img src="images/project_industrial.jpg" alt="Industrial steel structure" loading="lazy" />
+        <div class="project-card-overlay" aria-hidden="true"></div>
+        <div class="project-card-info">
+          <div class="project-card-tag">Industrial</div>
+          <div class="project-card-title">Industrial Steel Structure</div>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-2" data-lightbox="images/project_warehouse.jpg" data-alt="Warehouse project">
+        <img src="images/project_warehouse.jpg" alt="Commercial warehouse" loading="lazy" />
+        <div class="project-card-overlay" aria-hidden="true"></div>
+        <div class="project-card-info">
+          <div class="project-card-tag">Commercial</div>
+          <div class="project-card-title">Large Commercial Warehouse</div>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-1" data-lightbox="images/about_store.jpg" data-alt="Agricultural project">
+        <img src="images/about_store.jpg" alt="Agricultural shed structure" loading="lazy" />
+        <div class="project-card-overlay" aria-hidden="true"></div>
+        <div class="project-card-info">
+          <div class="project-card-tag">Agriculture</div>
+          <div class="project-card-title">Agricultural Storage Facility</div>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-2" data-lightbox="images/hero_warehouse.jpg" data-alt="Government project">
+        <img src="images/hero_warehouse.jpg" alt="Government project" loading="lazy" />
+        <div class="project-card-overlay" aria-hidden="true"></div>
+        <div class="project-card-info">
+          <div class="project-card-tag">Government</div>
+          <div class="project-card-title">Government Infrastructure</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     GALLERY SECTION
+═══════════════════════════════════════ -->
+<section class="gallery-section section" aria-label="Photo gallery">
+  <div class="container">
+    <div class="text-center mb-10 reveal">
+      <div class="section-label" style="justify-content:center;">
+        <div class="section-label-line" aria-hidden="true"></div>
+        <span class="text-label">Gallery</span>
+        <div class="section-label-line" aria-hidden="true"></div>
+      </div>
+      <h2 class="text-h2 mt-3">Our Warehouse &amp; Store</h2>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item reveal" data-lightbox="images/hero_warehouse.jpg" data-alt="Steel warehouse interior">
+        <img src="images/hero_warehouse.jpg" alt="Premium steel warehouse with TMT bars" loading="lazy" />
+        <div class="gallery-item-overlay">
+          <div class="gallery-zoom-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#12355B" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-1" data-lightbox="images/product_tmt.jpg" data-alt="TMT steel bars">
+        <img src="images/product_tmt.jpg" alt="TMT steel bars close-up" loading="lazy" />
+        <div class="gallery-item-overlay">
+          <div class="gallery-zoom-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#12355B" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-2" data-lightbox="images/roofing_section.jpg" data-alt="Roofing sheets">
+        <img src="images/roofing_section.jpg" alt="Premium color coated roofing sheets" loading="lazy" />
+        <div class="gallery-item-overlay">
+          <div class="gallery-zoom-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#12355B" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-1" data-lightbox="images/product_cement.jpg" data-alt="Cement products">
+        <img src="images/product_cement.jpg" alt="UltraTech cement bags in warehouse" loading="lazy" />
+        <div class="gallery-item-overlay">
+          <div class="gallery-zoom-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#12355B" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-2" data-lightbox="images/product_structural.jpg" data-alt="Structural steel">
+        <img src="images/product_structural.jpg" alt="Structural steel sections" loading="lazy" />
+        <div class="gallery-item-overlay">
+          <div class="gallery-zoom-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#12355B" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-3" data-lightbox="images/about_store.jpg" data-alt="Store interior">
+        <img src="images/about_store.jpg" alt="Mekalsuta Traders store interior" loading="lazy" />
+        <div class="gallery-item-overlay">
+          <div class="gallery-zoom-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#12355B" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-1" data-lightbox="images/project_industrial.jpg" data-alt="Industrial project">
+        <img src="images/project_industrial.jpg" alt="Industrial construction project" loading="lazy" />
+        <div class="gallery-item-overlay">
+          <div class="gallery-zoom-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#12355B" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-2" data-lightbox="images/project_warehouse.jpg" data-alt="Warehouse project">
+        <img src="images/project_warehouse.jpg" alt="Commercial warehouse construction" loading="lazy" />
+        <div class="gallery-item-overlay">
+          <div class="gallery-zoom-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#12355B" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-8 reveal">
+      <a href="gallery.html" class="btn btn-outline-primary btn-lg">View Full Gallery</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     GOOGLE REVIEWS
+═══════════════════════════════════════ -->
+<section class="reviews-section section" aria-label="Customer reviews">
+  <div class="container">
+    <div class="reviews-header-row">
+      <div class="reveal">
+        <div class="section-label mb-3">
+          <div class="section-label-line" aria-hidden="true"></div>
+          <span class="text-label">Customer Reviews</span>
+        </div>
+        <h2 class="text-h2">What Our Customers Say</h2>
+      </div>
+      <div class="reviews-aggregate reveal reveal-delay-2">
+        <span class="reviews-big-rating" aria-label="5 star rating">5.0</span>
+        <div>
+          <div class="reviews-stars-row" aria-label="5 stars">
+            <span class="star" aria-hidden="true">★</span>
+            <span class="star" aria-hidden="true">★</span>
+            <span class="star" aria-hidden="true">★</span>
+            <span class="star" aria-hidden="true">★</span>
+            <span class="star" aria-hidden="true">★</span>
+          </div>
+          <p class="reviews-count">Based on Google Reviews</p>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/160px-Google_2015_logo.svg.png" alt="Google" height="18" style="margin-top:6px; opacity:0.7;" loading="lazy" />
+        </div>
+      </div>
+    </div>
+
+    <div class="reviews-grid">
+      <article class="review-card reveal reveal-delay-1" aria-label="Review by Ramesh Kumar">
+        <div class="review-card-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#1d4ed8,#2563eb);" aria-hidden="true">RK</div>
+          <div class="review-meta">
+            <div class="review-name">Ramesh Kumar Verma</div>
+            <div class="review-source">Civil Contractor, Bareli</div>
+          </div>
+        </div>
+        <div class="review-stars" aria-label="5 stars">
+          <span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span>
+        </div>
+        <p class="review-text">"Best steel supplier in Bareli. Kamdhenu TMT quality is excellent and delivery is always on time. Have been purchasing for 3+ years now. Competitive rates and genuine products."</p>
+        <p class="review-date">2 months ago</p>
+      </article>
+
+      <article class="review-card reveal reveal-delay-2" aria-label="Review by Sunita Patel">
+        <div class="review-card-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#be185d,#9d174d);" aria-hidden="true">SP</div>
+          <div class="review-meta">
+            <div class="review-name">Sunita Patel</div>
+            <div class="review-source">Home Builder, Narsinghpur</div>
+          </div>
+        </div>
+        <div class="review-stars" aria-label="5 stars">
+          <span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span>
+        </div>
+        <p class="review-text">"Very trustworthy dealer. They helped me choose the right steel grade for my home construction. UltraTech cement was perfect. Highly recommended for anyone building a house."</p>
+        <p class="review-date">1 month ago</p>
+      </article>
+
+      <article class="review-card reveal reveal-delay-3" aria-label="Review by Ajay Singh">
+        <div class="review-card-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#0f766e,#047857);" aria-hidden="true">AS</div>
+          <div class="review-meta">
+            <div class="review-name">Ajay Singh Thakur</div>
+            <div class="review-source">Industrial Builder</div>
+          </div>
+        </div>
+        <div class="review-stars" aria-label="5 stars">
+          <span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span>
+        </div>
+        <p class="review-text">"Purchased JSW structural steel for my factory project. Quality was top-notch, pricing was competitive and they arranged delivery to site without any issues. Professional team."</p>
+        <p class="review-date">3 weeks ago</p>
+      </article>
+
+      <article class="review-card reveal reveal-delay-1" aria-label="Review by Priya Sharma">
+        <div class="review-card-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#b45309,#d97706);" aria-hidden="true">PS</div>
+          <div class="review-meta">
+            <div class="review-name">Priya Sharma</div>
+            <div class="review-source">Architect, Jabalpur</div>
+          </div>
+        </div>
+        <div class="review-stars" aria-label="5 stars">
+          <span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span>
+        </div>
+        <p class="review-text">"As an architect I specify materials for multiple projects. Mekalsuta Traders consistently delivers genuine Tata Steel products with proper documentation. Very professional dealer."</p>
+        <p class="review-date">5 weeks ago</p>
+      </article>
+
+      <article class="review-card reveal reveal-delay-2" aria-label="Review by Vikram Dubey">
+        <div class="review-card-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#7c3aed,#6d28d9);" aria-hidden="true">VD</div>
+          <div class="review-meta">
+            <div class="review-name">Vikram Dubey</div>
+            <div class="review-source">Farm Owner, Bareli</div>
+          </div>
+        </div>
+        <div class="review-stars" aria-label="5 stars">
+          <span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span>
+        </div>
+        <p class="review-text">"Got roofing sheets for my agricultural shed. SM Roofing quality is excellent. The team helped me calculate exactly how many sheets I needed. Fair price and quick delivery."</p>
+        <p class="review-date">6 weeks ago</p>
+      </article>
+
+      <article class="review-card reveal reveal-delay-3" aria-label="Review by Mohit Tiwari">
+        <div class="review-card-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#0891b2,#0e7490);" aria-hidden="true">MT</div>
+          <div class="review-meta">
+            <div class="review-name">Mohit Tiwari</div>
+            <div class="review-source">Government Contractor</div>
+          </div>
+        </div>
+        <div class="review-stars" aria-label="5 stars">
+          <span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span><span class="star" aria-hidden="true">★</span>
+        </div>
+        <p class="review-text">"For government tender projects we need ISI certified materials with proper bills. Mekalsuta provides everything properly. Highly trusted for bulk government supply work."</p>
+        <p class="review-date">2 months ago</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     CONTACT SECTION
+═══════════════════════════════════════ -->
+<section class="contact-section section" id="contact" aria-label="Contact us">
+  <div class="container">
+    <div class="text-center mb-10 reveal">
+      <div class="section-label" style="justify-content:center;">
+        <div class="section-label-line" aria-hidden="true"></div>
+        <span class="text-label">Get In Touch</span>
+        <div class="section-label-line" aria-hidden="true"></div>
+      </div>
+      <h2 class="text-h2 mt-3">Let's Build Together</h2>
+      <p class="text-lead mt-3" style="max-width:480px; margin:12px auto 0;">
+        Ready to start your project? Contact us for quotes, bulk orders, or expert advice.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <div class="contact-item reveal reveal-delay-1">
+          <div class="contact-item-icon" aria-hidden="true">📍</div>
+          <div>
+            <div class="contact-item-label">Address</div>
+            <div class="contact-item-value">Shri Mekalsuta Traders</div>
+            <div class="contact-item-sub">Bareli, Madhya Pradesh, India</div>
+          </div>
+        </div>
+
+        <div class="contact-item reveal reveal-delay-2">
+          <div class="contact-item-icon" aria-hidden="true">📞</div>
+          <div>
+            <div class="contact-item-label">Phone</div>
+            <a href="tel:+917000000000" class="contact-item-value">+91 70000 00000</a>
+            <div class="contact-item-sub">Mon – Sat, 9:00 AM – 7:00 PM</div>
+          </div>
+        </div>
+
+        <div class="contact-item reveal reveal-delay-3">
+          <div class="contact-item-icon" aria-hidden="true">💬</div>
+          <div>
+            <div class="contact-item-label">WhatsApp</div>
+            <button onclick="openWhatsApp()" class="contact-item-value" style="background:none;border:none;padding:0;cursor:pointer;font-family:inherit;font-weight:600;color:var(--text-dark);">Click to Chat</button>
+            <div class="contact-item-sub">Get instant response via WhatsApp</div>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div class="contact-map reveal reveal-delay-2" style="height:220px;">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3630.5!2d79.7!3d22.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDU0JzAwLjAiTiA3OcKwNDInMDAuMCJF!5e0!3m2!1sen!2sin!4v1699000000000!5m2!1sen!2sin"
+            title="Shri Mekalsuta Traders location map"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            style="border-radius:var(--radius-lg);"
+          ></iframe>
+        </div>
+      </div>
+
+      <!-- Quote Form -->
+      <div class="quote-form-card reveal reveal-delay-2">
+        <div style="margin-bottom:var(--space-5);">
+          <h3 class="text-h3">Request a Quote</h3>
+          <p class="text-small mt-2">Fill out the form and we'll get back to you within 2–4 hours.</p>
+        </div>
+
+        <form id="contactForm" data-validate action="thank-you.html" method="get" novalidate>
+          <div class="form-row" style="gap:var(--space-3); margin-bottom:var(--space-3);">
+            <div class="form-group">
+              <label class="form-label" for="contactName">Full Name <span>*</span></label>
+              <input type="text" id="contactName" name="name" class="form-input" placeholder="Your full name" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contactPhone">Phone <span>*</span></label>
+              <input type="tel" id="contactPhone" name="phone" class="form-input" placeholder="+91 XXXXX XXXXX" required autocomplete="tel" />
+            </div>
+          </div>
+
+          <div class="form-row" style="gap:var(--space-3); margin-bottom:var(--space-3);">
+            <div class="form-group">
+              <label class="form-label" for="contactMaterial">Material Required <span>*</span></label>
+              <div class="form-select-wrap">
+                <select id="contactMaterial" name="material" class="form-select" required>
+                  <option value="">Select material</option>
+                  <option>TMT Steel Bars</option>
+                  <option>Cement</option>
+                  <option>Roofing Sheets</option>
+                  <option>MS Angle / Channel</option>
+                  <option>Structural Steel</option>
+                  <option>Pipes &amp; Tubes</option>
+                  <option>Wire Products</option>
+                  <option>Multiple Materials</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="contactQty">Approximate Quantity</label>
+              <input type="text" id="contactQty" name="quantity" class="form-input" placeholder="e.g. 5 Tonnes, 100 Bags" />
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom:var(--space-3);">
+            <label class="form-label" for="contactMsg">Message</label>
+            <textarea id="contactMsg" name="message" class="form-textarea" placeholder="Describe your project or requirements..." rows="4"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg w-full">
+            Send Quote Request
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+
+          <div class="text-center mt-3">
+            <p class="text-small">Or <a href="javascript:openWhatsApp()" style="color:var(--primary); font-weight:600;">WhatsApp us directly</a> for instant response</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════ -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-top">
+      <!-- Brand -->
+      <div>
+        <div class="footer-brand-name">Shri Mekalsuta Traders</div>
+        <div class="footer-brand-sub">Premium Construction Materials</div>
+        <p class="footer-desc">
+          Three generations of trust. Authorized dealer of India's finest construction brands — serving contractors, builders, and engineers across Madhya Pradesh since decades.
+        </p>
+        <div class="footer-contact-links">
+          <a href="tel:+917000000000" class="footer-contact-link">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 11a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 0h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 7.91a16 16 0 0 0 5.12 5.12l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +91 70000 00000
+          </a>
+          <a href="javascript:openWhatsApp()" class="footer-contact-link">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="color:#25D366;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            WhatsApp Chat
+          </a>
+          <span class="footer-contact-link">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Bareli, Madhya Pradesh, India
+          </span>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="footer-col-title">Quick Links</h3>
+        <ul class="footer-links" role="list">
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="about.html" class="footer-link">About Us</a></li>
+          <li><a href="products.html" class="footer-link">Products</a></li>
+          <li><a href="brands.html" class="footer-link">Our Brands</a></li>
+          <li><a href="roofing.html" class="footer-link">Roofing Solutions</a></li>
+          <li><a href="projects.html" class="footer-link">Projects</a></li>
+          <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+          <li><a href="contact.html" class="footer-link">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Products -->
+      <div>
+        <h3 class="footer-col-title">Products</h3>
+        <ul class="footer-links" role="list">
+          <li><a href="products.html" class="footer-link">TMT Steel Bars</a></li>
+          <li><a href="products.html" class="footer-link">Cement</a></li>
+          <li><a href="roofing.html" class="footer-link">Roofing Sheets</a></li>
+          <li><a href="products.html" class="footer-link">MS Angle &amp; Channel</a></li>
+          <li><a href="products.html" class="footer-link">Structural Steel</a></li>
+          <li><a href="products.html" class="footer-link">Pipes &amp; Tubes</a></li>
+          <li><a href="products.html" class="footer-link">Wire Products</a></li>
+          <li><a href="quote.html" class="footer-link">Request Quote</a></li>
+        </ul>
+      </div>
+
+      <!-- Brands -->
+      <div>
+        <h3 class="footer-col-title">Our Brands</h3>
+        <ul class="footer-links" role="list">
+          <li><a href="brands.html" class="footer-link">UltraTech Cement</a></li>
+          <li><a href="brands.html" class="footer-link">JSW Steel</a></li>
+          <li><a href="brands.html" class="footer-link">Tata Steel</a></li>
+          <li><a href="brands.html" class="footer-link">Kamdhenu Steel</a></li>
+          <li><a href="brands.html" class="footer-link">Jindal Steel</a></li>
+          <li><a href="brands.html" class="footer-link">APL Apollo</a></li>
+          <li><a href="brands.html" class="footer-link">Tata Structura</a></li>
+          <li><a href="brands.html" class="footer-link">Tata Wiron</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-bottom-text">
+        © 2024 Shri Mekalsuta Traders, Bareli, MP. All rights reserved.
+      </p>
+      <div class="footer-bottom-badges">
+        <span class="footer-badge">★★★★★ 5.0 Google</span>
+        <span class="footer-badge">🏆 Best Rural Dealer</span>
+        <span class="footer-badge">✓ Auth. Dealer</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════
+     LIGHTBOX
+═══════════════════════════════════════ -->
+<div class="lightbox" id="lightbox" role="dialog" aria-label="Image lightbox" aria-modal="true" tabindex="-1">
+  <button class="lightbox-close" aria-label="Close lightbox">✕</button>
+  <img class="lightbox-img" src="" alt="" />
+</div>
+
+<!-- ═══════════════════════════════════════
+     MOBILE FLOATING CTAs
+═══════════════════════════════════════ -->
+<div class="mobile-cta" role="navigation" aria-label="Mobile quick actions">
+  <a href="tel:+917000000000" class="btn btn-secondary" aria-label="Call us">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 11a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 0h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 7.91a16 16 0 0 0 5.12 5.12l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Call Now
+  </a>
+  <a href="javascript:openWhatsApp()" class="btn" style="background:#25D366; color:white;" aria-label="WhatsApp us">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+    WhatsApp
+  </a>
+  <a href="quote.html" class="btn btn-primary" aria-label="Request quote">Quote</a>
+</div>
+
+<!-- Floating WhatsApp button -->
+<a href="javascript:openWhatsApp()" class="floating-quote" aria-label="WhatsApp" title="Chat on WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>
