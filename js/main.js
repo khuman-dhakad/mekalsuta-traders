@@ -377,7 +377,7 @@ window.showToast = (msg, type = 'success') => {
 
 // ── WhatsApp Helper ───────────────────────────────────────
 window.openWhatsApp = (msg) => {
-  const phone = '917000000000'; // Replace with actual phone
+  const phone = '918109216102'; // Replace with actual phone
   const text = msg || 'Hello! I am interested in your construction materials. Please share pricing.';
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
   window.open(url, '_blank', 'noopener');
