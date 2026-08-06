@@ -410,3 +410,51 @@ function setActiveNavLink() {
   });
 }
 
+// ── Google Maps — Smart Directions ────────────────────────
+//
+// Destination: Shri Mekalsuta Traders, Bareli, Madhya Pradesh
+// Opens Google Maps with the shop pre-selected as destination.
+// If geolocation is available and permitted, passes the user's
+// current coordinates as the origin so Maps can show the route
+// immediately. Falls back to destination-only link on denial.
+//
+window.openMaps = () => {
+  // Exact destination — business name + coordinates as fallback
+  const DEST_NAME   = 'Shri Mekalsuta Traders, Bareli, Madhya Pradesh';
+  const DEST_COORDS = '22.9168,79.7311'; // lat,lng of Bareli, MP
+
+  // Google Maps Directions API URL with destination pre-filled
+  const mapsBase = 'https://www.google.com/maps/dir/?api=1';
+  const destParam = encodeURIComponent(DEST_NAME);
+
+  if (!navigator.geolocation) {
+    // Browser doesn't support geolocation — open with destination only
+    window.open(
+      `${mapsBase}&destination=${destParam}`,
+      '_blank', 'noopener'
+    );
+    return;
+  }
+
+  // Try to get current location (timeout: 6 s)
+  navigator.geolocation.getCurrentPosition(
+    (pos) => {
+      const { latitude, longitude } = pos.coords;
+      // Open with both origin (current location) and destination
+      // Maps will immediately render the route
+      window.open(
+        `${mapsBase}&origin=${latitude},${longitude}&destination=${destParam}`,
+        '_blank', 'noopener'
+      );
+    },
+    () => {
+      // Permission denied or unavailable — destination-only link
+      // User still lands on Maps with the shop already selected
+      window.open(
+        `${mapsBase}&destination=${destParam}`,
+        '_blank', 'noopener'
+      );
+    },
+    { timeout: 6000, maximumAge: 60000 }
+  );
+};
