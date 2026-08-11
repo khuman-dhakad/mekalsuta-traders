@@ -54,7 +54,103 @@
       gap: var(--space-6);
     }
     @media (max-width: 992px) { .products-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 600px) { .products-grid { grid-template-columns: 1fr; } }
+
+    /* ── MOBILE-ONLY PRODUCT RANGE POLISH (max-width: 768px) ── */
+    @media (max-width: 768px) {
+      .page-hero {
+        padding: 32px 0 20px;
+        text-align: center;
+      }
+      .page-title {
+        font-size: clamp(1.45rem, 5.5vw, 1.85rem);
+        margin-bottom: 6px;
+        line-height: 1.25;
+      }
+      .page-subtitle {
+        font-size: 0.875rem;
+        line-height: 1.4;
+        opacity: 0.88;
+        max-width: 92%;
+        margin: 0 auto;
+      }
+      .products-container {
+        padding: 16px 0 32px;
+      }
+      .filter-bar {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        gap: 8px;
+        justify-content: flex-start;
+        padding: 4px 16px 8px;
+        margin: 0 -16px 16px;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+      }
+      .filter-bar::-webkit-scrollbar {
+        display: none;
+      }
+      .filter-btn {
+        flex-shrink: 0;
+        white-space: nowrap;
+        height: 44px;
+        min-height: 44px;
+        padding: 0 18px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        border-radius: 22px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .products-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .product-card {
+        border-radius: var(--radius-lg);
+      }
+      .product-img {
+        height: 180px;
+      }
+      .product-content {
+        padding: 14px 16px;
+      }
+      .product-title {
+        font-size: 1.125rem;
+        margin-bottom: 4px;
+      }
+      .product-desc {
+        font-size: 0.8125rem;
+        line-height: 1.45;
+        margin-bottom: 10px;
+      }
+      .product-specs {
+        margin-bottom: 12px;
+      }
+      .product-actions {
+        gap: 8px;
+      }
+      .product-actions .btn {
+        min-height: 42px;
+        height: 42px;
+        font-size: 0.8125rem;
+        padding: 8px 14px;
+      }
+      .cta-banner {
+        padding: 24px 16px;
+        margin: 24px 0;
+        border-radius: var(--radius-lg);
+      }
+      .cta-banner h2 {
+        font-size: 1.25rem;
+      }
+      .cta-banner p {
+        font-size: 0.875rem;
+        margin: 10px 0 16px !important;
+      }
+    }
     
     .product-card {
       background: var(--white);
@@ -199,14 +295,14 @@
 
 <!-- PRODUCTS GRID -->
 <section class="products-container container">
-  <div class="filter-bar">
-    <button class="filter-btn active" onclick="filterProducts('All')">All</button>
-    <button class="filter-btn" onclick="filterProducts('Steel')">Steel</button>
-    <button class="filter-btn" onclick="filterProducts('Cement')">Cement</button>
-    <button class="filter-btn" onclick="filterProducts('Roofing')">Roofing</button>
-    <button class="filter-btn" onclick="filterProducts('Structural')">Structural</button>
-    <button class="filter-btn" onclick="filterProducts('Pipes')">Pipes</button>
-    <button class="filter-btn" onclick="filterProducts('Wire')">Wire</button>
+  <div class="filter-bar" role="tablist" aria-label="Product categories">
+    <button class="filter-btn active" role="tab" aria-selected="true" onclick="filterProducts('All', this)">All</button>
+    <button class="filter-btn" role="tab" aria-selected="false" onclick="filterProducts('Steel', this)">Steel</button>
+    <button class="filter-btn" role="tab" aria-selected="false" onclick="filterProducts('Cement', this)">Cement</button>
+    <button class="filter-btn" role="tab" aria-selected="false" onclick="filterProducts('Roofing', this)">Roofing</button>
+    <button class="filter-btn" role="tab" aria-selected="false" onclick="filterProducts('Structural', this)">Structural</button>
+    <button class="filter-btn" role="tab" aria-selected="false" onclick="filterProducts('Pipes', this)">Pipes</button>
+    <button class="filter-btn" role="tab" aria-selected="false" onclick="filterProducts('Wire', this)">Wire</button>
   </div>
   
   <div class="products-grid" id="productsGrid">
@@ -475,10 +571,13 @@
 </div>
 
 <script>
-  function filterProducts(category) {
+  function filterProducts(category, btnElement) {
     const btns = document.querySelectorAll('.filter-btn');
-    btns.forEach(btn => btn.classList.remove('active'));
-    event.target.classList.add('active');
+    btns.forEach(btn => {
+      const isMatch = btn === btnElement || (!btnElement && btn.textContent.trim() === category);
+      btn.classList.toggle('active', isMatch);
+      btn.setAttribute('aria-selected', isMatch ? 'true' : 'false');
+    });
     
     const cards = document.querySelectorAll('.product-card');
     cards.forEach(card => {
