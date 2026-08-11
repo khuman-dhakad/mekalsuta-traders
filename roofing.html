@@ -33,7 +33,29 @@
       grid-template-columns: repeat(3, 1fr);
       gap: var(--space-3);
     }
-    @media (max-width: 768px) { .roofing-types-grid { grid-template-columns: 1fr; } }
+    .roofing-split-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-12);
+      align-items: center;
+    }
+    .roofing-features-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-3);
+    }
+    @media (max-width: 1100px) {
+      .roofing-split-grid { grid-template-columns: 1fr; gap: var(--space-8); }
+    }
+    @media (max-width: 768px) {
+      .roofing-types-grid { grid-template-columns: 1fr; }
+      .roofing-split-grid { display: flex; flex-direction: column; gap: 24px; width: 100%; }
+      .roofing-features-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .usage-grid { grid-template-columns: 1fr !important; }
+    }
+    @media (max-width: 430px) {
+      .roofing-features-grid { grid-template-columns: 1fr; }
+    }
     .roofing-type-card {
       background: var(--white);
       border: 1.5px solid var(--border);
@@ -178,7 +200,7 @@
 <!-- ── WHAT IS SM ROOFING ── -->
 <section class="section" style="background:var(--white);" aria-label="About SM Roofing">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-12);align-items:center;" class="reveal">
+    <div class="roofing-split-grid reveal">
       <div>
         <div class="section-label mb-3">
           <div class="section-label-line"></div>
@@ -295,7 +317,7 @@
     <div class="text-center mb-10 reveal">
       <h2 class="text-h2" style="color:var(--white);">Why Choose <span style="color:var(--orange);">SM Roofing?</span></h2>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-3);" class="reveal reveal-delay-1">
+    <div class="roofing-features-grid reveal reveal-delay-1">
       <div style="text-align:center;padding:var(--space-5);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius-xl);">
         <div style="font-size:2.5rem;margin-bottom:var(--space-3);">🌧️</div>
         <h3 style="font-family:var(--font-heading);font-size:1rem;font-weight:700;color:var(--white);margin-bottom:8px;">Weatherproof</h3>

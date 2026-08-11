@@ -23,8 +23,17 @@
     .brand-feature:hover { box-shadow: var(--shadow-lg); border-color: transparent; transform: translateY(-2px); }
     .brand-feature.reverse { direction: rtl; }
     .brand-feature.reverse > * { direction: ltr; }
+    .brands-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); text-align: center; }
+    .brand-stat-item { padding: var(--space-4); background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-lg); }
     @media (max-width: 1100px) {
       .brand-feature, .brand-feature.reverse { grid-template-columns: 1fr; direction: ltr; }
+    }
+    @media (max-width: 768px) {
+      .brands-stats-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+      .brand-feature { padding: 16px; border-radius: var(--radius-xl); gap: 16px; }
+    }
+    @media (max-width: 360px) {
+      .brands-stats-grid { grid-template-columns: 1fr; }
     }
     .brand-feature-logo {
       display: flex;
@@ -118,20 +127,20 @@
 <!-- ── INTRO ── -->
 <section style="background:var(--white);padding:var(--space-10) 0;border-bottom:1px solid var(--border);" aria-label="Brand dealer introduction">
   <div class="container">
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-4);text-align:center;" class="reveal">
-      <div style="padding:var(--space-4);">
+    <div class="brands-stats-grid reveal">
+      <div class="brand-stat-item">
         <div style="font-family:var(--font-number);font-size:2rem;font-weight:800;color:var(--primary);">8+</div>
         <div style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;font-weight:500;">Premium Brands</div>
       </div>
-      <div style="padding:var(--space-4);border-left:1px solid var(--border);">
+      <div class="brand-stat-item">
         <div style="font-family:var(--font-number);font-size:2rem;font-weight:800;color:var(--primary);">100%</div>
         <div style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;font-weight:500;">Genuine Products</div>
       </div>
-      <div style="padding:var(--space-4);border-left:1px solid var(--border);">
+      <div class="brand-stat-item">
         <div style="font-family:var(--font-number);font-size:2rem;font-weight:800;color:var(--primary);">ISI</div>
         <div style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;font-weight:500;">Certified Products</div>
       </div>
-      <div style="padding:var(--space-4);border-left:1px solid var(--border);">
+      <div class="brand-stat-item">
         <div style="font-family:var(--font-number);font-size:2rem;font-weight:800;color:var(--primary);">✓</div>
         <div style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;font-weight:500;">Authorized Dealer</div>
       </div>

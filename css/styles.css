@@ -3553,16 +3553,28 @@ input, textarea, select {
   .ann-btn { min-height: 40px; }
 
   /* ── 22. SUB-PAGES RESPONSIVE GRIDS ──────────────────────── */
-  .big-contact-grid { display: flex; flex-direction: column; gap: 20px; }
-  .products-grid { grid-template-columns: 1fr; }
+  .big-contact-grid { display: flex !important; flex-direction: column !important; gap: 20px !important; width: 100% !important; }
+  .reach-cards-grid { display: grid !important; grid-template-columns: 1fr !important; gap: 12px !important; width: 100% !important; }
+  .about-split { display: flex !important; flex-direction: column !important; gap: 24px !important; width: 100% !important; }
+  .about-journey-grid { display: flex !important; flex-direction: column !important; gap: 24px !important; width: 100% !important; }
+  .about-img-wrap img { height: 260px !important; width: 100% !important; }
+  .about-stats-overlay { bottom: 10px !important; left: 10px !important; right: 10px !important; padding: 10px !important; gap: 8px !important; border-radius: var(--radius-lg) !important; }
+  .about-stat-num { font-size: 1.25rem !important; }
+  .about-stat-lbl { font-size: 0.6rem !important; }
+  .values-grid { display: grid !important; grid-template-columns: 1fr !important; gap: 12px !important; }
+  .legacy-grid { display: grid !important; grid-template-columns: 1fr !important; gap: 10px !important; }
+  .brands-stats-grid { display: grid !important; grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }
+  .roofing-split-grid { display: flex !important; flex-direction: column !important; gap: 24px !important; width: 100% !important; }
+  .roofing-features-grid { display: grid !important; grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }
+  .products-grid { grid-template-columns: 1fr !important; }
   .product-card-img { height: 180px; }
-  .brand-feature { grid-template-columns: 1fr !important; }
+  .brand-feature { grid-template-columns: 1fr !important; padding: 16px !important; gap: 16px !important; }
   .brand-feature.reverse { direction: ltr !important; }
   .brand-feature-img { min-height: 240px; max-height: 280px; }
-  .quote-layout  { grid-template-columns: 1fr; }
+  .quote-layout  { grid-template-columns: 1fr !important; }
   .quote-sidebar { position: static; }
   .checkboxes-grid { grid-template-columns: 1fr 1fr; }
-  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr !important; }
 
 } /* end @media (max-width: 768px) */
 
