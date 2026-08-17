@@ -1,0 +1,776 @@
+/* ============================================================
+   SHRI MEKALSUTA TRADERS — Responsive Breakpoints
+   ============================================================ */
+
+/* ── RESPONSIVE ───────────────────────────────────────────── */
+
+/* ── Tablet Overrides (max-width: 1100px) ─────────────────── */
+@media (max-width: 1100px) {
+  .container, .container-narrow, .container-wide {
+    padding: 0 var(--space-6);
+  }
+
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+  .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: var(--space-6); }
+  .category-grid { grid-template-columns: repeat(3, 1fr); }
+  .category-grid .category-card:first-child { grid-column: span 1; grid-row: span 1; }
+  .roofing-section { grid-template-columns: 1fr; }
+  .roofing-img { min-height: 400px; }
+  .roofing-content { padding: var(--space-10) var(--space-8); }
+  .awards-inner { grid-template-columns: 1fr; gap: var(--space-8); }
+  .contact-grid { grid-template-columns: 1fr; }
+  .product-card-h { grid-template-columns: 260px 1fr; }
+  .product-detail-layout { grid-template-columns: 1fr; }
+  .product-quote-card { position: static; }
+  .projects-masonry { grid-template-columns: repeat(2, 1fr); }
+  .gallery-grid { columns: 3; }
+}
+
+/* ============================================================
+   MOBILE RESPONSIVE SYSTEM (DESKTOP LOCKED — MOBILE ISOLATED)
+   All rules strictly scoped to max-width media queries.
+   Breakpoints:
+   - 768px (Mobile & Tablet boundary)
+   - 430px (Standard Smart Phones - iPhone Pro Max / Plus)
+   - 390px (Target Standard Mobile - iPhone 14/15/16, Galaxy S)
+   - 360px (Compact Mobile - Galaxy A, Pixel)
+   - 320px (Small Mobile - iPhone SE / Mini)
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  /* ── 1. DOCUMENT & UNINTERRUPTED VERTICAL SCROLLING ──────── */
+  html {
+    overflow-x: hidden;
+    width: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    overflow-x: hidden;
+    overflow-y: visible;
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+    /* Safe padding ensures fixed bottom bar never covers any footer content or copyright */
+    padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px));
+  }
+
+  /* ── 2. MOBILE SPACING SYSTEM ────────────────────────────── */
+  .section, .section-lg { padding: 48px 0; }
+  .section-sm           { padding: 32px 0; }
+
+  .container,
+  .container-narrow,
+  .container-wide {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+  }
+
+  /* Section Header layout */
+  .section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+  .section-header .btn {
+    width: 100%;
+    justify-content: center;
+    min-height: 44px;
+  }
+
+  /* ── 3. ANNOUNCEMENT BAR ─────────────────────────────────── */
+  .announcement-bar {
+    display: none; /* Contact details and hours accessible in mobile menu and bottom bar */
+  }
+
+  /* ── 4. MOBILE NAVIGATION & HAMBURGER DRAWER ─────────────── */
+  .navbar-inner {
+    height: 62px;
+    padding: 0 16px;
+  }
+
+  .nav-logo {
+    max-width: 70%;
+  }
+  .nav-logo-name {
+    font-size: 1.05rem;
+    line-height: 1.15;
+  }
+  .nav-logo-sub {
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+  }
+
+  /* Desktop links hidden */
+  .nav-links, .nav-cta, .nav-phone {
+    display: none;
+  }
+
+  /* Mobile Toggle with accessible >=44px touch target */
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+  }
+
+  .nav-mobile {
+    top: 62px;
+    padding: 14px 18px max(18px, env(safe-area-inset-bottom, 0px));
+    max-height: calc(100dvh - 62px);
+    height: auto;
+    z-index: 999;
+  }
+
+  .nav-mobile-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .nav-mobile .nav-link {
+    font-size: 0.95rem;
+    padding: 10px 14px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    border-radius: var(--radius-md);
+    width: 100%;
+    font-weight: 600;
+  }
+
+  .nav-mobile .nav-link.active {
+    background: rgba(249,115,22,.08);
+    color: var(--orange);
+    font-weight: 700;
+  }
+
+  .nav-mobile-actions {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .nav-mobile-actions .btn {
+    width: 100%;
+    height: 46px;
+    min-height: 46px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    padding: 10px 16px;
+    justify-content: center;
+  }
+
+  /* ── 5. HERO SECTION ─────────────────────────────────────── */
+  .hero {
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-content {
+    padding: 80px 0 36px;
+    width: 100%;
+  }
+
+  .hero-eyebrow {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+
+  .hero-rating { padding: 4px 12px; }
+  .hero-rating .stars { font-size: 0.75rem; }
+  .hero-rating-text { font-size: 0.75rem; }
+  .hero-dealer-badge { font-size: 0.6875rem; padding: 4px 10px; }
+
+  .hero-title {
+    font-size: clamp(2rem, 8vw, 2.75rem);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+    max-width: 100%;
+    word-break: break-word;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    max-width: 100%;
+    color: rgba(255,255,255,0.85);
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 28px;
+    width: 100%;
+  }
+  .hero-actions .btn {
+    flex: 1;
+    min-width: 130px;
+    min-height: 48px;
+    font-size: 0.9rem;
+    padding: 12px 16px;
+    justify-content: center;
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px 12px;
+    width: 100%;
+  }
+  .hero-stat { gap: 2px; }
+  .hero-stat-number { font-size: 1.625rem; font-weight: 800; }
+  .hero-stat-label  { font-size: 0.6875rem; }
+  .hero-stat-divider { display: none; }
+  .hero-scroll { display: none; }
+
+  /* ── 6. STATS BAR ────────────────────────────────────────── */
+  .stats-bar { padding: 28px 0; }
+  .stats-bar-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px 14px;
+  }
+  .stat-item-number { font-size: 1.875rem; font-weight: 800; }
+  .stat-item-label  { font-size: 0.75rem; }
+  .stat-item-divider { display: none; }
+
+  /* ── 7. BRANDS MARQUEE (CONTINUOUS TICKER) ───────────────── */
+  .brands-section { padding: 28px 0; }
+  .brands-label   { margin-bottom: 16px; }
+  .brand-card { width: 130px; height: 84px; padding: 8px; }
+  .brand-card-name { font-size: 0.85rem; }
+  .brand-card-sub  { font-size: 0.58rem; }
+  .brands-marquee-wrapper::before,
+  .brands-marquee-wrapper::after { width: 36px; }
+
+  /* ── 8. AUTHORIZED DEALER BRANDS GRID (ALL 8 BRANDS) ─────── */
+  .brands-grid-section { padding: 48px 0; }
+  .brands-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+    margin-top: 20px !important;
+    width: 100%;
+  }
+
+  .brand-card-lg {
+    padding: 16px 10px;
+    gap: 10px;
+    height: auto;
+    min-height: 155px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    border-radius: var(--radius-lg);
+    background: var(--bg);
+  }
+
+  .brand-logo-img {
+    width: 60px;
+    height: 44px;
+    padding: 4px;
+    flex-shrink: 0;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    border: 1.5px solid var(--border);
+  }
+  .brand-logo-img svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+  }
+
+  .brand-card-lg-name {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-top: 2px;
+  }
+  .brand-card-lg-type {
+    font-size: 0.625rem;
+    color: var(--text-muted);
+    line-height: 1.3;
+  }
+  .brand-auth-tag {
+    font-size: 0.625rem;
+    padding: 3px 8px;
+    margin-top: auto;
+  }
+
+  /* ── 9. PRODUCT CATEGORIES (ALL 8 CATEGORIES) ────────────── */
+  .categories-section { padding: 48px 0; }
+  .category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .category-grid .category-card:first-child {
+    grid-column: span 2;
+    grid-row: span 1;
+    aspect-ratio: 16/9;
+  }
+  .category-card { aspect-ratio: 4/3; border-radius: var(--radius-lg); }
+  .category-card-content { padding: 14px; }
+  .category-card-name { font-size: 0.9375rem; margin-bottom: 2px; }
+  .category-card-count { font-size: 0.6875rem; }
+  .category-card-icon { width: 30px; height: 30px; font-size: 0.9rem; top: 10px; right: 10px; }
+
+  /* ── 10. WHY CHOOSE US (ALL 6 GUARANTEES) ────────────────── */
+  .why-section { padding: 48px 0; }
+  .why-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+  .why-card {
+    padding: 16px 12px;
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+  }
+  .why-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+  .why-title { font-size: 0.875rem; font-weight: 700; margin-bottom: 4px; }
+  .why-desc  { font-size: 0.78rem; line-height: 1.45; color: var(--text-muted); }
+
+  /* ── 11. FEATURED PRODUCTS (ALL 3 PRODUCTS) ──────────────── */
+  .products-section { padding: 48px 0; }
+  .featured-products-list { gap: 16px; }
+  .product-card-h {
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    grid-template-columns: 1fr !important;
+  }
+  .product-card-h-img {
+    width: 100%;
+    height: 220px;
+    aspect-ratio: unset;
+    flex-shrink: 0;
+  }
+  .product-card-h-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .product-card-h-body {
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .product-specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 8px 0;
+  }
+  .spec-tag { font-size: 0.7rem; padding: 3px 8px; }
+  .product-card-h-bottom {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    margin-top: 4px;
+  }
+  .product-card-h-bottom .btn {
+    flex: 1;
+    min-height: 44px;
+    justify-content: center;
+    font-size: 0.875rem;
+    padding: 10px 12px;
+  }
+
+  /* ── 12. ROOFING SECTION (IMAGE -> HEADING -> BENEFITS -> CTA) */
+  .roofing-section {
+    display: flex;
+    flex-direction: column;
+    min-height: unset;
+    width: 100%;
+  }
+  .roofing-img {
+    width: 100%;
+    height: 280px;
+    min-height: unset;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .roofing-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+  .roofing-content {
+    padding: 36px 20px;
+    gap: 16px;
+    width: 100%;
+  }
+  .roofing-title {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    line-height: 1.15;
+  }
+  .roofing-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  .roofing-benefits {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 4px 0;
+  }
+  .roofing-benefit-icon { width: 28px; height: 28px; font-size: 0.85rem; }
+  .roofing-benefit-text { font-size: 0.8rem; }
+  .roofing-actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+  }
+  .roofing-actions .btn {
+    flex: 1;
+    min-width: 130px;
+    min-height: 46px;
+    justify-content: center;
+  }
+
+  /* ── 13. AWARDS SECTION ──────────────────────────────────── */
+  .awards-section { padding: 48px 0; }
+  .awards-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  .awards-img-wrap { width: 100%; }
+  .awards-img-frame {
+    width: 100%;
+    height: 280px;
+    max-height: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-xl);
+    background: transparent;
+  }
+  .awards-img-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  .awards-img-badge {
+    max-width: 90%;
+    bottom: 12px;
+    left: 12px;
+    padding: 10px 14px;
+  }
+  .awards-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .awards-title { font-size: clamp(1.5rem, 6vw, 2rem); line-height: 1.15; }
+  .awards-desc  { font-size: 0.9rem; line-height: 1.65; }
+  .awards-highlight { padding: 14px 16px; }
+  .awards-highlight-text { font-size: 0.9rem; }
+
+  /* ── 14. PROJECTS (ALL 5 PROJECTS) ───────────────────────── */
+  .projects-section { padding: 48px 0; }
+  .projects-masonry {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .projects-masonry .project-card.tall { grid-row: span 1; }
+  .project-card { border-radius: var(--radius-xl); overflow: hidden; }
+  .project-card img,
+  .project-card.tall img {
+    width: 100%;
+    height: 230px;
+    min-height: unset;
+    max-height: 260px;
+    object-fit: cover;
+    display: block;
+  }
+  .project-card-overlay { opacity: 0.65; }
+  .project-card-info { opacity: 1; transform: translateY(0); padding: 16px; }
+
+  /* ── 15. GALLERY (ALL 8 IMAGES) ──────────────────────────── */
+  .gallery-section { padding: 48px 0; }
+  .gallery-grid {
+    columns: 2;
+    column-gap: 10px;
+  }
+  .gallery-item {
+    margin-bottom: 10px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+  .gallery-item-overlay { background: rgba(18,53,91,0.25); }
+  .gallery-zoom-icon { transform: scale(1); }
+
+  /* ── 16. REVIEWS (ALL 6 REVIEWS) ─────────────────────────── */
+  .reviews-section { padding: 48px 0; }
+  .reviews-header-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .reviews-big-rating { font-size: 3.5rem; }
+  .reviews-aggregate { gap: 16px; }
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .review-card { padding: 18px 16px; border-radius: var(--radius-lg); }
+
+  /* ── 17. CONTACT / MAP SECTION ───────────────────────────── */
+  .contact-section { padding: 48px 0; }
+  .contact-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .contact-map {
+    width: 100%;
+    height: 240px;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+  }
+  .quote-form-card { padding: 24px 16px; border-radius: var(--radius-xl); }
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  /* ── 18. FOOTER (FULL FOOTER WITH SOCIAL ICONS & CREDITS) ── */
+  .footer { padding: 48px 0 0; }
+  .footer-top {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding-bottom: 32px;
+  }
+  .footer-desc { max-width: 100%; font-size: 0.875rem; }
+  .footer-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+    padding: 20px 0;
+  }
+  .footer-bottom-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  /* ── 19. SUB-PAGE HERO (FOR INNER PAGES) ─────────────────── */
+  .page-hero {
+    padding: calc(62px + 28px) 0 28px;
+  }
+  .page-hero-title { font-size: clamp(1.625rem, 7vw, 2.25rem); }
+  .page-hero-sub   { font-size: 0.9rem; }
+
+  /* ── 20. FIXED MOBILE ACTION BAR (CALL · WHATSAPP · QUOTE) ─ */
+  .mobile-cta {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--z-overlay);
+    background: var(--white);
+    border-top: 1.5px solid var(--border);
+    padding: 10px 14px max(10px, env(safe-area-inset-bottom));
+    gap: 10px;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
+  }
+  .mobile-cta .btn {
+    flex: 1;
+    min-height: 48px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    padding: 10px 8px;
+    justify-content: center;
+  }
+
+  /* Redundant floating WhatsApp hidden on mobile since action bar has WhatsApp */
+  .floating-quote { display: none !important; }
+
+  /* ── 21. BUTTON TAP TARGETS ──────────────────────────────── */
+  .btn { min-height: 44px; }
+  .btn-sm { min-height: 40px; }
+  .ann-btn { min-height: 40px; }
+
+  /* ── 22. SUB-PAGES RESPONSIVE GRIDS ──────────────────────── */
+  .big-contact-grid { display: flex !important; flex-direction: column !important; gap: 20px !important; width: 100% !important; }
+  .reach-cards-grid { display: grid !important; grid-template-columns: 1fr !important; gap: 12px !important; width: 100% !important; }
+  .about-split { display: flex !important; flex-direction: column !important; gap: 24px !important; width: 100% !important; }
+  .about-journey-grid { display: flex !important; flex-direction: column !important; gap: 24px !important; width: 100% !important; }
+  .about-img-wrap img { height: 260px !important; width: 100% !important; }
+  .about-stats-overlay { bottom: 10px !important; left: 10px !important; right: 10px !important; padding: 10px !important; gap: 8px !important; border-radius: var(--radius-lg) !important; }
+  .about-stat-num { font-size: 1.25rem !important; }
+  .about-stat-lbl { font-size: 0.6rem !important; }
+  .values-grid { display: grid !important; grid-template-columns: 1fr !important; gap: 12px !important; }
+  .legacy-grid { display: grid !important; grid-template-columns: 1fr !important; gap: 10px !important; }
+  .brands-stats-grid { display: grid !important; grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }
+  .roofing-split-grid { display: flex !important; flex-direction: column !important; gap: 24px !important; width: 100% !important; }
+  .roofing-features-grid { display: grid !important; grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; }
+  .products-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+  .products-container { padding: 16px 0 32px !important; }
+  .filter-bar {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    gap: 8px !important;
+    justify-content: flex-start !important;
+    padding: 4px 16px 8px !important;
+    margin: 0 -16px 16px !important;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .filter-bar::-webkit-scrollbar { display: none; }
+  .filter-btn {
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+    height: 44px !important;
+    min-height: 44px !important;
+    padding: 0 18px !important;
+    font-size: 0.875rem !important;
+    font-weight: 600 !important;
+    border-radius: 22px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .product-card-img { height: 180px; }
+  .brand-feature { grid-template-columns: 1fr !important; padding: 16px !important; gap: 16px !important; }
+  .brand-feature.reverse { direction: ltr !important; }
+  .brand-feature-img { min-height: 240px; max-height: 280px; }
+  .quote-layout  { grid-template-columns: 1fr !important; }
+  .quote-sidebar { position: static; }
+  .checkboxes-grid { grid-template-columns: 1fr 1fr; }
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr !important; }
+
+} /* end @media (max-width: 768px) */
+
+
+/* ── 23. PHONES (≤ 430px) ──────────────────────────────────── */
+@media (max-width: 430px) {
+
+  .container,
+  .container-narrow,
+  .container-wide { padding-left: 16px; padding-right: 16px; }
+
+  .hero-title { font-size: clamp(1.75rem, 7.5vw, 2.25rem); }
+  .hero-subtitle { font-size: 0.875rem; }
+  .hero-actions { flex-direction: column; }
+  .hero-actions .btn { width: 100%; min-width: unset; }
+
+  .stats-bar-inner {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 16px 10px;
+  }
+  .stat-item-number { font-size: 1.625rem; }
+
+  .brand-card-lg { padding: 14px 8px; gap: 8px; }
+  .brand-card-lg-name { font-size: 0.75rem; }
+  .brand-logo-img { width: 50px; height: 38px; padding: 3px; }
+
+  .category-grid { gap: 10px; }
+  .category-card-name { font-size: 0.85rem; }
+
+  .roofing-img { height: 230px; }
+  .roofing-benefits { grid-template-columns: 1fr; }
+
+  .awards-img-frame { height: 240px; }
+
+  .review-card { padding: 14px 12px; }
+  .reviews-big-rating { font-size: 3rem; }
+
+  .quote-form-card { padding: 18px 12px; }
+  .mobile-cta .btn { padding: 10px 6px; font-size: 0.8125rem; }
+
+} /* end @media (max-width: 430px) */
+
+
+/* ── 24. SMALL PHONES (≤ 360px) ────────────────────────────── */
+@media (max-width: 360px) {
+
+  .container,
+  .container-narrow,
+  .container-wide { padding-left: 12px; padding-right: 12px; }
+
+  .why-grid { grid-template-columns: 1fr !important; }
+  .brand-card-lg-name { font-size: 0.7rem; }
+  .hero-title { font-size: 1.625rem; }
+  .mobile-cta { padding: 8px 10px max(8px, env(safe-area-inset-bottom)); gap: 6px; }
+  .mobile-cta .btn { font-size: 0.75rem; min-height: 44px; }
+
+} /* end @media (max-width: 360px) */
+
+
+/* ── TOUCH DEVICE OPTIMIZATIONS ─────────────────────────────── */
+@media (hover: none) {
+  .project-card-overlay { opacity: 0.65; }
+  .project-card-info    { opacity: 1; transform: translateY(0); }
+  .gallery-item-overlay { background: rgba(18,53,91,.2); }
+  .gallery-zoom-icon    { transform: scale(1); }
+
+  .btn, .nav-link, .brand-card, .category-card, .review-card, .why-card {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+
