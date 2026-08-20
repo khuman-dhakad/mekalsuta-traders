@@ -128,6 +128,9 @@
     padding: 14px 18px max(18px, env(safe-area-inset-bottom, 0px));
     max-height: calc(100dvh - 62px);
     height: auto;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
     z-index: 999;
   }
 
@@ -262,6 +265,14 @@
   /* ── 7. BRANDS MARQUEE (CONTINUOUS TICKER) ───────────────── */
   .brands-section { padding: 28px 0; }
   .brands-label   { margin-bottom: 16px; }
+  .brands-marquee-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .brands-marquee-wrapper::-webkit-scrollbar { display: none; }
   .brand-card { width: 130px; height: 84px; padding: 8px; }
   .brand-card-name { font-size: 0.85rem; }
   .brand-card-sub  { font-size: 0.58rem; }
@@ -276,6 +287,7 @@
     gap: 12px !important;
     margin-top: 20px !important;
     width: 100%;
+    min-width: 0;
   }
 
   .brand-card-lg {
@@ -283,6 +295,7 @@
     gap: 10px;
     height: auto;
     min-height: 155px;
+    min-width: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -583,11 +596,24 @@
     border-radius: var(--radius-xl);
     overflow: hidden;
   }
+  .contact-map iframe,
+  .contact-map img,
+  .contact-map video {
+    width: 100%;
+    max-width: 100%;
+  }
   .quote-form-card { padding: 24px 16px; border-radius: var(--radius-xl); }
   .form-row {
     display: flex;
     flex-direction: column;
     gap: 14px;
+  }
+  .quote-form-card input,
+  .quote-form-card textarea,
+  .quote-form-card select,
+  .quote-form-card button {
+    max-width: 100%;
+    min-width: 0;
   }
 
   /* ── 18. FOOTER (FULL FOOTER WITH SOCIAL ICONS & CREDITS) ── */
@@ -702,6 +728,11 @@
   .quote-sidebar { position: static; }
   .checkboxes-grid { grid-template-columns: 1fr 1fr; }
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr !important; }
+
+  img, iframe, video, svg { max-width: 100%; }
+  .container > *,
+  .container-narrow > *,
+  .container-wide > * { min-width: 0; }
 
 } /* end @media (max-width: 768px) */
 
