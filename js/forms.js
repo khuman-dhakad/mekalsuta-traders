@@ -27,33 +27,43 @@ function initFormValidation() {
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
+      if (form.dataset.submitting === 'true') return;
+
       const submitBtn = form.querySelector('button[type="submit"]');
-      const required = form.querySelectorAll('[required]');
+      const fields = form.querySelectorAll('input, textarea, select');
       let isValid = true;
 
-      required.forEach(field => {
+      fields.forEach(field => {
         const value = sanitizeInput(field.value);
         const error = field.closest('.form-group')?.querySelector('.form-error');
+        let fieldValid = Boolean(value);
+        let errorMessage = '';
 
-        if (!value) {
+        if (!field.required && !value) {
+          return;
+        }
+        if (!fieldValid) {
+          errorMessage = 'This field is required.';
+        } else if (field.type === 'email' && !field.validity.valid) {
+          fieldValid = false;
+          errorMessage = 'Please enter a valid email address.';
+        } else if (field.type === 'tel' || field.name === 'phone') {
+          const digits = value.replace(/\D/g, '');
+          fieldValid = /^(?:91)?[6-9]\d{9}$/.test(digits);
+          if (!fieldValid) errorMessage = 'Please enter a valid 10-digit mobile number.';
+        }
+
+        if (!fieldValid) {
           isValid = false;
           field.style.borderColor = '#EF4444';
-          if (error) error.style.display = 'block';
-        } else {
-          // Phone format check if tel field
-          if (field.type === 'tel' || field.name === 'phone') {
-            const digits = value.replace(/\D/g, '');
-            if (digits.length < 10) {
-              isValid = false;
-              field.style.borderColor = '#EF4444';
-              if (error) {
-                error.textContent = 'Please enter a valid 10-digit mobile number';
-                error.style.display = 'block';
-              }
-              return;
-            }
+          field.setAttribute('aria-invalid', 'true');
+          if (error) {
+            error.textContent = errorMessage;
+            error.style.display = 'block';
           }
+        } else {
           field.style.borderColor = '';
+          field.removeAttribute('aria-invalid');
           if (error) error.style.display = 'none';
         }
       });
@@ -69,11 +79,15 @@ function initFormValidation() {
       const formData = new FormData(form);
       const payload = {};
       formData.forEach((value, key) => {
-        payload[key] = sanitizeInput(value);
+        const cleanValue = sanitizeInput(value);
+        payload[key] = payload[key]
+          ? `${payload[key]}, ${cleanValue}`
+          : cleanValue;
       });
 
       // Submit button loading & debounce
       const originalText = submitBtn ? submitBtn.innerHTML : 'Submit';
+      form.dataset.submitting = 'true';
       if (submitBtn) {
         submitBtn.disabled = true;
         submitBtn.innerHTML = 'Submitting Request...';
@@ -109,19 +123,18 @@ function initFormValidation() {
         if (typeof window.showToast === 'function') {
           window.showToast('Quote Request Submitted! Redirecting...', 'success');
         }
+        form.dataset.submitting = 'complete';
         setTimeout(() => {
           window.location.href = 'thank-you.html';
         }, 500);
 
       } catch (err) {
-        console.warn('Form submission handoff notice:', err);
+        console.error('Form submission failed:', err);
         if (typeof window.showToast === 'function') {
-          window.showToast('Request received! Redirecting...', 'success');
+          window.showToast('We could not send your request. Please try again or use WhatsApp.', 'error');
         }
-        setTimeout(() => {
-          window.location.href = 'thank-you.html';
-        }, 600);
       } finally {
+        if (form.dataset.submitting !== 'complete') form.dataset.submitting = 'false';
         if (submitBtn) {
           submitBtn.disabled = false;
           submitBtn.innerHTML = originalText;
@@ -131,13 +144,16 @@ function initFormValidation() {
     });
 
     // Real-time validation clearance
-    form.querySelectorAll('[required]').forEach(field => {
-      field.addEventListener('input', () => {
-        if (field.value.trim()) {
-          field.style.borderColor = '';
-          const error = field.closest('.form-group')?.querySelector('.form-error');
-          if (error) error.style.display = 'none';
-        }
+    form.querySelectorAll('input, textarea, select').forEach(field => {
+      ['input', 'change'].forEach(eventName => {
+        field.addEventListener(eventName, () => {
+          if (field.value.trim()) {
+            field.style.borderColor = '';
+            field.removeAttribute('aria-invalid');
+            const error = field.closest('.form-group')?.querySelector('.form-error');
+            if (error) error.style.display = 'none';
+          }
+        });
       });
     });
   });
