@@ -17,6 +17,8 @@
   <meta name="twitter:description" content="Premium Kamdhenu TMT Fe500D bars. Authorized dealer in Bareli, MP with verified test certificates." />
   <meta name="twitter:image" content="https://shrimekalsuta.com/images/product_tmt.webp" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="image" href="images/product_tmt.webp" type="image/webp" />
   <link rel="stylesheet" href="css/styles.css" />
   <style>
     .product-detail-grid { display: grid; grid-template-columns: 540px 1fr; gap: var(--space-10); align-items: start; }
@@ -117,16 +119,16 @@
       <!-- Images -->
       <div class="reveal">
         <div class="product-image-main">
-          <img src="images/product_tmt.webp" id="mainProductImg" alt="Kamdhenu TMT Fe500D steel bars" / loading="lazy">
+          <img src="images/product_tmt.webp" id="mainProductImg" alt="Kamdhenu TMT Fe500D steel bars" fetchpriority="high" decoding="async">
           <div class="brand-auth-tag" style="position:absolute;top:16px;left:16px;">
             <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
             Authorized Dealer
           </div>
         </div>
         <div class="product-image-thumbs">
-          <div class="product-thumb active" onclick="swapImg('images/product_tmt.webp', this)"><img src="images/product_tmt.webp" alt="TMT bars" / loading="lazy"></div>
-          <div class="product-thumb" onclick="swapImg('images/hero_warehouse.webp', this)"><img src="images/hero_warehouse.webp" alt="Warehouse stock" /></div>
-          <div class="product-thumb" onclick="swapImg('images/project_residential.webp', this)"><img src="images/project_residential.webp" alt="In use" / loading="lazy"></div>
+          <div class="product-thumb active" onclick="swapImg('images/product_tmt.webp', this)"><img src="images/product_tmt.webp" alt="TMT bars" loading="lazy" decoding="async"></div>
+          <div class="product-thumb" onclick="swapImg('images/hero_warehouse.webp', this)"><img src="images/hero_warehouse.webp" alt="Warehouse stock" loading="lazy" decoding="async"></div>
+          <div class="product-thumb" onclick="swapImg('images/project_residential.webp', this)"><img src="images/project_residential.webp" alt="In use" loading="lazy" decoding="async"></div>
         </div>
       </div>
 
