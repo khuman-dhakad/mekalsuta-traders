@@ -51,8 +51,9 @@ function showToast(msg, type = 'success') {
 function openWhatsApp(msg) {
   const phone = window.CONFIG?.PHONE_NUMBER || '918109216102';
   const text = msg || window.CONFIG?.DEFAULT_WA_MESSAGE || 'Hello! I am interested in building materials.';
-  const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
-  window.open(url, '_blank', 'noopener,noreferrer');
+  const url = new URL(`https://wa.me/${encodeURIComponent(phone)}`);
+  url.searchParams.set('text', text);
+  window.open(url.href, '_blank', 'noopener,noreferrer');
 }
 
 /**

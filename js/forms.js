@@ -18,6 +18,15 @@ function sanitizeInput(str) {
     .trim();
 }
 
+const FIELD_LIMITS = Object.freeze({
+  name: 100,
+  fullName: 100,
+  email: 254,
+  phone: 15,
+  message: 2000,
+  projectDetails: 2000
+});
+
 /**
  * Production Form Validation and Submission Engine
  */
@@ -35,6 +44,7 @@ function initFormValidation() {
 
       fields.forEach(field => {
         const value = sanitizeInput(field.value);
+        field.value = value;
         const error = field.closest('.form-group')?.querySelector('.form-error');
         let fieldValid = Boolean(value);
         let errorMessage = '';
@@ -51,6 +61,13 @@ function initFormValidation() {
           const digits = value.replace(/\D/g, '');
           fieldValid = /^(?:91)?[6-9]\d{9}$/.test(digits);
           if (!fieldValid) errorMessage = 'Please enter a valid 10-digit mobile number.';
+        }
+
+        const nativeMaxLength = Number(field.maxLength);
+        const maxLength = FIELD_LIMITS[field.name] || (nativeMaxLength > 0 ? nativeMaxLength : 2000);
+        if (fieldValid && value.length > maxLength) {
+          fieldValid = false;
+          errorMessage = `Please keep this field under ${maxLength} characters.`;
         }
 
         if (!fieldValid) {
@@ -86,11 +103,11 @@ function initFormValidation() {
       });
 
       // Submit button loading & debounce
-      const originalText = submitBtn ? submitBtn.innerHTML : 'Submit';
+      const originalText = submitBtn ? submitBtn.textContent : 'Submit';
       form.dataset.submitting = 'true';
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.innerHTML = 'Submitting Request...';
+        submitBtn.textContent = 'Submitting Request...';
         submitBtn.style.opacity = '0.75';
       }
 
@@ -137,7 +154,7 @@ function initFormValidation() {
         if (form.dataset.submitting !== 'complete') form.dataset.submitting = 'false';
         if (submitBtn) {
           submitBtn.disabled = false;
-          submitBtn.innerHTML = originalText;
+          submitBtn.textContent = originalText;
           submitBtn.style.opacity = '';
         }
       }
