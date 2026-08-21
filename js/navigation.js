@@ -14,9 +14,13 @@ function initNavbar() {
   if (!navbar) return;
 
   // Sticky header on scroll
+  let scrollFrame = 0;
   const handleScroll = () => {
-    const scrolled = window.scrollY > 40;
-    navbar.classList.toggle('scrolled', scrolled);
+    if (scrollFrame) return;
+    scrollFrame = requestAnimationFrame(() => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+      scrollFrame = 0;
+    });
   };
 
   window.addEventListener('scroll', handleScroll, { passive: true });
