@@ -1,0 +1,155 @@
+/* ============================================================
+   SHRI MEKALSUTA TRADERS - Desktop Premium Polish
+   Deliberately isolated from tablet and mobile breakpoints.
+   ============================================================ */
+
+@media (min-width: 1101px) {
+  :root {
+    --desktop-section-space: clamp(104px, 8vw, 144px);
+  }
+
+  .section,
+  .section-lg,
+  .why-section,
+  .products-section,
+  .projects-section,
+  .gallery-section,
+  .reviews-section,
+  .contact-section,
+  .awards-section {
+    padding-top: var(--desktop-section-space);
+    padding-bottom: var(--desktop-section-space);
+  }
+
+  .navbar {
+    border-bottom-color: rgba(18, 53, 91, .1);
+    background: rgba(255, 255, 255, .88);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+  }
+
+  .navbar-inner { height: 76px; }
+
+  .nav-link {
+    transition: color var(--duration-fast) var(--ease-out), background var(--duration-fast) var(--ease-out);
+  }
+
+  .nav-link::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: -1px;
+    height: 2px;
+    background: var(--orange);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform var(--duration-normal) var(--ease-out);
+  }
+
+  .nav-link:hover::before,
+  .nav-link.active::before { transform: scaleX(1); }
+  .nav-link.active::after { display: none; }
+
+  .hero { min-height: min(860px, calc(100svh - 116px)); }
+
+  .hero-content {
+    max-width: 1440px;
+    padding-top: clamp(112px, 10vw, 168px);
+    padding-bottom: clamp(112px, 10vw, 168px);
+  }
+
+  .hero-title { max-width: 860px; }
+
+  .hero-actions .btn-primary {
+    box-shadow: 0 14px 38px rgba(249, 115, 22, .38);
+  }
+
+  .hero-stats {
+    gap: 12px;
+    flex-wrap: nowrap;
+  }
+
+  .hero-stat {
+    min-width: 132px;
+    padding: 16px 18px;
+    background: rgba(12, 37, 68, .36);
+    border: 1px solid rgba(255, 255, 255, .16);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .hero-stat-divider { display: none; }
+
+  .brands-grid-section { padding-top: var(--desktop-section-space); padding-bottom: var(--desktop-section-space); }
+
+  .brand-card-lg,
+  .brand-card,
+  .why-card,
+  .review-card,
+  .contact-item {
+    will-change: transform;
+  }
+
+  .brand-card-lg { min-height: 220px; justify-content: center; }
+  .brand-card-lg:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+  .brand-card-lg:hover .brand-logo-img { transform: scale(1.05); }
+  .brand-logo-img { transition: transform var(--duration-normal) var(--ease-out); }
+
+  .why-grid { gap: 20px; }
+  .why-card { min-height: 250px; padding: 32px; }
+  .why-icon { margin-bottom: 28px; }
+
+  .featured-products-list { gap: 24px; }
+
+  .product-card-h {
+    grid-template-columns: minmax(330px, 34%) 1fr;
+    box-shadow: 0 8px 24px rgba(18, 53, 91, .06);
+  }
+
+  .product-card-h:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+  }
+
+  .product-card-h-img { min-height: 280px; }
+  .product-card-h-body { padding: 40px 48px; }
+  .product-card-h-bottom { margin-top: 24px; }
+
+  .roofing-section { min-height: 680px; }
+  .roofing-img { min-height: 680px; }
+  .roofing-content { padding: 80px clamp(56px, 7vw, 120px); }
+
+  .awards-img-frame { height: 540px; }
+  .awards-highlight { box-shadow: inset 4px 0 0 rgba(212, 175, 55, .2); }
+
+  .projects-masonry { gap: 20px; }
+  .project-card,
+  .gallery-item { box-shadow: 0 8px 24px rgba(18, 53, 91, .08); }
+  .project-card img { transition: transform .75s var(--ease-out); }
+
+  .gallery-grid { column-gap: 20px; }
+  .gallery-item { margin-bottom: 20px; }
+
+  .reviews-grid { gap: 20px; }
+  .review-card { min-height: 230px; padding: 32px; }
+  .review-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+
+  .contact-grid { grid-template-columns: minmax(280px, .85fr) minmax(520px, 1.5fr); gap: 48px; }
+  .contact-map { height: 420px; box-shadow: var(--shadow-md); }
+  .quote-form-card { box-shadow: var(--shadow-lg); }
+
+  .footer { padding-top: 96px; }
+  .footer-top { padding-bottom: 64px; }
+  .footer-bottom { padding: 24px 0; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-bg img,
+    .nav-link::before,
+    .brand-logo-img,
+    .project-card img {
+      transition: none;
+    }
+  }
+}
