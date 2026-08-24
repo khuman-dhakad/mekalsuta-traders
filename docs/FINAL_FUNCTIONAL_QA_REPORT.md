@@ -108,7 +108,7 @@ Tested at 320px, 360px, 375px, 390px, 414px, 430px, 768px, 1024px, 1280px, 1440p
 - Mobile visual identity preserved: PASS
 - `npm run lint`: NOT APPLICABLE, no `package.json` or npm scripts
 - `npm run build`: NOT APPLICABLE, no `package.json` or build system
-- `git diff --check`: PASS
+- `git diff --check`: NOT RUN, the available repository tooling did not expose an executable shell command; structured diff inspection and editor diagnostics were clean
 - Working tree status before commit: PASS, only intended QA changes
 
 **Final QA Status: PASS**
