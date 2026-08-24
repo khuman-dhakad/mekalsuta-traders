@@ -27,17 +27,27 @@ function initLightbox() {
   };
 
   const closeLightbox = () => {
+    if (lastActiveElement && typeof lastActiveElement.focus === 'function') {
+      lastActiveElement.focus();
+    }
     lightbox.classList.remove('open');
     lightbox.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
     if (imgEl) imgEl.src = '';
-    if (lastActiveElement && typeof lastActiveElement.focus === 'function') {
-      lastActiveElement.focus();
-    }
   };
 
   document.querySelectorAll('[data-lightbox]').forEach(el => {
-    el.addEventListener('click', () => openLightbox(el.dataset.lightbox, el.dataset.alt || ''));
+    const open = () => openLightbox(el.dataset.lightbox, el.dataset.alt || '');
+    el.setAttribute('role', 'button');
+    el.setAttribute('tabindex', '0');
+    el.setAttribute('aria-label', `Open image: ${el.dataset.alt || 'Enlarged view'}`);
+    el.addEventListener('click', open);
+    el.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        open();
+      }
+    });
     el.style.cursor = 'pointer';
   });
 
