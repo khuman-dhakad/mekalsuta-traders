@@ -78,6 +78,20 @@
   border: 2px solid var(--primary);
 }
 
+.btn-whatsapp {
+  background: var(--whatsapp);
+  color: var(--white);
+  border: none;
+  box-shadow: var(--shadow-wa);
+}
+
+.btn-whatsapp:hover {
+  background: var(--whatsapp-hover);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(37,211,102,.4);
+}
+
 .btn-outline-primary:hover {
   background: var(--primary);
   color: var(--white);
